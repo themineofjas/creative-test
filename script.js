@@ -531,7 +531,7 @@ const profiles = {
     </h2>
 
     <div class="profile-sub">
-      The Heart & Psychological Anchor of the Ecosystem
+      The Heart & Emotional Anchor of the Project
     </div>
 
     <h3 class="section-title">
@@ -569,7 +569,7 @@ const profiles = {
     </h2>
 
     <div class="profile-sub">
-      The Spark & Blue-Sky Visionary
+      The Spark & Conceptual Visionary
     </div>
 
     <h3 class="section-title">
@@ -624,7 +624,7 @@ const profiles = {
     </h3>
 
     <p class="profile-text">
-      <b>Constraint Architect:</b>
+      <b>Organizing Architect:</b>
       You deconstruct messy ideas into clear, realistic frameworks and parameters.
 
       <br>
@@ -641,7 +641,7 @@ const profiles = {
     </h2>
 
     <div class="profile-sub">
-      The Mobilizer & High-Energy Engine
+      The Connector and Mobilizer
     </div>
 
     <h3 class="section-title">
@@ -678,7 +678,7 @@ const profiles = {
     </h2>
 
     <div class="profile-sub">
-      The Finisher & Tangible Builder
+      The Implementer & Tangible Builder
     </div>
 
     <h3 class="section-title">
@@ -714,7 +714,7 @@ const profiles = {
     </h2>
 
     <div class="profile-sub">
-      The Disruptor & Experimental Maverick
+      The Experimental Maverick
     </div>
 
     <h3 class="section-title">
