@@ -301,6 +301,156 @@ const questions = [
   sB: "When people disagree about what 'good' looks like, I look for the underlying needs and values shaping each person's position.",
   rB: "Advocate"
 },
+  // =====================================
+// SECTION 3: ENERGY & BURNOUT MAPPINGS
+// =====================================
+
+{
+  sA: "I come away energized after having space to explore possibilities, make connections, and follow ideas wherever they lead.",
+  rA: "Ideator",
+  sB: "I come away energized after untangling something complicated and finally understanding how all the pieces fit together.",
+  rB: "Analyst"
+},
+
+{
+  sA: "I feel most alive when I have room to wander mentally and discover ideas I did not expect.",
+  rA: "Ideator",
+  sB: "I feel most alive when I can share an idea with other people and watch their excitement build.",
+  rB: "Catalyst"
+},
+
+{
+  sA: "I gain energy from beginning with an open question and imagining what might be possible.",
+  rA: "Ideator",
+  sB: "I gain energy from taking something unfinished and steadily turning it into something real.",
+  rB: "Executor"
+},
+
+{
+  sA: "I am refreshed by having enough freedom to follow interesting ideas in several directions.",
+  rA: "Ideator",
+  sB: "I am refreshed by having enough freedom to experiment, break patterns, and try things no one expects.",
+  rB: "Alchemist"
+},
+
+{
+  sA: "I can happily spend hours generating concepts, connections, and possibilities without needing to settle on one immediately.",
+  rA: "Ideator",
+  sB: "I can happily spend hours exploring references, examples, and details until I understand what belongs and what does not.",
+  rB: "Curator"
+},
+
+{
+  sA: "A good creative day leaves me energized because my mind had plenty of room to explore.",
+  rA: "Ideator",
+  sB: "A good creative day leaves me energized because I felt genuinely connected to the people I was working with.",
+  rB: "Advocate"
+},
+
+{
+  sA: "I enjoy sustained concentration when I am organizing information, solving problems, or improving a system.",
+  rA: "Analyst",
+  sB: "I enjoy sustained activity when I am coordinating people, communicating ideas, or keeping momentum high.",
+  rB: "Catalyst"
+},
+
+{
+  sA: "I leave work satisfied when I have made something more logical, reliable, or clearly organized.",
+  rA: "Analyst",
+  sB: "I leave work satisfied when I can point to something concrete that I personally completed.",
+  rB: "Executor"
+},
+
+{
+  sA: "I am energized by discovering the underlying logic that makes a complicated situation finally make sense.",
+  rA: "Analyst",
+  sB: "I am energized by discovering what happens when I challenge the logic everyone else has been taking for granted.",
+  rB: "Alchemist"
+},
+
+{
+  sA: "I enjoy spending long periods refining the structure of something until every part has a clear purpose.",
+  rA: "Analyst",
+  sB: "I enjoy spending long periods refining the selection, presentation, or details until everything feels right together.",
+  rB: "Curator"
+},
+
+{
+  sA: "I recharge through quiet problem-solving where I can think clearly and make sense of complexity.",
+  rA: "Analyst",
+  sB: "I recharge through meaningful conversations where people can be open, understood, and honest with one another.",
+  rB: "Advocate"
+},
+
+{
+  sA: "I gain energy when there is movement around me—people responding, conversations happening, and something gaining traction.",
+  rA: "Catalyst",
+  sB: "I gain energy when I can settle into the work itself and make visible progress without having to keep talking about it.",
+  rB: "Executor"
+},
+
+{
+  sA: "I am at my best when I can build enthusiasm around a direction and help other people want to participate.",
+  rA: "Catalyst",
+  sB: "I am at my best when I can inject something unexpected that changes the direction completely.",
+  rB: "Alchemist"
+},
+
+{
+  sA: "A project becomes more exciting to me as more people begin noticing it, discussing it, or joining in.",
+  rA: "Catalyst",
+  sB: "A project becomes more exciting to me as its voice, references, and overall identity become increasingly distinctive.",
+  rB: "Curator"
+},
+
+{
+  sA: "I feel restored when I am around people who are energized, responsive, and ready to make something happen.",
+  rA: "Catalyst",
+  sB: "I feel restored when I am around people who trust one another enough to be genuine and emotionally present.",
+  rB: "Advocate"
+},
+
+{
+  sA: "I can stay engaged for a long time when there is a clear task in front of me and I can keep making tangible progress.",
+  rA: "Executor",
+  sB: "I can stay engaged for a long time when I am allowed to improvise, test strange ideas, and see what happens.",
+  rB: "Alchemist"
+},
+
+{
+  sA: "I get a deep sense of satisfaction from finishing something usable, functional, and complete.",
+  rA: "Executor",
+  sB: "I get a deep sense of satisfaction from refining something until its quality, presentation, and character feel exactly right.",
+  rB: "Curator"
+},
+
+{
+  sA: "I often recover my energy by getting away from discussion and doing something practical with my hands or attention.",
+  rA: "Executor",
+  sB: "I often recover my energy by reconnecting with someone, talking things through, or restoring a sense of mutual understanding.",
+  rB: "Advocate"
+},
+
+{
+  sA: "I feel energized when I can take familiar ingredients and combine them into something people have not seen before.",
+  rA: "Alchemist",
+  sB: "I feel energized when I can discover, preserve, or present something unusually good that deserves more attention.",
+  rB: "Curator"
+},
+
+{
+  sA: "I feel most engaged with a group when there is enough freedom to challenge assumptions and say what everyone else is avoiding.",
+  rA: "Alchemist",
+  sB: "I feel most engaged with a group when there is enough trust for people to be candid without being dismissed or shut down.",
+  rB: "Advocate"
+},
+
+{
+  sA: "I can lose track of time while selecting, comparing, arranging, or refining things until the whole experience feels coherent.",
+  rA: "Curator",
+  sB: "I can lose track of time while listening closely to people and helping create an environment where they can do their best work.",
+  rB: "Advocate"
+}
 
 ];
 
