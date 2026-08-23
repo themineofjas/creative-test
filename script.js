@@ -173,156 +173,178 @@ const questions = [
     rB: "Alchemist"
   },
   
-  // =====================================
-// SECTION 2: CRISIS & FRICTION PAIRS
+// =====================================
+// SECTION 2: GROUP CONTRIBUTION UNDER FRICTION
 // =====================================
 
+// Ideator vs Analyst
 {
-  sA: "When a project starts falling apart, my first instinct is to imagine several new ways it could still work.",
+  sA: "When a group gets stuck on a problem, I naturally start generating different ways we might approach it.",
   rA: "Ideator",
-  sB: "When a project starts falling apart, my first instinct is to identify exactly where the breakdown began.",
+  sB: "When a group gets stuck on a problem, I naturally start breaking it apart to understand what is actually causing it.",
   rB: "Analyst"
 },
 
+// Ideator vs Catalyst
 {
-  sA: "When a group gets discouraged, I help by introducing a fresh possibility or new idea.",
+  sA: "When a group loses momentum, I naturally help by opening up fresh possibilities for what we could try next.",
   rA: "Ideator",
-  sB: "When a group gets discouraged, I help by encouraging, motivating, and/or getting people moving again.",
+  sB: "When a group loses momentum, I naturally help by reconnecting people to a direction and getting movement started again.",
   rB: "Catalyst"
 },
 
+// Ideator vs Executor
 {
-  sA: "When a deadline suddenly gets tighter, I look for a different approach that might open up more options.",
+  sA: "When a deadline suddenly changes the plan, I naturally look for alternative routes or possibilities we have not considered.",
   rA: "Ideator",
-  sB: "When a deadline suddenly gets tighter, I narrow my focus and start completing the most essential tasks.",
+  sB: "When a deadline suddenly changes the plan, I naturally identify what still needs to be completed and start moving through it.",
   rB: "Executor"
 },
 
+// Ideator vs Alchemist
 {
-  sA: "When the obvious solution fails, I branch outward and generate or find several alternative possibilities.",
+  sA: "When the group's first solution fails, I naturally generate several other possible solutions.",
   rA: "Ideator",
-  sB: "When the obvious solution fails, I question assumptions behind it and try a radically different route.",
+  sB: "When the group's first solution fails, I naturally question the original assumptions and try changing the approach itself.",
   rB: "Alchemist"
 },
 
+// Ideator vs Curator
 {
-  sA: "When a project loses direction, I start thinking of what possibilities we have not explored yet.",
+  sA: "When a project loses direction, I naturally look for unexplored possibilities that might give us somewhere new to go.",
   rA: "Ideator",
-  sB: "When a project loses direction, I return to the strongest references or examples to get back to the core identity.",
+  sB: "When a project loses direction, I naturally look back at its strongest ideas, references, and choices to recover what should guide us.",
   rB: "Curator"
 },
 
+// Ideator vs Advocate
 {
-  sA: "When conflict blocks progress, I try to open a new path forward by introducing fresh ideas.",
+  sA: "When disagreement starts blocking progress, I naturally introduce new possibilities that might help the group find another way forward.",
   rA: "Ideator",
-  sB: "When conflict blocks progress, I try to understand what the people involved need before moving forward.",
+  sB: "When disagreement starts blocking progress, I naturally try to understand what people are reacting to or needing before we decide how to move forward.",
   rB: "Advocate"
 },
 
+// Analyst vs Catalyst
 {
-  sA: "When everyone is confused, I organize the facts, constraints, and resources until the problem becomes clear.",
+  sA: "When everyone is confused about what to do next, I naturally organize the facts, constraints, and options until the situation becomes clearer.",
   rA: "Analyst",
-  sB: "When everyone is confused, I get people aligned around an immediate direction so the group can regain momentum.",
+  sB: "When everyone is confused about what to do next, I naturally help the group choose a direction and regain forward momentum.",
   rB: "Catalyst"
 },
 
+// Analyst vs Executor
 {
-  sA: "When something goes wrong close to a deadline, I want to diagnose the cause before making the next move.",
+  sA: "When something goes wrong near a deadline, I naturally want to understand the source of the problem before deciding what to change.",
   rA: "Analyst",
-  sB: "When something goes wrong close to a deadline, I want to identify the next concrete task and start doing it.",
+  sB: "When something goes wrong near a deadline, I naturally want to identify the most important action we can take immediately.",
   rB: "Executor"
 },
 
+// Analyst vs Alchemist
 {
-  sA: "When a rule or limitation creates a problem, I'd immediately attempt to solve the problem within the real constraints.",
+  sA: "When an existing rule or limitation causes trouble, I naturally work out what the constraint actually is and how we can operate within it.",
   rA: "Analyst",
-  sB: "When a rule or limitation creates a problem, I'd immediately question whether a constraint is real or there at all.",
+  sB: "When an existing rule or limitation causes trouble, I naturally question whether we need to keep working within that constraint at all.",
   rB: "Alchemist"
 },
 
+// Analyst vs Curator
 {
-  sA: "When quality starts slipping, I check whether the process, or standards are being followed consistently for our desired result.",
+  sA: "When the quality of the work starts slipping, I naturally check whether the process, requirements, or structure has broken down.",
   rA: "Analyst",
-  sB: "When quality starts slipping, I check whether the work still feels coherent, intentional, and true to its identity.",
+  sB: "When the quality of the work starts slipping, I naturally check whether our choices still fit the project's intended character and standard.",
   rB: "Curator"
 },
 
+// Analyst vs Advocate
 {
-  sA: "When a team problem becomes complicated, I separate it into smaller parts so we can see what is actually happening.",
+  sA: "When a team problem becomes complicated, I naturally separate the issues so we can identify what is actually happening.",
   rA: "Analyst",
-  sB: "When a team problem becomes complicated, I pay attention to the emotional dynamics that may be affecting the work.",
+  sB: "When a team problem becomes complicated, I naturally pay attention to the people's perspectives, needs, and relationships that may be affecting it.",
   rB: "Advocate"
 },
 
+// Catalyst vs Executor
 {
-  sA: "When a project stalls, I naturally start coordinating people, having conversations, and trying moves to restart momentum.",
+  sA: "When a project stalls, I naturally start reconnecting people, clarifying the immediate direction, and rebuilding momentum.",
   rA: "Catalyst",
-  sB: "When a project stalls, I naturally look for the next concrete task I can personally complete to move it forward.",
+  sB: "When a project stalls, I naturally identify something concrete that can be completed and begin moving the work forward.",
   rB: "Executor"
 },
 
+// Catalyst vs Alchemist
 {
-  sA: "When everyone becomes attached to one direction, I try to rebuild excitement and commitment around where we are going.",
+  sA: "When the group becomes too attached to one direction, I naturally try to renew people's commitment to a clear path forward.",
   rA: "Catalyst",
-  sB: "When everyone becomes attached to one direction, I am willing to introduce a bold alternative to the plan even at inconvenient times.",
+  sB: "When the group becomes too attached to one direction, I naturally introduce an alternative that could change how we are approaching the work.",
   rB: "Alchemist"
 },
 
+// Catalyst vs Curator
 {
-  sA: "When outside support begins fading, I focus on communicating the project in a way that makes people care again.",
+  sA: "When outside interest in a project begins fading, I naturally think about how we can communicate it differently and reconnect people to it.",
   rA: "Catalyst",
-  sB: "When outside support begins fading, I focus on protecting what makes the project distinctive rather than external support or attention.",
+  sB: "When outside interest in a project begins fading, I naturally examine whether what we are presenting still clearly expresses what makes the project worth caring about.",
   rB: "Curator"
 },
 
+// Catalyst vs Advocate
 {
-  sA: "When a group loses confidence, I can try to rally the group and/or individuals around what we can still accomplish together.",
+  sA: "When a group loses confidence, I naturally help people reconnect to what we can still accomplish and encourage movement.",
   rA: "Catalyst",
-  sB: "When a group loses confidence, I can try to make sure each individual feels heard, supported, and appreciated to contribute to the group.",
+  sB: "When a group loses confidence, I naturally help people feel heard, supported, and able to contribute again.",
   rB: "Advocate"
 },
 
+// Executor vs Alchemist
 {
-  sA: "When the original plan becomes impossible, I choose the most workable alternative and begin building on it.",
+  sA: "When the original plan becomes impossible, I naturally choose the strongest workable alternative and start building from there.",
   rA: "Executor",
-  sB: "When the original plan becomes impossible, I use the disruption as permission to experiment with something alternative or different.",
+  sB: "When the original plan becomes impossible, I naturally use the disruption as an opportunity to test a substantially different approach.",
   rB: "Alchemist"
 },
 
+// Executor vs Curator
 {
-  sA: "When time is running out, I focus on getting the strongest or most efficient workable version finished.",
+  sA: "When time is running out, I naturally focus on getting the essential version completed and usable.",
   rA: "Executor",
-  sB: "When time is running out, I focus on removing anything that weakens the quality or branding of the final work.",
+  sB: "When time is running out, I naturally focus on protecting the most important qualities so the final result still feels intentional.",
   rB: "Curator"
 },
 
+// Executor vs Advocate
 {
-  sA: "When teammates become overwhelmed, I tend to reduce the pressure by taking responsibility for concrete tasks that need doing.",
+  sA: "When teammates become overloaded, I naturally help by taking ownership of concrete work that needs to get done.",
   rA: "Executor",
-  sB: "When teammates become overwhelmed, I tend to reduce the pressure by understanding people's capacity and helping the group adjust.",
+  sB: "When teammates become overloaded, I naturally help by understanding people's capacity and helping the group adjust how the work is distributed.",
   rB: "Advocate"
 },
 
+// Alchemist vs Curator
 {
-  sA: "When a project starts feeling stale or predictable, I want to combine unlikely elements and push it somewhere unfamiliar.",
+  sA: "When a project starts feeling repetitive, I naturally introduce an unusual combination, experiment, or change that might transform it.",
   rA: "Alchemist",
-  sB: "When a project starts feeling stale or predictable, I want to revisit strong references and identify what is worth preserving.",
+  sB: "When a project starts feeling repetitive, I naturally examine what is still strong, what has become unnecessary, and what deserves refinement.",
   rB: "Curator"
 },
 
+// Alchemist vs Advocate
 {
-  sA: "When everyone is avoiding an uncomfortable issue, I am willing to name it directly and force the issue into the open.",
+  sA: "When a group keeps avoiding an important issue, I naturally challenge the pattern and bring the underlying issue into the open.",
   rA: "Alchemist",
-  sB: "When everyone is avoiding an uncomfortable issue, I try to create enough trust for people to say what they have not been saying.",
+  sB: "When a group keeps avoiding an important issue, I naturally work to create enough trust for people to say what they have been holding back.",
   rB: "Advocate"
 },
 
+// Curator vs Advocate
 {
-  sA: "When people disagree about what 'good' looks like, I look for the standard, context, or reference that can guide the decision.",
+  sA: "When people disagree about what the work should become, I naturally look at the project's purpose, references, and existing identity to guide the decision.",
   rA: "Curator",
-  sB: "When people disagree about what 'good' looks like, I look for the underlying needs and values shaping each person's position.",
+  sB: "When people disagree about what the work should become, I naturally look at the needs, concerns, and values behind each person's position.",
   rB: "Advocate"
 },
+  
   // =====================================
 // SECTION 3: ENERGY & BURNOUT MAPPINGS
 // =====================================
