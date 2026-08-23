@@ -149,7 +149,7 @@ const questions = [
     rA: "Ideator",
     sB: "I like to challenge lines, cross taboos, and shock the system into paying attention.",
     rB: "Alchemist"
-  },,
+  },
   
   // =====================================
 // SECTION 2: CRISIS & FRICTION PAIRS
