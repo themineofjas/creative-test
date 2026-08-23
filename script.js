@@ -1,153 +1,175 @@
 // =====================================
 // SECTION 1: FOUNDATIONAL ROLE PAIRS
+// Preferred contribution in a group
 // =====================================
 
 const questions = [
 
+  // Ideator vs Analyst
   {
-    sA: "I am happiest when daydreaming about unlimited possibilities.",
+    sA: "When a group is figuring out what to do, I naturally start expanding the possibilities and making connections between different ideas.",
     rA: "Ideator",
-    sB: "I am happiest when sorting through a pile of something and bringing order to it.",
+    sB: "When a group is figuring out what to do, I naturally start organizing the information and identifying the parts we need to understand.",
     rB: "Analyst"
   },
 
+  // Catalyst vs Executor
   {
-    sA: "I prefer to be a voice of the group, getting everyone excited to start.",
+    sA: "Once a group has a direction, I naturally help create momentum by getting people aligned, involved, and ready to move.",
     rA: "Catalyst",
-    sB: "I prefer to put my head down and manually finish the work myself.",
+    sB: "Once a group has a direction, I naturally help create momentum by turning the plan into concrete tasks and visible progress.",
     rB: "Executor"
   },
 
+  // Alchemist vs Curator
   {
-    sA: "I love combining completely opposite styles or ideas together to create something different or new.",
+    sA: "When a group already has something promising, I naturally look for unusual combinations or changes that could transform it into something new.",
     rA: "Alchemist",
-    sB: "I love preserving traditions and collecting the absolute best examples of classic or timeless.",
+    sB: "When a group already has something promising, I naturally look for what should be kept, removed, or refined so the whole thing feels stronger.",
     rB: "Curator"
   },
 
+  // Advocate vs Ideator
   {
-    sA: "When a conversation hits a tense wall, I instinctively check on how everyone feels.",
+    sA: "Early in a collaboration, I naturally pay attention to what the people involved need in order to contribute well together.",
     rA: "Advocate",
-    sB: "When a conversation hits a tense wall, I offer a light-hearted, unexpected joke or reframe.",
+    sB: "Early in a collaboration, I naturally pay attention to what ideas, possibilities, or directions the group has not considered yet.",
     rB: "Ideator"
   },
 
+  // Analyst vs Catalyst
   {
-    sA: "I feel secure when there is a clear, predictable plan or layout to follow.",
+    sA: "At the beginning of a group project, I naturally help clarify the goal, constraints, resources, and how the pieces fit together.",
     rA: "Analyst",
-    sB: "I feel secure when I can actively wing it and using my charm to navigate a situation.",
+    sB: "At the beginning of a group project, I naturally help turn the shared goal into energy, commitment, and forward movement.",
     rB: "Catalyst"
   },
 
+  // Executor vs Alchemist
   {
-    sA: "I get an absolute thrill from crossing off the final item on a checklist.",
+    sA: "When a group has a rough idea, I naturally want to start turning it into something concrete that we can use, test, or build on.",
     rA: "Executor",
-    sB: "I get an absolute thrill if i can tear up the plan to try a bold experiment.",
+    sB: "When a group has a rough idea, I naturally want to experiment with it, alter it, or combine it with something unexpected.",
     rB: "Alchemist"
   },
 
+  // Curator vs Advocate
   {
-    sA: "I am highly sensitive to visual details, aesthetics, or the mood of a room.",
+    sA: "As a group develops something, I naturally notice whether the choices fit together and support a clear overall identity.",
     rA: "Curator",
-    sB: "I am highly sensitive to changes in a person's body language or vocal tone.",
+    sB: "As a group develops something, I naturally notice whether people feel heard, supported, and able to contribute effectively.",
     rB: "Advocate"
   },
 
+  // Ideator vs Catalyst
   {
-    sA: "I would rather spend an hour inventing or creating an imaginary world or scenario.",
+    sA: "When a promising direction appears, I naturally want to keep exploring what else it could become or connect to.",
     rA: "Ideator",
-    sB: "I would rather spend an hour telling a room a highly engaging story.",
+    sB: "When a promising direction appears, I naturally want to help people understand it, get behind it, and move it forward.",
     rB: "Catalyst"
   },
 
+  // Analyst vs Executor
   {
-    sA: "My brain naturally focuses on troubleshooting errors.",
+    sA: "After a group chooses a goal, I naturally want to map out what is required, what depends on what, and where problems might appear.",
     rA: "Analyst",
-    sB: "My brain naturally focuses on physically putting pieces together until it works.",
+    sB: "After a group chooses a goal, I naturally want to take the next concrete step and begin turning the plan into something real.",
     rB: "Executor"
   },
 
+  // Alchemist vs Advocate
   {
-    sA: "I don't mind rattling the cage or causing friction if it can lead to a breakthrough.",
+    sA: "In a collaborative group, I naturally contribute by questioning assumptions and introducing perspectives that may change how we see the work.",
     rA: "Alchemist",
-    sB: "I will gladly modify my language to ensure everyone feels comfortable and safe.",
+    sB: "In a collaborative group, I naturally contribute by noticing the human dynamics and helping create conditions where people can participate honestly.",
     rB: "Advocate"
   },
 
+  // Curator vs Ideator
   {
-    sA: "I excel at filtering the massive amounts of ideas and noise to find the absolute diamond in the rough.",
+    sA: "When a group has many possible ideas, I naturally want to identify which ones are strongest, most fitting, or worth developing.",
     rA: "Curator",
-    sB: "I excel at generating a massive volume of ideas and choices, even if most are unusable.",
+    sB: "When a group has many possible ideas, I naturally want to make more connections and see what additional possibilities we can generate.",
     rB: "Ideator"
   },
 
+  // Catalyst vs Advocate
   {
-    sA: "I am energized by massive, high-energy gatherings with many connections.",
+    sA: "When people come together around a shared project, I naturally help create movement by connecting people to the goal and encouraging participation.",
     rA: "Catalyst",
-    sB: "I am energized by deep, intimate, one-on-one conversations typically.",
+    sB: "When people come together around a shared project, I naturally help strengthen the relationships and trust that allow people to contribute well.",
     rB: "Advocate"
   },
 
+  // Executor vs Curator
   {
-    sA: "I would rather build a usuable, working prototype right away, even if it looks slightly unfinished.",
+    sA: "As a group approaches a finished result, I naturally focus on making sure the essential pieces are completed and usable.",
     rA: "Executor",
-    sB: "I would rather spend time reviewing things to ensure the presentation is flawless.",
+    sB: "As a group approaches a finished result, I naturally focus on making sure the final choices feel intentional, coherent, and true to the project.",
     rB: "Curator"
   },
 
+  // Analyst vs Alchemist
   {
-    sA: "I enjoy when I can folow data, history, and proven logical systems and information.",
+    sA: "When a group inherits an existing approach, I naturally want to understand how it works and where its structure could be improved.",
     rA: "Analyst",
-    sB: "I enjoy when I can follow intuition, gut feelings, and happy accidents.",
+    sB: "When a group inherits an existing approach, I naturally want to question its assumptions and experiment with doing it differently.",
     rB: "Alchemist"
   },
 
+  // Ideator vs Executor
   {
-    sA: "I enjoy the process of figuring out the initial concepts of a project.",
+    sA: "When a group starts with a blank page, I naturally want to help generate directions, concepts, and possibilities.",
     rA: "Ideator",
-    sB: "I get really interested once the actionable building phase actually starts.",
+    sB: "When a group starts with a blank page, I naturally want to help create an early version we can actually see, use, or respond to.",
     rB: "Executor"
   },
 
+  // Analyst vs Curator
   {
-    sA: "I look at things mostly through a lens of utility, function, and efficiency.",
+    sA: "When reviewing the group's work, I naturally notice whether the reasoning, structure, and practical requirements hold together.",
     rA: "Analyst",
-    sB: "I look at things mostly through a lens of emotional impact, taste, and timeless beauty.",
+    sB: "When reviewing the group's work, I naturally notice whether the selection, presentation, and overall identity hold together.",
     rB: "Curator"
   },
 
+  // Catalyst vs Alchemist
   {
-    sA: "I enjoy adapting my style to win over the crowd I am currently pitching or talking to.",
+    sA: "When a group needs a new direction, I naturally want to build enthusiasm and organize people around a path forward.",
     rA: "Catalyst",
-    sB: "I prefer to lean on my individual preferences, even if i know the audience will disagree.",
+    sB: "When a group needs a new direction, I naturally want to disrupt the existing pattern and introduce an experiment that could change the work.",
     rB: "Alchemist"
   },
 
+  // Executor vs Advocate
   {
-    sA: "When working, I'd rather be left completely alone to get into a state of deep flow.",
+    sA: "When several people need help moving a project forward, I naturally contribute by taking ownership of concrete work that needs to get done.",
     rA: "Executor",
-    sB: "When working, I'd rather feel emotionally connected and aligned with my team.",
+    sB: "When several people need help moving a project forward, I naturally contribute by noticing people's needs, capacity, and ability to work well together.",
     rB: "Advocate"
   },
 
+  // Analyst vs Advocate
   {
-    sA: "I solve problems by stepping back, observing, and analyzing the moving parts.",
+    sA: "When a group sees a situation differently, I naturally help by separating the issues, identifying what we know, and clarifying the problem.",
     rA: "Analyst",
-    sB: "I solve problems by stepping in, empathetic, and listening to the people.",
+    sB: "When a group sees a situation differently, I naturally help by understanding the perspectives, concerns, and needs behind people's positions.",
     rB: "Advocate"
   },
 
+  // Catalyst vs Curator
   {
-    sA: "I am more focused on the future growth, reach, and expansion of a project.",
+    sA: "When a group is ready to share its work with others, I naturally think about how to communicate it, attract interest, and build participation.",
     rA: "Catalyst",
-    sB: "I am focused on connecting the deep roots, context, and history of a project.",
+    sB: "When a group is ready to share its work with others, I naturally think about whether the presentation accurately reflects its quality and identity.",
     rB: "Curator"
   },
 
+  // Ideator vs Alchemist
   {
-    sA: "I'd mainly rather come up with many suggestions and ideas for the project.",
+    sA: "When a group has one workable idea, I naturally want to generate additional directions, possibilities, or connections around it.",
     rA: "Ideator",
-    sB: "I'd mainly rather challenge ideas, combine ideas, test them to see what combinations may work.",
+    sB: "When a group has one workable idea, I naturally want to take it apart, recombine it, or test an unconventional variation of it.",
     rB: "Alchemist"
   },
   
