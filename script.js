@@ -723,7 +723,7 @@ const profiles = {
 // APPLICATION STATE
 // =====================================
 
-let currentQuestionIndex = 42;
+let currentQuestionIndex = 0;
 
 let scores = {
   Ideator: 0,
