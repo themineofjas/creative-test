@@ -300,7 +300,7 @@ const questions = [
   rA: "Curator",
   sB: "When people disagree about what 'good' looks like, I look for the underlying needs and values shaping each person's position.",
   rB: "Advocate"
-}
+},
 
 ];
 
