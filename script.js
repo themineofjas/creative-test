@@ -5,44 +5,44 @@
 const questions = [
 
   {
-    sA: "I am happiest when daydreaming about unlimited possibilities without rules.",
+    sA: "I am happiest when daydreaming about unlimited possibilities.",
     rA: "Ideator",
-    sB: "I am happiest when sorting through a pile of clutter and bringing clean order to it.",
+    sB: "I am happiest when sorting through a pile of something and bringing order to it.",
     rB: "Analyst"
   },
 
   {
-    sA: "I prefer to be the voice of the group, getting everyone excited to start.",
+    sA: "I prefer to be a voice of the group, getting everyone excited to start.",
     rA: "Catalyst",
-    sB: "I prefer to quietly put my head down and manually finish the work myself.",
+    sB: "I prefer to put my head down and manually finish the work myself.",
     rB: "Executor"
   },
 
   {
-    sA: "I love smashing completely opposite styles together to create a weird, messy shock.",
+    sA: "I love combining completely opposite styles or ideas together to create something different or new.",
     rA: "Alchemist",
-    sB: "I love preserving traditions and collecting the absolute best examples of a classic.",
+    sB: "I love preserving traditions and collecting the absolute best examples of "classic" or timeless".",
     rB: "Curator"
   },
 
   {
     sA: "When a conversation hits a tense wall, I instinctively check on how everyone feels.",
     rA: "Advocate",
-    sB: "When a conversation hits a tense wall, I offer a wild, unexpected joke or alternative view.",
+    sB: "When a conversation hits a tense wall, I offer a light-hearted, unexpected joke or reframe.",
     rB: "Ideator"
   },
 
   {
     sA: "I feel secure when there is a clear, predictable plan or layout to follow.",
     rA: "Analyst",
-    sB: "I feel secure when I am actively winging it and using my charm to navigate a situation.",
+    sB: "I feel secure when I can actively wing it and using my charm to navigate a situation.",
     rB: "Catalyst"
   },
 
   {
     sA: "I get an absolute thrill from crossing off the final item on a checklist.",
     rA: "Executor",
-    sB: "I get an absolute thrill from tearing up the plan at the last minute to try a bold experiment.",
+    sB: "I get an absolute thrill if i can tear up the plan to try a bold experiment.",
     rB: "Alchemist"
   },
 
@@ -54,100 +54,100 @@ const questions = [
   },
 
   {
-    sA: "I would rather spend an hour inventing an imaginary world or scenario.",
+    sA: "I would rather spend an hour inventing or creating an imaginary world or scenario.",
     rA: "Ideator",
-    sB: "I would rather spend an hour telling a captive room a highly engaging story.",
+    sB: "I would rather spend an hour telling a room a highly engaging story.",
     rB: "Catalyst"
   },
 
   {
-    sA: "My brain naturally focuses on troubleshooting errors and mapping out constraints.",
+    sA: "My brain naturally focuses on troubleshooting errors.",
     rA: "Analyst",
     sB: "My brain naturally focuses on physically putting pieces together until it works.",
     rB: "Executor"
   },
 
   {
-    sA: "I don't mind rattling the cage or causing friction if it forces a breakthrough.",
+    sA: "I don't mind rattling the cage or causing friction if it can lead to a breakthrough.",
     rA: "Alchemist",
     sB: "I will gladly modify my language to ensure everyone feels comfortable and safe.",
     rB: "Advocate"
   },
 
   {
-    sA: "I excel at filtering the noise to find the absolute diamond in the rough.",
+    sA: "I excel at filtering the massive amounts of ideas and noise to find the absolute diamond in the rough.",
     rA: "Curator",
-    sB: "I excel at generating a massive volume of choices, even if most are unusable.",
+    sB: "I excel at generating a massive volume of ideas and choices, even if most are unusable.",
     rB: "Ideator"
   },
 
   {
-    sA: "I am energized by massive, high-energy gatherings with loose connections.",
+    sA: "I am energized by massive, high-energy gatherings with many connections.",
     rA: "Catalyst",
-    sB: "I am energized by deep, intimate, one-on-one conversations.",
+    sB: "I am energized by deep, intimate, one-on-one conversations typically.",
     rB: "Advocate"
   },
 
   {
-    sA: "I would rather build a rough, working prototype right away, even if it looks ugly.",
+    sA: "I would rather build a usuable, working prototype right away, even if it looks slightly unfinished.",
     rA: "Executor",
     sB: "I would rather spend time reviewing things to ensure the presentation is flawless.",
     rB: "Curator"
   },
 
   {
-    sA: "I respect data, history, and proven logical systems.",
+    sA: "I enjoy when i can folow data, history, and proven logical systems and information.",
     rA: "Analyst",
-    sB: "I respect intuition, raw gut feelings, and happy accidents.",
+    sB: "I enjoy when i can follow intuition, gut feelings, and happy accidents.",
     rB: "Alchemist"
   },
 
   {
-    sA: "I lose interest once the initial concept is figured out.",
+    sA: "I enjoy the process of figuring out the initial concepts of a project.",
     rA: "Ideator",
-    sB: "I only get interested once the manual building phase actually starts.",
+    sB: "I get really interested once the actionable building phase actually starts.",
     rB: "Executor"
   },
 
   {
-    sA: "I look at things through a lens of utility, function, and sheer efficiency.",
+    sA: "I look at things mostly through a lens of utility, function, and efficiency.",
     rA: "Analyst",
-    sB: "I look at things through a lens of emotional impact, taste, and timeless beauty.",
+    sB: "I look at things mostly through a lens of emotional impact, taste, and timeless beauty.",
     rB: "Curator"
   },
 
   {
-    sA: "I naturally adapt my style to win over whatever crowd I am currently pitching to.",
+    sA: "I enjoy adapting my style to win over the crowd I am currently pitching or talking to.",
     rA: "Catalyst",
-    sB: "I stubbornly stick to my individual style, regardless of what the crowd thinks.",
+    sB: "I prefer to lean on my individual preferences, even if i know the audience will disagree.",
     rB: "Alchemist"
   },
 
   {
-    sA: "When working, I want to be left completely alone to get into a state of deep flow.",
+    sA: "When working, I'd rather to be left completely alone to get into a state of deep flow.",
     rA: "Executor",
-    sB: "When working, I need to feel emotionally connected and aligned with my team.",
+    sB: "When working, I'd rather feel emotionally connected and aligned with my team.",
     rB: "Advocate"
   },
 
   {
-    sA: "I solve problems by stepping back, detached, and analyzing the moving parts.",
+    sA: "I solve problems by stepping back, observing, and analyzing the moving parts.",
     rA: "Analyst",
     sB: "I solve problems by stepping in, empathetic, and listening to the people.",
     rB: "Advocate"
   },
 
   {
-    sA: "I am focused on the future growth, reach, and outer momentum of a project.",
+    sA: "I am more focused on the future growth, reach, and expansion of a project.",
     rA: "Catalyst",
-    sB: "I am focused on honoring the deep roots, context, and history of a project.",
+    sB: "I am focused on connecting the deep roots, context, and history of a project.",
     rB: "Curator"
   },
 
   {
-    sA: "I like to build elegant, harmonious ideas that make sense to people.",
+    sA: "I'd mainly rather come up with many suggestions and ideas for the project.",
     rA: "Ideator",
-    sB: "I like to challenge lines, cross taboos, and shock the system into paying attention.",
+    sB: "I'd mainly rather challenge ideas, combine ideas, test them to see what combinations may work.",
     rB: "Alchemist"
   },
   
@@ -163,9 +163,9 @@ const questions = [
 },
 
 {
-  sA: "When a group gets discouraged, I help by introducing a fresh possibility no one has considered.",
+  sA: "When a group gets discouraged, I help by introducing a fresh possibility or new idea.",
   rA: "Ideator",
-  sB: "When a group gets discouraged, I help by restoring energy and getting people moving again.",
+  sB: "When a group gets discouraged, I help by encouraging, motivating, and/or getting people moving again.",
   rB: "Catalyst"
 },
 
@@ -177,28 +177,28 @@ const questions = [
 },
 
 {
-  sA: "When the obvious solution fails, I branch outward and generate several alternative possibilities.",
+  sA: "When the obvious solution fails, I branch outward and generate or find several alternative possibilities.",
   rA: "Ideator",
-  sB: "When the obvious solution fails, I question the assumptions behind it and try a radically different route.",
+  sB: "When the obvious solution fails, I question assumptions behind it and try a radically different route.",
   rB: "Alchemist"
 },
 
 {
-  sA: "When a project loses direction, I start asking what possibilities we have not explored yet.",
+  sA: "When a project loses direction, I start thinking of what possibilities we have not explored yet.",
   rA: "Ideator",
-  sB: "When a project loses direction, I return to the strongest references or examples to recover its identity.",
+  sB: "When a project loses direction, I return to the strongest references or examples to get back to the core identity.",
   rB: "Curator"
 },
 
 {
   sA: "When conflict blocks progress, I try to open a new path forward by introducing fresh ideas.",
   rA: "Ideator",
-  sB: "When conflict blocks progress, I try to understand what the people involved need before pushing forward.",
+  sB: "When conflict blocks progress, I try to understand what the people involved need before moving forward.",
   rB: "Advocate"
 },
 
 {
-  sA: "When everyone is confused, I organize the facts, constraints, and dependencies until the problem becomes clear.",
+  sA: "When everyone is confused, I organize the facts, constraints, and resources until the problem becomes clear.",
   rA: "Analyst",
   sB: "When everyone is confused, I get people aligned around an immediate direction so the group can regain momentum.",
   rB: "Catalyst"
@@ -212,14 +212,14 @@ const questions = [
 },
 
 {
-  sA: "When a rule or limitation creates a problem, I work out how to solve the problem within the real constraints.",
+  sA: "When a rule or limitation creates a problem, I'd immediately attempt to solve the problem within the real constraints.",
   rA: "Analyst",
-  sB: "When a rule or limitation creates a problem, I question whether that rule should be controlling us at all.",
+  sB: "When a rule or limitation creates a problem, I'd immediately question whether a constraint is real or there at all.",
   rB: "Alchemist"
 },
 
 {
-  sA: "When quality starts slipping, I check whether the system, process, or standards are being followed consistently.",
+  sA: "When quality starts slipping, I check whether the process, or standards are being followed consistently for our desired result.",
   rA: "Analyst",
   sB: "When quality starts slipping, I check whether the work still feels coherent, intentional, and true to its identity.",
   rB: "Curator"
@@ -228,49 +228,49 @@ const questions = [
 {
   sA: "When a team problem becomes complicated, I separate it into smaller parts so we can see what is actually happening.",
   rA: "Analyst",
-  sB: "When a team problem becomes complicated, I pay attention to the human dynamics that may be affecting the work.",
+  sB: "When a team problem becomes complicated, I pay attention to the emotional dynamics that may be affecting the work.",
   rB: "Advocate"
 },
 
 {
-  sA: "When a project stalls, I naturally start coordinating people, conversations, and next moves to restart momentum.",
+  sA: "When a project stalls, I naturally start coordinating people, having conversations, and trying moves to restart momentum.",
   rA: "Catalyst",
-  sB: "When a project stalls, I naturally look for something concrete I can personally complete to move it forward.",
+  sB: "When a project stalls, I naturally look for the next concrete task I can personally complete to move it forward.",
   rB: "Executor"
 },
 
 {
   sA: "When everyone becomes attached to one direction, I try to rebuild excitement and commitment around where we are going.",
   rA: "Catalyst",
-  sB: "When everyone becomes attached to one direction, I am willing to introduce a bold alternative that disrupts the plan.",
+  sB: "When everyone becomes attached to one direction, I am willing to introduce a bold alternative to the plan even at inconvenient times.",
   rB: "Alchemist"
 },
 
 {
   sA: "When outside support begins fading, I focus on communicating the project in a way that makes people care again.",
   rA: "Catalyst",
-  sB: "When outside support begins fading, I focus on protecting what makes the project distinctive rather than chasing attention.",
+  sB: "When outside support begins fading, I focus on protecting what makes the project distinctive rather than external support or attention.",
   rB: "Curator"
 },
 
 {
-  sA: "When a group loses confidence, I instinctively rally people around what we can still accomplish together.",
+  sA: "When a group loses confidence, I can try to rally the group and/or individuals around what we can still accomplish together.",
   rA: "Catalyst",
-  sB: "When a group loses confidence, I instinctively make sure people feel heard, supported, and reconnected to one another.",
+  sB: "When a group loses confidence, I can try to make sure each individual feels heard, supported, and appreciated to contribute to the group.",
   rB: "Advocate"
 },
 
 {
-  sA: "When the original plan becomes impossible, I choose the most workable alternative and begin building it.",
+  sA: "When the original plan becomes impossible, I choose the most workable alternative and begin building on it.",
   rA: "Executor",
-  sB: "When the original plan becomes impossible, I use the disruption as permission to experiment with something unexpected.",
+  sB: "When the original plan becomes impossible, I use the disruption as permission to experiment with something alternative or different.",
   rB: "Alchemist"
 },
 
 {
-  sA: "When time is running out, I concentrate on getting the strongest workable version finished.",
+  sA: "When time is running out, I focus on getting the strongest or most efficient workable version finished.",
   rA: "Executor",
-  sB: "When time is running out, I concentrate on removing anything that weakens the quality or integrity of the final work.",
+  sB: "When time is running out, I focus on removing anything that weakens the quality or branding of the final work.",
   rB: "Curator"
 },
 
