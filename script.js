@@ -346,153 +346,174 @@ const questions = [
 },
   
   // =====================================
-// SECTION 3: ENERGY & BURNOUT MAPPINGS
+// SECTION 3: SUSTAINABLE GROUP CONTRIBUTION
 // =====================================
 
+// Ideator vs Analyst
 {
-  sA: "I come away energized after having space to explore possibilities, make connections, and follow ideas wherever they lead.",
+  sA: "Over a long project, I can keep contributing by generating possibilities, making connections, and helping the group see new directions.",
   rA: "Ideator",
-  sB: "I come away energized after untangling something complicated and finally understanding how all the pieces fit together.",
+  sB: "Over a long project, I can keep contributing by making sense of complexity, clarifying information, and helping the group understand how things fit together.",
   rB: "Analyst"
 },
 
+// Ideator vs Catalyst
 {
-  sA: "I feel most alive when I have room to wander mentally and discover ideas I did not expect.",
+  sA: "I can repeatedly contribute to a group by bringing in fresh ideas and opening up possibilities that were not previously considered.",
   rA: "Ideator",
-  sB: "I feel most alive when I can share an idea with other people and watch their excitement build.",
+  sB: "I can repeatedly contribute to a group by keeping people connected to the goal and helping maintain forward movement.",
   rB: "Catalyst"
 },
 
+// Ideator vs Executor
 {
-  sA: "I gain energy from beginning with an open question and imagining what might be possible.",
+  sA: "During a long collaboration, I naturally keep noticing additional directions, possibilities, or connections the group could explore.",
   rA: "Ideator",
-  sB: "I gain energy from taking something unfinished and steadily turning it into something real.",
+  sB: "During a long collaboration, I naturally keep noticing concrete work that can be completed to turn the group's plans into reality.",
   rB: "Executor"
 },
 
+// Ideator vs Alchemist
 {
-  sA: "I am refreshed by having enough freedom to follow interesting ideas in several directions.",
+  sA: "I can keep helping a group by expanding the range of ideas and possibilities available to us.",
   rA: "Ideator",
-  sB: "I am refreshed by having enough freedom to experiment, break patterns, and try things no one expects.",
+  sB: "I can keep helping a group by experimenting with existing ideas and transforming them into something unexpected.",
   rB: "Alchemist"
 },
 
+// Ideator vs Curator
 {
-  sA: "I can happily spend hours generating concepts, connections, and possibilities without needing to settle on one immediately.",
+  sA: "When a project develops over time, I naturally keep looking for additional ideas, connections, and directions worth exploring.",
   rA: "Ideator",
-  sB: "I can happily spend hours exploring references, examples, and details until I understand what belongs and what does not.",
+  sB: "When a project develops over time, I naturally keep identifying which ideas, references, and choices are strongest and most fitting.",
   rB: "Curator"
 },
 
+// Ideator vs Advocate
 {
-  sA: "A good creative day leaves me energized because my mind had plenty of room to explore.",
+  sA: "In an ongoing collaboration, I naturally keep contributing by bringing new possibilities into the conversation.",
   rA: "Ideator",
-  sB: "A good creative day leaves me energized because I felt genuinely connected to the people I was working with.",
+  sB: "In an ongoing collaboration, I naturally keep contributing by noticing what people need in order to participate and work well together.",
   rB: "Advocate"
 },
 
+// Analyst vs Catalyst
 {
-  sA: "I enjoy sustained concentration when I am organizing information, solving problems, or improving a system.",
+  sA: "I can consistently support a group by clarifying problems, organizing information, and making complicated situations easier to understand.",
   rA: "Analyst",
-  sB: "I enjoy sustained activity when I am coordinating people, communicating ideas, or keeping momentum high.",
+  sB: "I can consistently support a group by helping people stay engaged, coordinated, and moving toward the shared goal.",
   rB: "Catalyst"
 },
 
+// Analyst vs Executor
 {
-  sA: "I leave work satisfied when I have made something more logical, reliable, or clearly organized.",
+  sA: "As a project continues, I naturally keep examining how the pieces work together and where the structure may need adjustment.",
   rA: "Analyst",
-  sB: "I leave work satisfied when I can point to something concrete that I personally completed.",
+  sB: "As a project continues, I naturally keep identifying what needs to be done next and turning plans into completed work.",
   rB: "Executor"
 },
 
+// Analyst vs Alchemist
 {
-  sA: "I am energized by discovering the underlying logic that makes a complicated situation finally make sense.",
+  sA: "I can stay engaged for a long time when my contribution involves understanding systems, identifying patterns, and improving how things work.",
   rA: "Analyst",
-  sB: "I am energized by discovering what happens when I challenge the logic everyone else has been taking for granted.",
+  sB: "I can stay engaged for a long time when my contribution involves questioning assumptions, experimenting, and changing how things are done.",
   rB: "Alchemist"
 },
 
+// Analyst vs Curator
 {
-  sA: "I enjoy spending long periods refining the structure of something until every part has a clear purpose.",
+  sA: "Throughout a project, I naturally keep checking whether the reasoning, structure, requirements, and processes still make sense.",
   rA: "Analyst",
-  sB: "I enjoy spending long periods refining the selection, presentation, or details until everything feels right together.",
+  sB: "Throughout a project, I naturally keep checking whether the choices, references, presentation, and overall identity still make sense together.",
   rB: "Curator"
 },
 
+// Analyst vs Advocate
 {
-  sA: "I recharge through quiet problem-solving where I can think clearly and make sense of complexity.",
+  sA: "In a long-running group, I naturally keep helping people understand problems, decisions, and how different parts of the work relate.",
   rA: "Analyst",
-  sB: "I recharge through meaningful conversations where people can be open, understood, and honest with one another.",
+  sB: "In a long-running group, I naturally keep helping people understand one another, communicate needs, and work together effectively.",
   rB: "Advocate"
 },
 
+// Catalyst vs Executor
 {
-  sA: "I gain energy when there is movement around me—people responding, conversations happening, and something gaining traction.",
+  sA: "Over time, I naturally help a project keep moving by reconnecting people to priorities, coordinating effort, and maintaining momentum.",
   rA: "Catalyst",
-  sB: "I gain energy when I can settle into the work itself and make visible progress without having to keep talking about it.",
+  sB: "Over time, I naturally help a project keep moving by taking ownership of concrete tasks and steadily producing completed work.",
   rB: "Executor"
 },
 
+// Catalyst vs Alchemist
 {
-  sA: "I am at my best when I can build enthusiasm around a direction and help other people want to participate.",
+  sA: "I can sustainably contribute by keeping people engaged with a direction and helping the group maintain momentum around it.",
   rA: "Catalyst",
-  sB: "I am at my best when I can inject something unexpected that changes the direction completely.",
+  sB: "I can sustainably contribute by keeping the work from becoming predictable and introducing experiments that change its direction.",
   rB: "Alchemist"
 },
 
+// Catalyst vs Curator
 {
-  sA: "A project becomes more exciting to me as more people begin noticing it, discussing it, or joining in.",
+  sA: "As a project grows, I naturally keep thinking about how to communicate it, involve people, and build participation around it.",
   rA: "Catalyst",
-  sB: "A project becomes more exciting to me as its voice, references, and overall identity become increasingly distinctive.",
+  sB: "As a project grows, I naturally keep thinking about how to protect its quality, identity, and consistency as more gets added.",
   rB: "Curator"
 },
 
+// Catalyst vs Advocate
 {
-  sA: "I feel restored when I am around people who are energized, responsive, and ready to make something happen.",
+  sA: "In an ongoing group, I naturally keep strengthening participation by encouraging involvement and reconnecting people to what we are trying to accomplish.",
   rA: "Catalyst",
-  sB: "I feel restored when I am around people who trust one another enough to be genuine and emotionally present.",
+  sB: "In an ongoing group, I naturally keep strengthening participation by noticing people's capacity, concerns, and ability to contribute well.",
   rB: "Advocate"
 },
 
+// Executor vs Alchemist
 {
-  sA: "I can stay engaged for a long time when there is a clear task in front of me and I can keep making tangible progress.",
+  sA: "I can keep contributing to a project by steadily turning decisions into finished, usable work.",
   rA: "Executor",
-  sB: "I can stay engaged for a long time when I am allowed to improvise, test strange ideas, and see what happens.",
+  sB: "I can keep contributing to a project by regularly testing variations, recombining ideas, and finding new ways to approach the work.",
   rB: "Alchemist"
 },
 
+// Executor vs Curator
 {
-  sA: "I get a deep sense of satisfaction from finishing something usable, functional, and complete.",
+  sA: "As a project continues, I naturally stay focused on making sure important pieces actually get completed.",
   rA: "Executor",
-  sB: "I get a deep sense of satisfaction from refining something until its quality, presentation, and character feel exactly right.",
+  sB: "As a project continues, I naturally stay focused on making sure the growing body of work remains coherent and meets the intended standard.",
   rB: "Curator"
 },
 
+// Executor vs Advocate
 {
-  sA: "I often recover my energy by getting away from discussion and doing something practical with my hands or attention.",
+  sA: "In a long collaboration, I naturally support the group by noticing unfinished work and taking responsibility for getting concrete things done.",
   rA: "Executor",
-  sB: "I often recover my energy by reconnecting with someone, talking things through, or restoring a sense of mutual understanding.",
+  sB: "In a long collaboration, I naturally support the group by noticing when people need clarification, support, adjustment, or better conditions for contributing.",
   rB: "Advocate"
 },
 
+// Alchemist vs Curator
 {
-  sA: "I feel energized when I can take familiar ingredients and combine them into something people have not seen before.",
+  sA: "As a project develops, I naturally keep looking for opportunities to remix, challenge, or transform what we have already created.",
   rA: "Alchemist",
-  sB: "I feel energized when I can discover, preserve, or present something unusually good that deserves more attention.",
+  sB: "As a project develops, I naturally keep looking for opportunities to strengthen the selection, coherence, and identity of what we have already created.",
   rB: "Curator"
 },
 
+// Alchemist vs Advocate
 {
-  sA: "I feel most engaged with a group when there is enough freedom to challenge assumptions and say what everyone else is avoiding.",
+  sA: "Over time, I naturally help a group by challenging patterns that have become limiting and introducing different ways of working or thinking.",
   rA: "Alchemist",
-  sB: "I feel most engaged with a group when there is enough trust for people to be candid without being dismissed or shut down.",
+  sB: "Over time, I naturally help a group by noticing relational patterns that are limiting participation and helping people work through them.",
   rB: "Advocate"
 },
 
+// Curator vs Advocate
 {
-  sA: "I can lose track of time while selecting, comparing, arranging, or refining things until the whole experience feels coherent.",
+  sA: "In an ongoing collaboration, I naturally keep paying attention to whether the work itself remains coherent, intentional, and true to what the group is creating.",
   rA: "Curator",
-  sB: "I can lose track of time while listening closely to people and helping create an environment where they can do their best work.",
+  sB: "In an ongoing collaboration, I naturally keep paying attention to whether the people involved remain supported, understood, and able to contribute well.",
   rB: "Advocate"
 }
 
