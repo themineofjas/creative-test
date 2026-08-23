@@ -96,9 +96,9 @@ const questions = [
   },
 
   {
-    sA: "I enjoy when i can folow data, history, and proven logical systems and information.",
+    sA: "I enjoy when I can folow data, history, and proven logical systems and information.",
     rA: "Analyst",
-    sB: "I enjoy when i can follow intuition, gut feelings, and happy accidents.",
+    sB: "I enjoy when I can follow intuition, gut feelings, and happy accidents.",
     rB: "Alchemist"
   },
 
@@ -124,7 +124,7 @@ const questions = [
   },
 
   {
-    sA: "When working, I'd rather to be left completely alone to get into a state of deep flow.",
+    sA: "When working, I'd rather be left completely alone to get into a state of deep flow.",
     rA: "Executor",
     sB: "When working, I'd rather feel emotionally connected and aligned with my team.",
     rB: "Advocate"
