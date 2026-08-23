@@ -170,7 +170,7 @@ const profiles = {
     </div>
 
     <h3 class="section-title">
-      ✨ Your Way of Moving Through the World
+       Your Way of Moving Through the World
     </h3>
 
     <p class="profile-text">
@@ -183,7 +183,7 @@ const profiles = {
     </p>
 
     <h3 class="section-title">
-      🚀 Your Group Superpowers
+       Your Group Superpowers
     </h3>
 
     <p class="profile-text">
@@ -208,7 +208,7 @@ const profiles = {
     </div>
 
     <h3 class="section-title">
-      ✨ Your Way of Moving Through the World
+       Your Way of Moving Through the World
     </h3>
 
     <p class="profile-text">
@@ -219,7 +219,7 @@ const profiles = {
     </p>
 
     <h3 class="section-title">
-      🚀 Your Group Superpowers
+       Your Group Superpowers
     </h3>
 
     <p class="profile-text">
@@ -244,7 +244,7 @@ const profiles = {
     </div>
 
     <h3 class="section-title">
-      ✨ Your Way of Moving Through the World
+       Your Way of Moving Through the World
     </h3>
 
     <p class="profile-text">
@@ -255,7 +255,7 @@ const profiles = {
     </p>
 
     <h3 class="section-title">
-      🚀 Your Group Superpowers
+       Your Group Superpowers
     </h3>
 
     <p class="profile-text">
@@ -280,7 +280,7 @@ const profiles = {
     </div>
 
     <h3 class="section-title">
-      ✨ Your Way of Moving Through the World
+       Your Way of Moving Through the World
     </h3>
 
     <p class="profile-text">
@@ -291,7 +291,7 @@ const profiles = {
     </p>
 
     <h3 class="section-title">
-      🚀 Your Group Superpowers
+       Your Group Superpowers
     </h3>
 
     <p class="profile-text">
@@ -317,7 +317,7 @@ const profiles = {
     </div>
 
     <h3 class="section-title">
-      ✨ Your Way of Moving Through the World
+       Your Way of Moving Through the World
     </h3>
 
     <p class="profile-text">
@@ -328,7 +328,7 @@ const profiles = {
     </p>
 
     <h3 class="section-title">
-      🚀 Your Group Superpowers
+       Your Group Superpowers
     </h3>
 
     <p class="profile-text">
@@ -353,7 +353,7 @@ const profiles = {
     </div>
 
     <h3 class="section-title">
-      ✨ Your Way of Moving Through the World
+       Your Way of Moving Through the World
     </h3>
 
     <p class="profile-text">
@@ -364,7 +364,7 @@ const profiles = {
     </p>
 
     <h3 class="section-title">
-      🚀 Your Group Superpowers
+       Your Group Superpowers
     </h3>
 
     <p class="profile-text">
@@ -401,7 +401,7 @@ const profiles = {
     </p>
 
     <h3 class="section-title">
-      🚀 Your Group Superpowers
+       Your Group Superpowers
     </h3>
 
     <p class="profile-text">
