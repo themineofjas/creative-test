@@ -21,7 +21,7 @@ const questions = [
   {
     sA: "I love combining completely opposite styles or ideas together to create something different or new.",
     rA: "Alchemist",
-    sB: "I love preserving traditions and collecting the absolute best examples of classic or timeless".",
+    sB: "I love preserving traditions and collecting the absolute best examples of classic or timeless.",
     rB: "Curator"
   },
 
