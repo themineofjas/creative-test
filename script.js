@@ -149,7 +149,158 @@ const questions = [
     rA: "Ideator",
     sB: "I like to challenge lines, cross taboos, and shock the system into paying attention.",
     rB: "Alchemist"
-  }
+  },,
+  
+  // =====================================
+// SECTION 2: CRISIS & FRICTION PAIRS
+// =====================================
+
+{
+  sA: "When a project starts falling apart, my first instinct is to imagine several new ways it could still work.",
+  rA: "Ideator",
+  sB: "When a project starts falling apart, my first instinct is to identify exactly where the breakdown began.",
+  rB: "Analyst"
+},
+
+{
+  sA: "When a group gets discouraged, I help by introducing a fresh possibility no one has considered.",
+  rA: "Ideator",
+  sB: "When a group gets discouraged, I help by restoring energy and getting people moving again.",
+  rB: "Catalyst"
+},
+
+{
+  sA: "When a deadline suddenly gets tighter, I look for a different approach that might open up more options.",
+  rA: "Ideator",
+  sB: "When a deadline suddenly gets tighter, I narrow my focus and start completing the most essential tasks.",
+  rB: "Executor"
+},
+
+{
+  sA: "When the obvious solution fails, I branch outward and generate several alternative possibilities.",
+  rA: "Ideator",
+  sB: "When the obvious solution fails, I question the assumptions behind it and try a radically different route.",
+  rB: "Alchemist"
+},
+
+{
+  sA: "When a project loses direction, I start asking what possibilities we have not explored yet.",
+  rA: "Ideator",
+  sB: "When a project loses direction, I return to the strongest references or examples to recover its identity.",
+  rB: "Curator"
+},
+
+{
+  sA: "When conflict blocks progress, I try to open a new path forward by introducing fresh ideas.",
+  rA: "Ideator",
+  sB: "When conflict blocks progress, I try to understand what the people involved need before pushing forward.",
+  rB: "Advocate"
+},
+
+{
+  sA: "When everyone is confused, I organize the facts, constraints, and dependencies until the problem becomes clear.",
+  rA: "Analyst",
+  sB: "When everyone is confused, I get people aligned around an immediate direction so the group can regain momentum.",
+  rB: "Catalyst"
+},
+
+{
+  sA: "When something goes wrong close to a deadline, I want to diagnose the cause before making the next move.",
+  rA: "Analyst",
+  sB: "When something goes wrong close to a deadline, I want to identify the next concrete task and start doing it.",
+  rB: "Executor"
+},
+
+{
+  sA: "When a rule or limitation creates a problem, I work out how to solve the problem within the real constraints.",
+  rA: "Analyst",
+  sB: "When a rule or limitation creates a problem, I question whether that rule should be controlling us at all.",
+  rB: "Alchemist"
+},
+
+{
+  sA: "When quality starts slipping, I check whether the system, process, or standards are being followed consistently.",
+  rA: "Analyst",
+  sB: "When quality starts slipping, I check whether the work still feels coherent, intentional, and true to its identity.",
+  rB: "Curator"
+},
+
+{
+  sA: "When a team problem becomes complicated, I separate it into smaller parts so we can see what is actually happening.",
+  rA: "Analyst",
+  sB: "When a team problem becomes complicated, I pay attention to the human dynamics that may be affecting the work.",
+  rB: "Advocate"
+},
+
+{
+  sA: "When a project stalls, I naturally start coordinating people, conversations, and next moves to restart momentum.",
+  rA: "Catalyst",
+  sB: "When a project stalls, I naturally look for something concrete I can personally complete to move it forward.",
+  rB: "Executor"
+},
+
+{
+  sA: "When everyone becomes attached to one direction, I try to rebuild excitement and commitment around where we are going.",
+  rA: "Catalyst",
+  sB: "When everyone becomes attached to one direction, I am willing to introduce a bold alternative that disrupts the plan.",
+  rB: "Alchemist"
+},
+
+{
+  sA: "When outside support begins fading, I focus on communicating the project in a way that makes people care again.",
+  rA: "Catalyst",
+  sB: "When outside support begins fading, I focus on protecting what makes the project distinctive rather than chasing attention.",
+  rB: "Curator"
+},
+
+{
+  sA: "When a group loses confidence, I instinctively rally people around what we can still accomplish together.",
+  rA: "Catalyst",
+  sB: "When a group loses confidence, I instinctively make sure people feel heard, supported, and reconnected to one another.",
+  rB: "Advocate"
+},
+
+{
+  sA: "When the original plan becomes impossible, I choose the most workable alternative and begin building it.",
+  rA: "Executor",
+  sB: "When the original plan becomes impossible, I use the disruption as permission to experiment with something unexpected.",
+  rB: "Alchemist"
+},
+
+{
+  sA: "When time is running out, I concentrate on getting the strongest workable version finished.",
+  rA: "Executor",
+  sB: "When time is running out, I concentrate on removing anything that weakens the quality or integrity of the final work.",
+  rB: "Curator"
+},
+
+{
+  sA: "When teammates become overwhelmed, I tend to reduce the pressure by taking responsibility for concrete tasks that need doing.",
+  rA: "Executor",
+  sB: "When teammates become overwhelmed, I tend to reduce the pressure by understanding people's capacity and helping the group adjust.",
+  rB: "Advocate"
+},
+
+{
+  sA: "When a project starts feeling stale or predictable, I want to combine unlikely elements and push it somewhere unfamiliar.",
+  rA: "Alchemist",
+  sB: "When a project starts feeling stale or predictable, I want to revisit strong references and identify what is worth preserving.",
+  rB: "Curator"
+},
+
+{
+  sA: "When everyone is avoiding an uncomfortable issue, I am willing to name it directly and force the issue into the open.",
+  rA: "Alchemist",
+  sB: "When everyone is avoiding an uncomfortable issue, I try to create enough trust for people to say what they have not been saying.",
+  rB: "Advocate"
+},
+
+{
+  sA: "When people disagree about what 'good' looks like, I look for the standard, context, or reference that can guide the decision.",
+  rA: "Curator",
+  sB: "When people disagree about what 'good' looks like, I look for the underlying needs and values shaping each person's position.",
+  rB: "Advocate"
+}
 
 ];
 
@@ -390,7 +541,7 @@ const profiles = {
     </div>
 
     <h3 class="section-title">
-      ✨ Your Way of Moving Through the World
+       Your Way of Moving Through the World
     </h3>
 
     <p class="profile-text">
@@ -423,7 +574,7 @@ const profiles = {
 // APPLICATION STATE
 // =====================================
 
-let currentQuestionIndex = 0;
+let currentQuestionIndex = 21;
 
 let scores = {
   Ideator: 0,
