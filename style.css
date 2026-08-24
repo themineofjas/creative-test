@@ -587,3 +587,152 @@ a:focus-visible {
   background: #1BCEEE;
   color: #000000;
 }
+/* =====================================
+   QUIZ POSITION + RESPONSIVE CHOICES
+===================================== */
+
+/* Keep the assessment slightly above
+   the vertical center of the screen */
+
+#quiz-screen:not(.hide) {
+  min-height: calc(100dvh - 4rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transform: translateY(-5vh);
+}
+
+
+/* Make sure hidden screens stay hidden */
+
+.hide {
+  display: none !important;
+}
+
+
+/* Find the container holding the two
+   answer buttons, regardless of its class */
+
+#quiz-screen *:has(> #btn-sideA):has(> #btn-sideB) {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 1rem;
+}
+
+
+/* Answer buttons */
+
+#btn-sideA,
+#btn-sideB {
+  width: 100%;
+
+  padding: 1.25rem;
+
+  background: #FFFFFF;
+  color: #000000;
+
+  border: 1px solid #9B9B9B;
+  border-radius: 10px;
+
+  text-align: left;
+
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+
+/* Larger screens:
+   choices sit SIDE BY SIDE */
+
+@media (min-width: 700px) {
+
+  #quiz-screen *:has(> #btn-sideA):has(> #btn-sideB) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+
+  #btn-sideA,
+  #btn-sideB {
+    flex: 1;
+    width: 50%;
+  }
+
+}
+
+
+/* Mobile:
+   choices remain TOP / BOTTOM */
+
+@media (max-width: 699px) {
+
+  #quiz-screen:not(.hide) {
+    min-height: calc(100dvh - 2rem);
+
+    transform: translateY(-3vh);
+  }
+
+
+  #quiz-screen *:has(> #btn-sideA):has(> #btn-sideB) {
+    flex-direction: column;
+  }
+
+
+  #btn-sideA,
+  #btn-sideB {
+    width: 100%;
+  }
+
+}
+
+/* =====================================
+   RESULT BUTTONS
+===================================== */
+
+/* Retake + Download PDF */
+
+#results-screen button,
+.pdf-button,
+#retake-button {
+  background: #1BCEEE;
+  color: #000000;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 0.8rem 1.2rem;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* Same interaction for both buttons */
+
+#results-screen button:hover,
+.pdf-button:hover,
+#retake-button:hover {
+  background: #1BCEEE;
+  color: #000000;
+
+  opacity: 0.85;
+}
+
+
+/* PDF remains bottom-right */
+
+.results-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
