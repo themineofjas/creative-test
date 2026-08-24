@@ -1,214 +1,554 @@
+/* =====================================
+   GLOBAL RESET
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+
+  background: #FFFFFF;
+  color: #000000;
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
-    Roboto,
+    Arial,
     sans-serif;
 
-  background-color: #0f172a;
-  color: #f8fafc;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 100vh;
-
-  margin: 0;
-  padding: 20px;
+  line-height: 1.6;
 }
 
 
-.test-container {
-  width: 100%;
-  max-width: 700px;
-}
+/* =====================================
+   MAIN CONTAINER
+===================================== */
 
-
+.container,
 .card {
-  background-color: #1e293b;
+  width: min(92%, 700px);
 
-  border-radius: 16px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
 
-  padding: 40px;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-
-  text-align: center;
-
-  transition: all 0.3s ease;
+  background: #FFFFFF;
+  color: #000000;
 }
 
+
+/* =====================================
+   SCREENS
+===================================== */
+
+#welcome-screen,
+#quiz-screen,
+#results-screen {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+
+/* Used by JavaScript to switch screens */
 
 .hide {
-  display: none !important;
+  display: none;
 }
 
 
-.btn-main {
-  background-color: #3b82f6;
-  color: white;
+/* =====================================
+   MAIN HEADINGS
+===================================== */
 
-  border: none;
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
 
-  padding: 14px 28px;
 
-  font-size: 1.1rem;
-  font-weight: bold;
+/* Main page title */
 
-  border-radius: 8px;
+h1 {
+  color: #000000;
+
+  font-size: 2rem;
+  line-height: 1.15;
+
+  margin-bottom: 1rem;
+}
+
+
+/* =====================================
+   WELCOME SCREEN
+===================================== */
+
+#welcome-screen {
+  text-align: center;
+}
+
+
+#welcome-screen p {
+  color: #000000;
+
+  max-width: 600px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+button {
+  font: inherit;
 
   cursor: pointer;
+
+  border: none;
+  border-radius: 8px;
+
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 
-.btn-main:hover {
-  background-color: #2563eb;
+button:active {
+  transform: scale(0.99);
 }
 
 
-.retake-button {
-  margin-top: 20px;
+/* Start / retake type buttons */
+
+.main-button,
+#start-button,
+#retake-button {
+  background: #000000;
+  color: #FFFFFF;
+
+  padding: 0.9rem 1.4rem;
+
+  font-weight: 700;
+
+  border-radius: 8px;
 }
 
 
-.progress-bar-container {
-  background-color: #475569;
+.main-button:hover,
+#start-button:hover,
+#retake-button:hover {
+  background: #1BCEEE;
+  color: #000000;
+}
 
-  border-radius: 10px;
 
-  height: 8px;
+/* =====================================
+   QUIZ
+===================================== */
+
+#quiz-screen {
   width: 100%;
-
-  margin-bottom: 20px;
 }
 
 
-.progress-bar {
-  background-color: #10b981;
+/* Quiz question heading */
 
-  height: 100%;
+#quiz-screen h2,
+#quiz-screen h3 {
+  color: #000000;
+}
+
+
+/* =====================================
+   PROGRESS BAR
+===================================== */
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+
+  margin-bottom: 1.5rem;
+
+  overflow: hidden;
+
+  background: #E5E5E5;
+
+  border-radius: 999px;
+}
+
+
+#progress {
   width: 0%;
+  height: 100%;
 
-  border-radius: 10px;
+  background: #1BCEEE;
 
-  transition: width 0.3s ease;
+  border-radius: 999px;
+
+  transition: width 0.25s ease;
 }
 
 
-.timer-display {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* =====================================
+   TIMER
+===================================== */
 
-  color: #f59e0b;
+#timer {
+  display: block;
 
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
+
+  color: #9B9B9B;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  text-align: center;
 }
 
 
-.pairing-container {
+/* =====================================
+   ANSWER CHOICES
+===================================== */
+
+.choices,
+.choice-container {
   display: flex;
   flex-direction: column;
 
-  gap: 20px;
+  gap: 1rem;
 
-  margin-top: 30px;
+  width: 100%;
+
+  margin-top: 1.5rem;
 }
 
 
-.choice-box {
-  background-color: #334155;
-  color: #f8fafc;
+.choice-button,
+#btn-sideA,
+#btn-sideB {
+  width: 100%;
 
-  border: 2px solid #475569;
-  border-radius: 12px;
+  padding: 1.25rem;
 
-  padding: 24px;
+  background: #FFFFFF;
+  color: #000000;
 
-  font-size: 1.1rem;
-
-  cursor: pointer;
+  border: 1px solid #9B9B9B;
+  border-radius: 10px;
 
   text-align: left;
 
-  transition: all 0.2s ease;
-
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.45;
 }
 
 
-.choice-box:hover {
-  background-color: #475569;
-  border-color: #3b82f6;
+.choice-button:hover,
+#btn-sideA:hover,
+#btn-sideB:hover {
+  border-color: #1BCEEE;
+  background: #F8FCFD;
 }
 
 
-.vs-divider {
-  font-weight: bold;
-  color: #94a3b8;
+/* =====================================
+   RESULTS SCREEN
+===================================== */
+
+#results-screen {
+  background: #FFFFFF;
+  color: #000000;
 }
 
 
-/* -----------------------------
-   PROFILE / RESULTS LAYOUT
------------------------------ */
+/* Main results page title:
+   "Your Creative Role"
+*/
 
-.profile-title {
-  color: #10b981;
-
-  font-size: 2rem;
-
-  margin-bottom: 5px;
+#results-screen > h1,
+#results-screen > h2 {
+  color: #000000;
 }
 
 
-.profile-sub {
-  color: #94a3b8;
+/* =====================================
+   PRIMARY / SECONDARY LABELS
 
-  font-style: italic;
-
-  margin-bottom: 25px;
-}
-
+   Example:
+   YOUR PRIMARY ROLE
+   YOUR SECONDARY ROLE
+===================================== */
 
 .section-title {
-  text-align: left;
+  color: #9B9B9B;
 
-  color: #3b82f6;
+  font-size: 0.95rem;
+  line-height: 1.25;
 
-  border-bottom: 1px solid #334155;
+  font-weight: 700;
 
-  padding-bottom: 5px;
+  text-transform: uppercase;
 
-  margin-top: 25px;
+  letter-spacing: 0.06em;
+
+  margin-top: 2.5rem;
+  margin-bottom: 0.45rem;
 }
 
+
+/* =====================================
+   ROLE NAME
+
+   Example:
+   The Ideator
+   The Analyst
+===================================== */
+
+.profile-title {
+  color: #1BCEEE;
+
+  font-size: 2rem;
+  line-height: 1.1;
+
+  font-weight: 750;
+
+  margin-top: 0;
+  margin-bottom: 0.15rem;
+}
+
+
+/* =====================================
+   ROLE DESCRIPTION / SUBTITLE
+
+   Example:
+   The Possibility Generator
+===================================== */
+
+.profile-sub {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+
+  color: #9B9B9B;
+
+  font-size: 1rem;
+  line-height: 1.3;
+
+  font-weight: 600;
+}
+
+
+/* =====================================
+   RESULT BODY TEXT
+===================================== */
 
 .profile-text {
-  text-align: left;
+  color: #000000;
 
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.7;
 
-  color: #cbd5e1;
+  margin-bottom: 1.5rem;
 }
 
 
-/* -----------------------------
-   LARGER SCREENS
------------------------------ */
+.profile-text b {
+  font-weight: 700;
+}
 
-@media (min-width: 600px) {
 
-  .pairing-container {
-    flex-direction: row;
-    align-items: center;
+/* =====================================
+   PRIMARY + SECONDARY ROLE SEPARATION
+===================================== */
+
+#results-content > .section-title {
+  margin-top: 3rem;
+}
+
+
+/* =====================================
+   COMPLEMENTARY ROLE SECTION
+===================================== */
+
+.results-section-heading {
+  color: #000000;
+
+  font-size: 1.25rem;
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  margin-top: 3.5rem;
+  margin-bottom: 0.75rem;
+}
+
+
+/* Individual complementary role */
+
+.recommended-role {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Complementary role names */
+
+.recommended-role .section-title {
+  color: #1BCEEE;
+
+  font-size: 1.05rem;
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  text-transform: none;
+
+  letter-spacing: normal;
+
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+
+/* Complementary role description */
+
+.recommended-role .profile-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+/* =====================================
+   THE SEVEN CREATIVE ROLES
+===================================== */
+
+.role-directory {
+  margin-top: 1rem;
+
+  padding-left: 1.25rem;
+
+  color: #000000;
+}
+
+
+.role-directory li {
+  margin-bottom: 0.7rem;
+
+  color: #000000;
+}
+
+
+.role-directory li b {
+  font-weight: 700;
+}
+
+
+/* =====================================
+   LINKS
+===================================== */
+
+a {
+  color: #1BCEEE;
+
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* =====================================
+   ACCESSIBILITY / FOCUS
+===================================== */
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #1BCEEE;
+  outline-offset: 3px;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 599px) {
+
+  .container,
+  .card {
+    width: 94%;
+
+    padding: 1.5rem 0.75rem;
   }
 
 
-  .choice-box {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+
+  .profile-title {
+    font-size: 1.75rem;
+  }
+
+
+  .results-section-heading {
+    font-size: 1.15rem;
+  }
+
+
+  .choice-button,
+  #btn-sideA,
+  #btn-sideB {
+    padding: 1rem;
+  }
+
+}
+
+
+/* =====================================
+   TABLET / DESKTOP
+===================================== */
+
+@media (min-width: 600px) {
+
+  .container,
+  .card {
+    padding: 3rem 2rem;
+  }
+
+
+  .choices,
+  .choice-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+
+  .choice-button,
+  #btn-sideA,
+  #btn-sideB {
     flex: 1;
-    min-height: 140px;
   }
 
 }
