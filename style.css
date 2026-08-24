@@ -1,5 +1,5 @@
 /* =====================================
-   BASE
+   GLOBAL RESET
 ===================================== */
 
 *,
@@ -13,17 +13,21 @@ html {
   margin: 0;
   padding: 0;
 
+  width: 100%;
+
   background: #FFFFFF;
+
+  overflow-x: hidden;
 }
 
 
 body {
   margin: 0;
-
-  min-height: 100dvh;
-
   padding:
     clamp(1rem, 4vw, 3rem);
+
+  width: 100%;
+  min-height: 100dvh;
 
   background: #FFFFFF;
   color: #000000;
@@ -41,6 +45,10 @@ body {
 }
 
 
+/* =====================================
+   MAIN APP CONTAINER
+===================================== */
+
 .app-shell {
   width: min(100%, 900px);
 
@@ -49,7 +57,7 @@ body {
 
 
 /* =====================================
-   SCREEN VISIBILITY
+   VISIBILITY
 ===================================== */
 
 .hide {
@@ -76,11 +84,18 @@ h1 {
     clamp(1.8rem, 4vw, 2.4rem);
 
   line-height: 1.15;
+
+  font-weight: 750;
+}
+
+
+p {
+  color: #000000;
 }
 
 
 /* =====================================
-   WELCOME
+   WELCOME SCREEN
 ===================================== */
 
 #welcome-screen {
@@ -90,6 +105,7 @@ h1 {
     calc(100dvh - 6rem);
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 }
@@ -98,31 +114,33 @@ h1 {
 .welcome-content {
   width: min(100%, 650px);
 
-  text-align: center;
-
   padding:
     clamp(1rem, 3vw, 2rem);
+
+  text-align: center;
+}
+
+
+.welcome-content h1 {
+  margin-bottom: 1rem;
 }
 
 
 .welcome-content p {
-  margin-left: auto;
-  margin-right: auto;
-
   max-width: 600px;
 
-  color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
 }
 
 
 /* =====================================
-   ACTION BUTTONS
+   GENERAL BUTTON BEHAVIOR
 ===================================== */
 
 button {
   font: inherit;
-
-  border: none;
 
   cursor: pointer;
 
@@ -131,6 +149,10 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+
+/* =====================================
+   MAIN ACTION BUTTONS
+===================================== */
 
 #start-button,
 #retake-button,
@@ -148,6 +170,7 @@ button {
 
   font-size: 0.95rem;
   font-weight: 700;
+
   line-height: 1.2;
 
   text-align: center;
@@ -173,26 +196,34 @@ button {
 
 
 /* =====================================
-   ASSESSMENT-ONLY SCROLL LOCK
+   KEYBOARD FOCUS
 ===================================== */
 
-/*
-   JavaScript adds quiz-active to BOTH
-   <html> and <body> while the assessment
-   is running.
+button:focus-visible,
+a:focus-visible {
+  outline:
+    3px solid #1BCEEE;
 
-   Welcome and results remain normally
-   scrollable.
-*/
+  outline-offset: 3px;
+}
+
+
+/* =====================================
+   ASSESSMENT-ONLY SCROLL LOCK
+
+   JavaScript adds .quiz-active to both
+   HTML and BODY during the assessment.
+===================================== */
 
 html.quiz-active,
 html.quiz-active body {
-  width: 100%;
+  width: 100% !important;
 
-  height: 100%;
-  max-height: 100%;
+  height: 100% !important;
+  max-height: 100% !important;
 
-  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 
   overflow: hidden !important;
 
@@ -205,15 +236,13 @@ html.quiz-active body {
 
   inset: 0;
 
-  padding: 0;
-
-  width: 100vw;
-  height: 100dvh;
+  width: 100vw !important;
+  height: 100dvh !important;
 }
 
 
 /* =====================================
-   QUIZ SCREEN
+   ASSESSMENT SCREEN
 ===================================== */
 
 #quiz-screen:not(.hide) {
@@ -224,43 +253,51 @@ html.quiz-active body {
   width: 100vw;
   height: 100dvh;
 
-  overflow: hidden;
-
-  background: #FFFFFF;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
 
   /*
-     More bottom padding than top padding
-     places the test slightly above center
-     without using transforms that create
-     browser overflow.
+     Slightly more space at the bottom
+     places the assessment a little
+     above visual center without using
+     transforms that can cause overflow.
   */
 
   padding:
     3vh
     clamp(1rem, 4vw, 3rem)
     9vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #FFFFFF;
+
+  overflow: hidden;
 }
 
 
 .quiz-content {
   width: min(100%, 920px);
 
+  max-width: 920px;
+
   margin: 0 auto;
 
   padding:
-    clamp(1rem, 3vw, 2rem);
+    clamp(0.75rem, 3vw, 2rem);
 
   background: #FFFFFF;
   color: #000000;
+
+  overflow: hidden;
 }
 
 
 /* =====================================
-   PREVENT ACCIDENTAL QUIZ SELECTION
+   PREVENT ACCIDENTAL SELECTION
+   DURING ASSESSMENT
 ===================================== */
 
 #quiz-screen,
@@ -272,9 +309,9 @@ html.quiz-active body {
 
   -webkit-touch-callout: none;
 
-  touch-action: manipulation;
-
   -webkit-tap-highlight-color: transparent;
+
+  touch-action: manipulation;
 }
 
 
@@ -307,6 +344,8 @@ html.quiz-active body {
   width: 0%;
   height: 100%;
 
+  min-height: 10px;
+
   background: #1BCEEE;
 
   border-radius: 999px;
@@ -321,6 +360,8 @@ html.quiz-active body {
 ===================================== */
 
 #timer {
+  display: block;
+
   margin-bottom: 1rem;
 
   color: #9B9B9B;
@@ -339,55 +380,72 @@ html.quiz-active body {
 .quiz-heading {
   margin-bottom: 0.4rem;
 
-  text-align: center;
+  color: #000000;
 
   font-size:
     clamp(1.35rem, 3vw, 1.8rem);
+
+  line-height: 1.2;
+
+  text-align: center;
 }
 
 
 .quiz-instruction {
+  max-width: 620px;
+
   margin:
     0
     auto
     1.5rem;
 
-  max-width: 620px;
-
   color: #9B9B9B;
 
-  text-align: center;
-
   font-size: 0.95rem;
+
+  text-align: center;
 }
 
 
 /* =====================================
-   ANSWER AREA
+   ANSWER ROW
 ===================================== */
 
 .answer-row {
   display: flex;
 
+  flex-direction: row;
+
+  align-items: stretch;
+
   width: 100%;
 
   gap: 1rem;
-
-  align-items: stretch;
 }
 
 
-.choice-button {
+/* =====================================
+   ANSWER BUTTONS
+===================================== */
+
+.choice-button,
+#btn-sideA,
+#btn-sideB {
   flex: 1 1 0;
 
+  width: 0;
   min-width: 0;
-
-  width: 100%;
 
   min-height: 150px;
 
+  margin: 0;
+
   padding:
     1.25rem;
+
+  display: flex;
+
+  align-items: center;
 
   background: #FFFFFF;
   color: #000000;
@@ -402,9 +460,6 @@ html.quiz-active body {
 
   text-align: left;
 
-  display: flex;
-  align-items: center;
-
   transition:
     border-color 0.15s ease,
     background-color 0.15s ease,
@@ -412,14 +467,18 @@ html.quiz-active body {
 }
 
 
-.choice-button:hover {
+.choice-button:hover,
+#btn-sideA:hover,
+#btn-sideB:hover {
   border-color: #1BCEEE;
 
   background: #F8FCFD;
 }
 
 
-.choice-button:active {
+.choice-button:active,
+#btn-sideA:active,
+#btn-sideB:active {
   transform: scale(0.99);
 }
 
@@ -428,19 +487,25 @@ html.quiz-active body {
    OR DIVIDER
 ===================================== */
 
-.or-divider {
-  flex: 0 0 auto;
+.or-divider,
+.or,
+#or {
+  flex:
+    0 0 auto;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
   align-self: center;
 
-  padding:
-    0 0.25rem;
+  width: auto;
 
   margin: 0;
+
+  padding:
+    0 0.4rem;
 
   color: #9B9B9B;
 
@@ -470,19 +535,127 @@ html.quiz-active body {
 }
 
 
-.results-page-title {
-  margin-bottom: 1.5rem;
+/* =====================================
+   RESULTS PAGE TITLE
+===================================== */
+
+.results-page-title,
+#results-screen > h1 {
+  margin-bottom: 2rem;
 
   color: #000000;
 }
 
 
 /* =====================================
-   RESULT LABELS
+   TOP PRIMARY + SECONDARY RESULTS
+===================================== */
+
+.results-role-pair {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap:
+    clamp(1.5rem, 5vw, 3rem);
+
+  width: 100%;
+
+  margin-bottom: 3rem;
+
+  padding-bottom: 2rem;
+
+  border-bottom:
+    1px solid #E5E5E5;
+}
+
+
+.result-role-summary {
+  min-width: 0;
+}
+
+
+.result-role-label {
+  margin-bottom: 0.4rem;
+
+  color: #9B9B9B;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.06em;
+}
+
+
+.result-role-name {
+  margin:
+    0
+    0
+    0.2rem;
+
+  color: #1BCEEE;
+
+  font-size:
+    clamp(1.65rem, 4vw, 2.2rem);
+
+  line-height: 1.1;
+
+  font-weight: 750;
+
+  overflow-wrap: anywhere;
+}
+
+
+.result-role-word {
+  margin: 0;
+
+  color: #000000;
+
+  font-size:
+    clamp(1rem, 2vw, 1.1rem);
+
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+
+/* =====================================
+   RESULTS SECTION HEADINGS
 
    Examples:
-   YOUR PRIMARY ROLE
-   YOUR SECONDARY ROLE
+   What I Bring
+   Your Combination
+   Your Primary Role
+===================================== */
+
+.results-section-heading {
+  margin-top: 3.5rem;
+  margin-bottom: 0.8rem;
+
+  color: #000000;
+
+  font-size:
+    1.25rem;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+
+/* =====================================
+   SMALL RESULT LABELS
+
+   Examples:
+   Your Natural Group Contribution
+   Your Group Superpowers
 ===================================== */
 
 .section-title {
@@ -503,8 +676,76 @@ html.quiz-active body {
 
 
 /* =====================================
-   ACTUAL ROLE NAMES
+   WHAT I BRING
 ===================================== */
+
+.what-i-bring {
+  margin-bottom: 3.5rem;
+}
+
+
+.what-i-bring .results-section-heading {
+  margin-top: 0;
+}
+
+
+.what-i-bring-title {
+  margin:
+    0
+    0
+    1rem;
+
+  color: #1BCEEE;
+
+  font-size:
+    clamp(1.45rem, 3vw, 1.8rem);
+
+  line-height: 1.2;
+
+  font-weight: 750;
+}
+
+
+.what-i-bring-list {
+  margin-top: 0;
+
+  padding-left: 1.25rem;
+}
+
+
+.what-i-bring-list li {
+  margin-bottom: 0.65rem;
+}
+
+
+/* =====================================
+   COMBINATION SECTION
+===================================== */
+
+.combination-section {
+  margin-bottom: 3.5rem;
+}
+
+
+.combination-section
+.results-section-heading {
+  margin-top: 0;
+}
+
+
+/* =====================================
+   FULL ROLE PROFILE
+===================================== */
+
+.role-profile {
+  margin-bottom: 3.5rem;
+
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+
+/* Actual Role name */
 
 .profile-title {
   margin-top: 0;
@@ -521,7 +762,7 @@ html.quiz-active body {
 }
 
 
-/* Role descriptor directly underneath */
+/* Role descriptor */
 
 .profile-sub {
   margin-top: 0;
@@ -537,7 +778,7 @@ html.quiz-active body {
 
 
 /* =====================================
-   RESULT TEXT
+   GENERAL RESULT TEXT
 ===================================== */
 
 .profile-text {
@@ -551,35 +792,6 @@ html.quiz-active body {
 
 
 .profile-text b {
-  font-weight: 700;
-}
-
-
-/* Keep each full role profile together
-   where possible in PDF output */
-
-.role-profile {
-  break-inside: avoid;
-  page-break-inside: avoid;
-}
-
-
-/* =====================================
-   SMALLER RESULTS SECTIONS
-
-   Three Complementary Roles
-   The Seven Creative Roles
-===================================== */
-
-.results-section-heading {
-  margin-top: 3.5rem;
-  margin-bottom: 0.75rem;
-
-  color: #000000;
-
-  font-size: 1.25rem;
-  line-height: 1.3;
-
   font-weight: 700;
 }
 
@@ -598,7 +810,8 @@ html.quiz-active body {
 }
 
 
-.recommended-role .section-title {
+.recommended-role
+.section-title {
   margin-top: 0;
   margin-bottom: 0.25rem;
 
@@ -615,7 +828,8 @@ html.quiz-active body {
 }
 
 
-.recommended-role .profile-text {
+.recommended-role
+.profile-text {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -647,11 +861,32 @@ html.quiz-active body {
 
 
 /* =====================================
-   RESULTS BUTTONS
+   CLOSING RESULTS NOTE
+===================================== */
+
+.results-note {
+  margin-top: 4rem;
+
+  padding-top: 1.5rem;
+
+  border-top:
+    1px solid #E5E5E5;
+
+  color: #666666;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+/* =====================================
+   RESULTS BUTTON ROW
 ===================================== */
 
 .results-buttons {
   display: flex;
+
+  flex-direction: row;
 
   align-items: stretch;
   justify-content: flex-end;
@@ -661,6 +896,7 @@ html.quiz-active body {
   width: 100%;
 
   margin-top: 3rem;
+
   padding-top: 1.5rem;
 }
 
@@ -677,20 +913,7 @@ html.quiz-active body {
 
 
 /* =====================================
-   FOCUS ACCESSIBILITY
-===================================== */
-
-button:focus-visible,
-a:focus-visible {
-  outline:
-    3px solid #1BCEEE;
-
-  outline-offset: 3px;
-}
-
-
-/* =====================================
-   MOBILE / NARROW BROWSER
+   PHONE / NARROW SCREEN
 ===================================== */
 
 @media (max-width: 699px) {
@@ -699,6 +922,25 @@ a:focus-visible {
     padding: 0.75rem;
   }
 
+
+  /* -------------------------------------
+     WELCOME
+  ------------------------------------- */
+
+  #welcome-screen {
+    min-height:
+      calc(100dvh - 1.5rem);
+  }
+
+
+  .welcome-content {
+    padding: 1rem;
+  }
+
+
+  /* -------------------------------------
+     QUIZ
+  ------------------------------------- */
 
   #quiz-screen:not(.hide) {
     padding:
@@ -709,16 +951,34 @@ a:focus-visible {
 
 
   .quiz-content {
+    width: 100%;
+
     padding:
       0.75rem;
   }
 
 
+  .progress-container {
+    margin-bottom: 1.1rem;
+  }
+
+
+  #timer {
+    margin-bottom: 0.8rem;
+  }
+
+
+  .quiz-instruction {
+    margin-bottom: 1rem;
+  }
+
+
   /*
-     Phone:
-     Choice A
-     OR
-     Choice B
+     Mobile layout:
+
+     CHOICE A
+        OR
+     CHOICE B
   */
 
   .answer-row {
@@ -728,33 +988,74 @@ a:focus-visible {
   }
 
 
-  .choice-button {
+  .choice-button,
+  #btn-sideA,
+  #btn-sideB {
+    flex: none;
+
     width: 100%;
 
+    min-width: 0;
     min-height: 0;
 
-    padding:
-      1rem;
-
-    flex: none;
+    padding: 1rem;
   }
 
 
-  .or-divider {
+  .or-divider,
+  .or,
+  #or {
     width: 100%;
 
     padding:
       0.1rem 0;
 
+    align-self: center;
+
     text-align: center;
   }
 
 
+  /* -------------------------------------
+     RESULTS
+  ------------------------------------- */
+
   #results-screen:not(.hide) {
-    padding:
-      1rem;
+    padding: 1rem;
   }
 
+
+  /*
+     Keep Primary and Secondary stacked
+     on phone for readability.
+  */
+
+  .results-role-pair {
+    grid-template-columns: 1fr;
+
+    gap: 1.75rem;
+
+    margin-bottom: 2.5rem;
+
+    padding-bottom: 1.75rem;
+  }
+
+
+  .results-section-heading {
+    margin-top: 3rem;
+  }
+
+
+  .what-i-bring,
+  .combination-section,
+  .role-profile {
+    margin-bottom: 3rem;
+  }
+
+
+  /* -------------------------------------
+     RESULT BUTTONS
+  ------------------------------------- */
 
   .results-buttons {
     gap: 0.75rem;
@@ -769,7 +1070,8 @@ a:focus-visible {
     min-width: 0;
 
     padding:
-      0.75rem 0.55rem;
+      0.75rem
+      0.55rem;
 
     font-size: 0.88rem;
   }
@@ -778,13 +1080,14 @@ a:focus-visible {
 
 
 /* =====================================
-   LARGER SCREEN
+   LARGE SCREEN
 ===================================== */
 
 @media (min-width: 700px) {
 
   /*
-     Desktop / iPad:
+     Desktop / tablet assessment:
+
      Choice A   OR   Choice B
   */
 
@@ -793,14 +1096,19 @@ a:focus-visible {
   }
 
 
-  .choice-button {
+  .choice-button,
+  #btn-sideA,
+  #btn-sideB {
     flex: 1 1 0;
 
     width: 0;
+    min-width: 0;
   }
 
 
-  .or-divider {
+  .or-divider,
+  .or,
+  #or {
     width: auto;
 
     padding:
@@ -811,7 +1119,11 @@ a:focus-visible {
 
 
 /* =====================================
-   VERY SHORT VIEWPORTS
+   SHORT VIEWPORTS
+
+   Keeps the full quiz usable on laptops
+   or landscape devices without adding
+   page scrolling.
 ===================================== */
 
 @media (max-height: 650px) {
@@ -831,27 +1143,74 @@ a:focus-visible {
 
 
   .progress-container {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.7rem;
   }
 
 
   #timer {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+
+  .quiz-heading {
+    margin-bottom: 0.25rem;
+
+    font-size: 1.3rem;
   }
 
 
   .quiz-instruction {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.7rem;
+
+    font-size: 0.9rem;
   }
 
 
-  .choice-button {
+  .choice-button,
+  #btn-sideA,
+  #btn-sideB {
     min-height: 0;
 
     padding:
-      0.85rem 1rem;
+      0.8rem
+      1rem;
 
-    font-size: 0.95rem;
+    font-size: 0.94rem;
+    line-height: 1.35;
+  }
+
+}
+
+
+/* =====================================
+   VERY NARROW PHONES
+===================================== */
+
+@media (max-width: 380px) {
+
+  #results-screen:not(.hide) {
+    padding:
+      0.75rem;
+  }
+
+
+  .result-role-name {
+    font-size: 1.6rem;
+  }
+
+
+  .what-i-bring-title {
+    font-size: 1.4rem;
+  }
+
+
+  #retake-button,
+  #download-button {
+    font-size: 0.82rem;
+
+    padding:
+      0.7rem
+      0.4rem;
   }
 
 }
