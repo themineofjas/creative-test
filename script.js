@@ -734,32 +734,133 @@ const profiles = {
 };
 
 // =====================================
-// SHORT ROLE SUMMARIES
-// Used for Secondary Role results
+// ROLE DIRECTORY
 // =====================================
 
-const roleSummaries = {
+const roleDetails = {
 
-  Ideator:
-    "You expand possibility by generating ideas, making connections, and helping a group see directions it may not have considered.",
+  Ideator: {
+    fullName: "The Ideator — Possibility Generator",
+    contribution:
+      "Adds possibilities, connections, concepts, and new directions."
+  },
 
-  Analyst:
-    "You create clarity by organizing complexity, examining structure, and helping a group understand how the pieces fit together.",
+  Analyst: {
+    fullName: "The Analyst — Structure & Sense-Making Anchor",
+    contribution:
+      "Adds clarity, structure, analysis, and understanding of how the pieces fit together."
+  },
 
-  Catalyst:
-    "You create movement by connecting people to priorities, opportunities, decisions, and next moves.",
+  Catalyst: {
+    fullName: "The Catalyst — Movement & Mobilization Engine",
+    contribution:
+      "Adds momentum, coordination, participation, and forward movement."
+  },
 
-  Executor:
-    "You create tangible progress by taking ownership of concrete work and helping shared intentions become completed results.",
+  Executor: {
+    fullName: "The Executor — Implementation & Completion Engine",
+    contribution:
+      "Adds concrete action, ownership, implementation, and completion."
+  },
 
-  Alchemist:
-    "You create transformation by challenging assumptions, experimenting with existing ideas, and recombining elements in new ways.",
+  Alchemist: {
+    fullName: "The Alchemist — Transformation & Experimentation Engine",
+    contribution:
+      "Adds experimentation, reframing, recombination, and transformation."
+  },
 
-  Curator:
-    "You create coherence by discerning what belongs, what is strongest, and what should be selected, refined, or removed.",
+  Curator: {
+    fullName: "The Curator — Discernment & Coherence Anchor",
+    contribution:
+      "Adds discernment, quality control, context, selection, and coherence."
+  },
 
-  Advocate:
-    "You strengthen the human conditions of collaboration by noticing communication, trust, capacity, workload, and what people need to contribute well."
+  Advocate: {
+    fullName: "The Advocate — Human Conditions Anchor",
+    contribution:
+      "Adds attention to communication, trust, capacity, relationships, and healthy collaboration."
+  }
+
+};
+
+
+// =====================================
+// COMPLEMENTARY ROLE RECOMMENDATIONS
+//
+// These are provisional design recommendations.
+// They are intended to broaden the contribution
+// mix around a person's Primary + Secondary Roles.
+// =====================================
+
+const complementaryPairings = {
+
+  "Ideator|Analyst":
+    ["Catalyst", "Executor", "Advocate"],
+
+  "Ideator|Catalyst":
+    ["Analyst", "Executor", "Advocate"],
+
+  "Ideator|Executor":
+    ["Analyst", "Catalyst", "Advocate"],
+
+  "Ideator|Alchemist":
+    ["Analyst", "Executor", "Advocate"],
+
+  "Ideator|Curator":
+    ["Catalyst", "Executor", "Advocate"],
+
+  "Ideator|Advocate":
+    ["Analyst", "Catalyst", "Executor"],
+
+
+  "Analyst|Catalyst":
+    ["Ideator", "Executor", "Advocate"],
+
+  "Analyst|Executor":
+    ["Ideator", "Catalyst", "Advocate"],
+
+  "Analyst|Alchemist":
+    ["Catalyst", "Executor", "Advocate"],
+
+  "Analyst|Curator":
+    ["Ideator", "Executor", "Advocate"],
+
+  "Analyst|Advocate":
+    ["Ideator", "Catalyst", "Executor"],
+
+
+  "Catalyst|Executor":
+    ["Ideator", "Analyst", "Advocate"],
+
+  "Catalyst|Alchemist":
+    ["Analyst", "Executor", "Advocate"],
+
+  "Catalyst|Curator":
+    ["Ideator", "Executor", "Advocate"],
+
+  "Catalyst|Advocate":
+    ["Ideator", "Analyst", "Executor"],
+
+
+  "Executor|Alchemist":
+    ["Analyst", "Curator", "Advocate"],
+
+  "Executor|Curator":
+    ["Ideator", "Catalyst", "Advocate"],
+
+  "Executor|Advocate":
+    ["Ideator", "Analyst", "Catalyst"],
+
+
+  "Alchemist|Curator":
+    ["Analyst", "Executor", "Advocate"],
+
+  "Alchemist|Advocate":
+    ["Analyst", "Catalyst", "Executor"],
+
+
+  "Curator|Advocate":
+    ["Ideator", "Catalyst", "Executor"]
 
 };
 
