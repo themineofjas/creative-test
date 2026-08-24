@@ -1356,6 +1356,353 @@ const complementaryPairings = {
 
 
 // =====================================
+// PRIMARY + SECONDARY ROLE COMBINATIONS
+//
+// One shared profile for each of the
+// 21 possible unordered Role pairs.
+// =====================================
+
+const combinationProfiles = {
+
+  "Ideator|Analyst": {
+
+    together:
+      "This combination brings possibility generation and sense-making together. You may naturally open up new directions while also wanting to understand how the ideas connect, what they require, and which patterns are worth paying attention to.",
+
+    groupValue:
+      "You may be especially useful when a group needs both imagination and clarity. You can help generate options without leaving them completely unstructured, giving the group more possibilities while also helping those possibilities become understandable.",
+
+    tension:
+      "The pull to keep expanding possibilities can sometimes compete with the pull to analyze and organize them. It may help to notice when the group needs more exploration and when it is time to make sense of what is already on the table."
+  },
+
+
+  "Ideator|Catalyst": {
+
+    together:
+      "This combination connects new possibilities with collective movement. You may naturally notice promising directions and then become interested in helping people engage with them, understand them, or move around them.",
+
+    groupValue:
+      "You may help a group move from possibility into enthusiasm and participation. Rather than only introducing ideas, you can also help those ideas gain attention, momentum, and involvement from other people.",
+
+    tension:
+      "Generating new possibilities and building momentum do not always happen at the same pace. You may need to notice when a fresh idea deserves exploration and when the group would benefit more from committing to a direction already in motion."
+  },
+
+
+  "Ideator|Executor": {
+
+    together:
+      "This combination connects possibility generation with concrete implementation. You may naturally imagine what could exist while also being drawn toward making at least some of those possibilities tangible.",
+
+    groupValue:
+      "You may be especially useful when a group needs ideas that can become prototypes, drafts, experiments, or finished work. You can help shorten the distance between imagining something and having something real to respond to.",
+
+    tension:
+      "The desire to explore another possibility can compete with the need to finish what has already been started. It may help to distinguish between moments that call for another idea and moments that call for completing the current one."
+  },
+
+
+  "Ideator|Alchemist": {
+
+    together:
+      "This combination strongly favors possibility, experimentation, and change. You may naturally generate new directions while also seeing ways to transform, recombine, or challenge what already exists.",
+
+    groupValue:
+      "You may help a group escape obvious solutions and discover approaches it would not have reached through incremental thinking alone. This combination can be particularly useful when genuinely new possibilities are needed.",
+
+    tension:
+      "Because both Roles can keep opening new territory, the group may eventually need help deciding what should become stable enough to develop. It can be useful to notice when continued novelty is expanding the work and when it is preventing commitment."
+  },
+
+
+  "Ideator|Curator": {
+
+    together:
+      "This combination brings expansion and discernment together. You may naturally generate possibilities while also developing a sense of which ideas, references, or directions have the strongest fit.",
+
+    groupValue:
+      "You may help groups avoid choosing between creativity and selectivity. You can widen the field of possibilities and then help recognize which possibilities deserve further attention.",
+
+    tension:
+      "The Ideator contribution wants to keep options open, while the Curator contribution eventually wants to distinguish what belongs from what does not. The useful question may be whether the group is currently in an expanding phase or a selecting phase."
+  },
+
+
+  "Ideator|Advocate": {
+
+    together:
+      "This combination connects possibility generation with attention to the people involved. You may naturally imagine new directions while also noticing how those directions could affect participation, communication, capacity, or collaboration.",
+
+    groupValue:
+      "You may help groups generate possibilities that remain connected to the realities of the people who would actually carry them out. You can bring imagination into the room without completely losing sight of human conditions.",
+
+    tension:
+      "An exciting possibility may not always match the group's current capacity or working conditions. At other times, concern about those conditions could make a promising idea feel harder to pursue. Both pieces of information can be useful."
+  },
+
+
+  "Analyst|Catalyst": {
+
+    together:
+      "This combination connects understanding with movement. You may naturally clarify what is happening, identify the important parts, and then become interested in helping the group organize around a direction.",
+
+    groupValue:
+      "You may be useful when a group needs movement that is grounded in a clearer understanding of the situation. You can help turn complexity into priorities that people can actually act around.",
+
+    tension:
+      "The desire to understand the situation thoroughly can sometimes slow movement, while the desire to regain momentum can sometimes push the group forward before everything is clear. The challenge is finding the amount of clarity the situation actually requires."
+  },
+
+
+  "Analyst|Executor": {
+
+    together:
+      "This combination connects structural understanding with implementation. You may naturally examine what needs to happen, how the pieces depend on one another, and then move toward concrete execution.",
+
+    groupValue:
+      "You may help a group build plans that are both understandable and workable. This combination can be particularly useful for translating complicated intentions into organized action.",
+
+    tension:
+      "Analysis can continue producing useful information long after action could begin. At the same time, moving too quickly can create avoidable problems. It may help to distinguish between information that is necessary for action and information that would simply be nice to know."
+  },
+
+
+  "Analyst|Alchemist": {
+
+    together:
+      "This combination connects deep understanding with transformation. You may naturally examine how something works and then notice assumptions, structures, or patterns that could be changed rather than merely repaired.",
+
+    groupValue:
+      "You may be particularly useful when a group needs to understand an existing system before redesigning it. You can bring both diagnosis and experimentation to difficult problems.",
+
+    tension:
+      "One part of you may want to improve the logic of the existing system while another wants to question whether the system itself should remain intact. It can help to distinguish between a problem inside the current approach and a problem with the approach itself."
+  },
+
+
+  "Analyst|Curator": {
+
+    together:
+      "This combination brings structural clarity and discernment together. You may naturally examine whether something works while also noticing whether its choices, context, quality, and overall identity belong together.",
+
+    groupValue:
+      "You may give a group a particularly strong review function. You can help distinguish between something that is technically workable and something that is also coherent, intentional, and worth presenting.",
+
+    tension:
+      "Functional logic and qualitative fit do not always point toward the same decision. Something can work without feeling right for the project, or fit the project while creating practical complications. Both forms of judgment deserve attention."
+  },
+
+
+  "Analyst|Advocate": {
+
+    together:
+      "This combination brings systems awareness and relational awareness together. You may naturally examine both what is happening in the work and what is happening among the people doing it.",
+
+    groupValue:
+      "You may help groups avoid treating every difficulty as either purely technical or purely interpersonal. You can notice how structures, expectations, information, communication, and relationships may be interacting.",
+
+    tension:
+      "A structural explanation can sometimes overlook people's lived experience, while focusing only on interpersonal experience can obscure a structural cause. This combination works best when neither side is automatically treated as the whole explanation."
+  },
+
+
+  "Catalyst|Executor": {
+
+    together:
+      "This combination connects collective movement with concrete delivery. You may naturally help people orient around what needs to happen and then become interested in making sure real work actually moves forward.",
+
+    groupValue:
+      "You may be especially useful when a group needs to convert energy into progress. You can help create momentum while also giving that momentum somewhere concrete to go.",
+
+    tension:
+      "Coordinating movement and personally carrying out work can compete for the same attention. You may sometimes need to decide whether your greatest contribution is helping everyone move or taking ownership of a specific piece yourself."
+  },
+
+
+  "Catalyst|Alchemist": {
+
+    together:
+      "This combination connects transformation with mobilization. You may naturally recognize when a different approach is needed and then become interested in helping people move around that change.",
+
+    groupValue:
+      "You may help groups do more than invent change privately. You can contribute to making a new direction understandable, actionable, and capable of gaining participation.",
+
+    tension:
+      "Transformation requires experimentation, while mobilization usually benefits from a direction people can recognize. Changing the approach too frequently can make coordinated movement difficult, while committing too early can limit experimentation."
+  },
+
+
+  "Catalyst|Curator": {
+
+    together:
+      "This combination connects movement with coherence. You may naturally think about how a project can reach people and gain participation while also noticing how it should be presented, framed, and protected as it grows.",
+
+    groupValue:
+      "You may help a group expand without completely losing the identity or quality of what it is expanding. This can be particularly valuable when work is moving from an internal project toward a larger audience or community.",
+
+    tension:
+      "Growth and participation can reward accessibility and speed, while discernment sometimes requires selectivity and restraint. It can help to ask what should become more open and what should remain carefully protected."
+  },
+
+
+  "Catalyst|Advocate": {
+
+    together:
+      "This combination connects participation with the conditions that make participation sustainable. You may naturally help people move toward a shared direction while also noticing what affects their ability to stay engaged.",
+
+    groupValue:
+      "You may help groups build momentum that is not based only on pressure or enthusiasm. You can connect people to action while remaining attentive to communication, trust, workload, and capacity.",
+
+    tension:
+      "The desire to keep things moving can sometimes conflict with signals that people need more clarity, support, or space. At other times, waiting for ideal conditions can stall useful movement. The task is not choosing one permanently, but reading what the group needs."
+  },
+
+
+  "Executor|Alchemist": {
+
+    together:
+      "This combination connects making with transforming. You may naturally build something concrete and then notice how it could be altered, tested, recombined, or improved through experimentation.",
+
+    groupValue:
+      "You may be particularly effective in iterative work where ideas need to become real before the group can learn from them. You can contribute both tangible output and meaningful revision.",
+
+    tension:
+      "The Executor contribution wants work to reach completion, while the Alchemist contribution can continue seeing reasons to change it. It may help to define when something is a prototype that should keep evolving and when it is a deliverable that needs to be finished."
+  },
+
+
+  "Executor|Curator": {
+
+    together:
+      "This combination connects completion with discernment. You may naturally want important work to get finished while also paying attention to whether the final choices are coherent, intentional, and strong enough to represent the project.",
+
+    groupValue:
+      "You may help groups produce work that is not only completed but considered. You can bring attention to both the finish line and the quality of what crosses it.",
+
+    tension:
+      "There will often be a point where further refinement improves the work only slightly while delaying completion significantly. Knowing what is good enough to release and what genuinely needs another pass can become an important judgment."
+  },
+
+
+  "Executor|Advocate": {
+
+    together:
+      "This combination connects practical responsibility with attention to human capacity. You may naturally notice what needs to be handled while also noticing how workload, expectations, and communication affect the people doing the work.",
+
+    groupValue:
+      "You may help groups create dependable progress without treating people as interchangeable resources. You can contribute practical support while remaining aware of the conditions under which that work is being done.",
+
+    tension:
+      "Because you can see both unfinished responsibilities and other people's needs, you may be tempted to absorb too much yourself. Sometimes the healthier contribution is completing the task; other times it is helping the group redistribute or rethink the task."
+  },
+
+
+  "Alchemist|Curator": {
+
+    together:
+      "This combination brings transformation and discernment together. You may naturally challenge what already exists while also developing a strong sense of which changes genuinely strengthen the work.",
+
+    groupValue:
+      "You may help a group innovate without treating change itself as the goal. You can introduce experimentation while still asking whether the result is more coherent, meaningful, or distinctive than what came before.",
+
+    tension:
+      "The Alchemist contribution is willing to disrupt familiar patterns, while the Curator contribution recognizes what may be worth preserving. Productive tension between those instincts can help distinguish meaningful transformation from change for its own sake."
+  },
+
+
+  "Alchemist|Advocate": {
+
+    together:
+      "This combination connects transformation with awareness of human dynamics. You may naturally notice limiting patterns and become interested in changing both how the work happens and the conditions surrounding the people involved.",
+
+    groupValue:
+      "You may be useful when a group needs to rethink habits, norms, assumptions, or ways of working that have become unhelpful. You can bring change into areas that other people may accept simply because they are familiar.",
+
+    tension:
+      "Challenging an entrenched pattern can be necessary, but people may not all be equally ready for that challenge. The useful question is often how to create meaningful change without ignoring the human conditions required for people to engage with it."
+  },
+
+
+  "Curator|Advocate": {
+
+    together:
+      "This combination connects discernment about the work with attentiveness to the people creating it. You may naturally notice whether a project remains coherent and intentional while also noticing whether the collaboration supporting it remains workable.",
+
+    groupValue:
+      "You may help groups protect both the integrity of the work and the conditions that allow people to contribute to it. This can make you particularly attentive to whether quality, expectations, context, and collaboration still fit together.",
+
+    tension:
+      "Maintaining a strong standard can sometimes conflict with people's current capacity or preferences. At the same time, accommodating every preference can weaken the identity of the work. The challenge is distinguishing what genuinely needs protection from what can be adapted."
+  }
+
+};
+
+
+
+// =====================================
+// PRIMARY ROLE LEAD LANGUAGE
+// =====================================
+
+const primaryLeadDescriptions = {
+
+  Ideator:
+    "expanding possibilities and making connections",
+
+  Analyst:
+    "making complexity understandable and clarifying structure",
+
+  Catalyst:
+    "creating movement and connecting people to action",
+
+  Executor:
+    "turning intentions into concrete progress",
+
+  Alchemist:
+    "challenging patterns and transforming what already exists",
+
+  Curator:
+    "using discernment to strengthen quality and coherence",
+
+  Advocate:
+    "strengthening the human conditions that help people contribute well"
+
+};
+
+
+
+// =====================================
+// SECONDARY ROLE SUPPORT LANGUAGE
+// =====================================
+
+const secondarySupportDescriptions = {
+
+  Ideator:
+    "open additional possibilities and connections",
+
+  Analyst:
+    "add structure, clarity, and sense-making",
+
+  Catalyst:
+    "turn direction into coordinated movement",
+
+  Executor:
+    "turn ideas and decisions into concrete work",
+
+  Alchemist:
+    "introduce experimentation, reframing, and transformation",
+
+  Curator:
+    "refine choices and protect coherence",
+
+  Advocate:
+    "keep communication, capacity, and collaborative conditions in view"
+
+};
+
+
+
+// =====================================
 // ROLE ORDER
 // =====================================
 
@@ -1394,6 +1741,81 @@ function getPairKey(
 
 
   return `${roleB}|${roleA}`;
+}
+
+
+
+// =====================================
+// BUILD PRIMARY + SECONDARY
+// COMBINATION INTERPRETATION
+// =====================================
+
+function buildCombinationHTML(
+  primaryRole,
+  secondaryRole
+) {
+
+  const pairKey =
+    getPairKey(
+      primaryRole,
+      secondaryRole
+    );
+
+
+  const combination =
+    combinationProfiles[
+      pairKey
+    ];
+
+
+  if (!combination) {
+
+    return "";
+  }
+
+
+  return `
+
+    <h3 class="section-title">
+      Your Combination
+    </h3>
+
+
+    <p class="profile-text">
+      Your ${primaryRole} result suggests that you may
+      lead by ${primaryLeadDescriptions[primaryRole]}.
+      Your ${secondaryRole} contribution may then help
+      you ${secondarySupportDescriptions[secondaryRole]}.
+    </p>
+
+
+    <h3 class="section-title">
+      How These Roles Work Together
+    </h3>
+
+    <p class="profile-text">
+      ${combination.together}
+    </p>
+
+
+    <h3 class="section-title">
+      What You May Add to a Group
+    </h3>
+
+    <p class="profile-text">
+      ${combination.groupValue}
+    </p>
+
+
+    <h3 class="section-title">
+      Potential Tension to Watch
+    </h3>
+
+    <p class="profile-text">
+      ${combination.tension}
+    </p>
+
+  `;
 }
 
 
@@ -2172,26 +2594,10 @@ function showResults() {
 
 
 
-      <h3 class="section-title">
-        Your Combination
-      </h3>
-
-
-      <p class="profile-text">
-
-        Your Primary Role represents the contribution
-        pattern that emerged most strongly across your
-        responses. Your Secondary Role represents
-        another prominent contribution pattern.
-
-        <br><br>
-
-        Together, these two Roles offer a more useful
-        picture of how you are naturally inclined to
-        contribute in collaborative work than either
-        Role alone.
-
-      </p>
+      ${buildCombinationHTML(
+        primaryRole,
+        secondaryRole
+      )}
 
 
 
