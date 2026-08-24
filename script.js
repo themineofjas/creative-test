@@ -811,20 +811,21 @@ function loadQuestion() {
 
   timerInterval = setInterval(() => {
 
-    timeLeft--;
+  timeLeft--;
+
+  updateTimerDisplay();
+
+  if (timeLeft <= 0) {
+
+    clearInterval(timerInterval);
+
+    timeLeft = 0;
 
     updateTimerDisplay();
+  }
 
-    if (timeLeft <= 0) {
-
-      clearInterval(timerInterval);
-
-      currentQuestionIndex++;
-
-      loadQuestion();
-    }
-
-  }, 1000);
+}, 1000);
+  
 }
 
 
