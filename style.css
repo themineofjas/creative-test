@@ -1138,3 +1138,21 @@ body,
 button {
   touch-action: manipulation;
 }
+/* =====================================
+   PREVENT TEXT SELECTION ON QUIZ TAPS
+===================================== */
+
+#quiz-screen,
+#btn-sideA,
+#btn-sideB,
+#quiz-screen button,
+.or,
+.or-divider,
+#or {
+  -webkit-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+
+  -webkit-tap-highlight-color: transparent;
+}
