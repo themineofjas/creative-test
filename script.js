@@ -1,5 +1,10 @@
 // =====================================
 // QUESTION BANK
+//
+// IMPORTANT:
+// Question IDs are permanent.
+// If questions are reordered later,
+// keep each question's original ID.
 // =====================================
 
 const questions = [
@@ -9,11 +14,14 @@ const questions = [
   // Preferred contribution in a group
   // =====================================
 
-
   // Ideator vs Analyst
   {
+    id: "F01",
+    section: "Foundational",
+
     sA: "When a group is figuring out what to do, I naturally start expanding the possibilities and making connections between different ideas.",
     rA: "Ideator",
+
     sB: "When a group is figuring out what to do, I naturally start organizing the information and identifying the parts we need to understand.",
     rB: "Analyst"
   },
@@ -21,8 +29,12 @@ const questions = [
 
   // Catalyst vs Executor
   {
+    id: "F02",
+    section: "Foundational",
+
     sA: "Once a group has a direction, I naturally help create momentum by coordinating people around what we are trying to accomplish.",
     rA: "Catalyst",
+
     sB: "Once a group has a direction, I naturally help create momentum by turning what we decided into concrete work that can be completed.",
     rB: "Executor"
   },
@@ -30,8 +42,12 @@ const questions = [
 
   // Alchemist vs Curator
   {
+    id: "F03",
+    section: "Foundational",
+
     sA: "When a group already has something promising, I naturally look for unusual combinations or changes that could transform it into something new.",
     rA: "Alchemist",
+
     sB: "When a group already has something promising, I naturally look for what should be kept, removed, or refined so the whole thing feels stronger.",
     rB: "Curator"
   },
@@ -39,8 +55,12 @@ const questions = [
 
   // Advocate vs Ideator
   {
+    id: "F04",
+    section: "Foundational",
+
     sA: "Early in a collaboration, I naturally notice what would help the people involved communicate, participate, and work well together.",
     rA: "Advocate",
+
     sB: "Early in a collaboration, I naturally notice ideas, connections, and possible directions the group has not explored yet.",
     rB: "Ideator"
   },
@@ -48,8 +68,12 @@ const questions = [
 
   // Analyst vs Catalyst
   {
+    id: "F05",
+    section: "Foundational",
+
     sA: "At the beginning of a group project, I naturally help make the situation clearer by organizing what we know and how the pieces relate.",
     rA: "Analyst",
+
     sB: "At the beginning of a group project, I naturally help create movement by connecting people to a direction and getting participation started.",
     rB: "Catalyst"
   },
@@ -57,8 +81,12 @@ const questions = [
 
   // Executor vs Alchemist
   {
+    id: "F06",
+    section: "Foundational",
+
     sA: "When a group has a rough idea, I naturally want to start turning it into something concrete that we can use, test, or build on.",
     rA: "Executor",
+
     sB: "When a group has a rough idea, I naturally want to experiment with it, alter it, or combine it with something unexpected.",
     rB: "Alchemist"
   },
@@ -66,8 +94,12 @@ const questions = [
 
   // Curator vs Advocate
   {
+    id: "F07",
+    section: "Foundational",
+
     sA: "As a group develops something, I naturally notice whether the choices fit together and support a clear overall identity.",
     rA: "Curator",
+
     sB: "As a group develops something, I naturally notice whether people feel heard, supported, and able to contribute effectively.",
     rB: "Advocate"
   },
@@ -75,8 +107,12 @@ const questions = [
 
   // Ideator vs Catalyst
   {
+    id: "F08",
+    section: "Foundational",
+
     sA: "When a promising direction appears, I naturally want to keep exploring what else it could become or connect to.",
     rA: "Ideator",
+
     sB: "When a promising direction appears, I naturally want to help people understand it, get behind it, and move it forward.",
     rB: "Catalyst"
   },
@@ -84,8 +120,12 @@ const questions = [
 
   // Analyst vs Executor
   {
+    id: "F09",
+    section: "Foundational",
+
     sA: "After a group chooses a goal, I naturally want to map out what is required, what depends on what, and where problems might appear.",
     rA: "Analyst",
+
     sB: "After a group chooses a goal, I naturally want to take the next concrete step and begin turning the plan into something real.",
     rB: "Executor"
   },
@@ -93,8 +133,12 @@ const questions = [
 
   // Alchemist vs Advocate
   {
+    id: "F10",
+    section: "Foundational",
+
     sA: "In a collaborative group, I naturally notice assumptions or patterns that could be challenged to change the work.",
     rA: "Alchemist",
+
     sB: "In a collaborative group, I naturally notice interpersonal patterns that could be adjusted to help people work better together.",
     rB: "Advocate"
   },
@@ -102,8 +146,12 @@ const questions = [
 
   // Curator vs Ideator
   {
+    id: "F11",
+    section: "Foundational",
+
     sA: "When a group has many possible ideas, I naturally want to identify which ones are strongest, most fitting, or worth developing.",
     rA: "Curator",
+
     sB: "When a group has many possible ideas, I naturally want to make more connections and see what additional possibilities we can generate.",
     rB: "Ideator"
   },
@@ -111,8 +159,12 @@ const questions = [
 
   // Catalyst vs Advocate
   {
+    id: "F12",
+    section: "Foundational",
+
     sA: "When people come together around a shared project, I naturally help connect people to the goal, opportunities, and next moves.",
     rA: "Catalyst",
+
     sB: "When people come together around a shared project, I naturally help strengthen the trust, communication, and working relationships between them.",
     rB: "Advocate"
   },
@@ -120,8 +172,12 @@ const questions = [
 
   // Executor vs Curator
   {
+    id: "F13",
+    section: "Foundational",
+
     sA: "As a group approaches a finished result, I naturally focus on making sure the essential pieces are completed and ready to use.",
     rA: "Executor",
+
     sB: "As a group approaches a finished result, I naturally focus on making sure the final choices fit together and clearly represent what we intended.",
     rB: "Curator"
   },
@@ -129,8 +185,12 @@ const questions = [
 
   // Analyst vs Alchemist
   {
+    id: "F14",
+    section: "Foundational",
+
     sA: "When a group inherits an existing approach, I naturally want to understand how it works, where it breaks down, and what could be improved.",
     rA: "Analyst",
+
     sB: "When a group inherits an existing approach, I naturally want to question its assumptions and explore substantially different ways of doing it.",
     rB: "Alchemist"
   },
@@ -138,8 +198,12 @@ const questions = [
 
   // Ideator vs Executor
   {
+    id: "F15",
+    section: "Foundational",
+
     sA: "When a group starts with a blank page, I naturally want to help generate directions, concepts, and possibilities.",
     rA: "Ideator",
+
     sB: "When a group starts with a blank page, I naturally want to help create an early version we can actually see, use, or respond to.",
     rB: "Executor"
   },
@@ -147,8 +211,12 @@ const questions = [
 
   // Analyst vs Curator
   {
+    id: "F16",
+    section: "Foundational",
+
     sA: "When reviewing the group's work, I naturally notice whether the reasoning, structure, and practical requirements hold together.",
     rA: "Analyst",
+
     sB: "When reviewing the group's work, I naturally notice whether the selection, presentation, and overall identity hold together.",
     rB: "Curator"
   },
@@ -156,8 +224,12 @@ const questions = [
 
   // Catalyst vs Alchemist
   {
+    id: "F17",
+    section: "Foundational",
+
     sA: "When a group needs a new direction, I naturally focus on finding a direction people can understand, commit to, and move around.",
     rA: "Catalyst",
+
     sB: "When a group needs a new direction, I naturally focus on introducing an experiment or reframing that could change how we see the work.",
     rB: "Alchemist"
   },
@@ -165,8 +237,12 @@ const questions = [
 
   // Executor vs Advocate
   {
+    id: "F18",
+    section: "Foundational",
+
     sA: "When a group needs support moving forward, I naturally notice concrete responsibilities I can take ownership of.",
     rA: "Executor",
+
     sB: "When a group needs support moving forward, I naturally notice adjustments in communication, workload, or coordination that could help people contribute better.",
     rB: "Advocate"
   },
@@ -174,8 +250,12 @@ const questions = [
 
   // Analyst vs Advocate
   {
+    id: "F19",
+    section: "Foundational",
+
     sA: "When a group sees a situation differently, I naturally try to clarify the issues, evidence, and relationships between the parts of the problem.",
     rA: "Analyst",
+
     sB: "When a group sees a situation differently, I naturally try to clarify the perspectives, concerns, and relationships between the people involved.",
     rB: "Advocate"
   },
@@ -183,8 +263,12 @@ const questions = [
 
   // Catalyst vs Curator
   {
+    id: "F20",
+    section: "Foundational",
+
     sA: "When a group is ready to share its work with others, I naturally think about how to communicate it, attract interest, and build participation.",
     rA: "Catalyst",
+
     sB: "When a group is ready to share its work with others, I naturally think about whether the presentation accurately reflects its quality and identity.",
     rB: "Curator"
   },
@@ -192,8 +276,12 @@ const questions = [
 
   // Ideator vs Alchemist
   {
+    id: "F21",
+    section: "Foundational",
+
     sA: "When a group has one workable idea, I naturally want to generate additional directions, possibilities, or connections around it.",
     rA: "Ideator",
+
     sB: "When a group has one workable idea, I naturally want to take it apart, recombine it, or test an unconventional variation of it.",
     rB: "Alchemist"
   },
@@ -202,13 +290,17 @@ const questions = [
 
   // =====================================
   // SECTION 2: GROUP CONTRIBUTION UNDER FRICTION
+  // What I naturally bring when collaboration gets difficult
   // =====================================
-
 
   // Ideator vs Analyst
   {
+    id: "R01",
+    section: "Friction",
+
     sA: "When a group gets stuck on a problem, I naturally start generating different ways we might approach it.",
     rA: "Ideator",
+
     sB: "When a group gets stuck on a problem, I naturally start breaking it apart to understand what is actually causing it.",
     rB: "Analyst"
   },
@@ -216,8 +308,12 @@ const questions = [
 
   // Ideator vs Catalyst
   {
+    id: "R02",
+    section: "Friction",
+
     sA: "When a group loses momentum, I naturally help by opening up fresh possibilities for what we could try next.",
     rA: "Ideator",
+
     sB: "When a group loses momentum, I naturally help by reconnecting people to a direction and getting movement started again.",
     rB: "Catalyst"
   },
@@ -225,8 +321,12 @@ const questions = [
 
   // Ideator vs Executor
   {
+    id: "R03",
+    section: "Friction",
+
     sA: "When a deadline suddenly changes the plan, I naturally look for alternative routes or possibilities we have not considered.",
     rA: "Ideator",
+
     sB: "When a deadline suddenly changes the plan, I naturally identify what still needs to be completed and start moving through it.",
     rB: "Executor"
   },
@@ -234,8 +334,12 @@ const questions = [
 
   // Ideator vs Alchemist
   {
+    id: "R04",
+    section: "Friction",
+
     sA: "When the group's first solution fails, I naturally generate several other possible solutions.",
     rA: "Ideator",
+
     sB: "When the group's first solution fails, I naturally question the original assumptions and try changing the approach itself.",
     rB: "Alchemist"
   },
@@ -243,8 +347,12 @@ const questions = [
 
   // Ideator vs Curator
   {
+    id: "R05",
+    section: "Friction",
+
     sA: "When a project loses direction, I naturally look for unexplored possibilities that might give us somewhere new to go.",
     rA: "Ideator",
+
     sB: "When a project loses direction, I naturally look back at its strongest ideas, references, and choices to recover what should guide us.",
     rB: "Curator"
   },
@@ -252,8 +360,12 @@ const questions = [
 
   // Ideator vs Advocate
   {
+    id: "R06",
+    section: "Friction",
+
     sA: "When disagreement starts blocking progress, I naturally introduce new possibilities that might help the group find another way forward.",
     rA: "Ideator",
+
     sB: "When disagreement starts blocking progress, I naturally try to understand what people are reacting to or needing before we decide how to move forward.",
     rB: "Advocate"
   },
@@ -261,8 +373,12 @@ const questions = [
 
   // Analyst vs Catalyst
   {
+    id: "R07",
+    section: "Friction",
+
     sA: "When everyone is confused about what to do next, I naturally organize what we know, what is uncertain, and how the pieces relate.",
     rA: "Analyst",
+
     sB: "When everyone is confused about what to do next, I naturally help the group choose an immediate direction and regain forward movement.",
     rB: "Catalyst"
   },
@@ -270,8 +386,12 @@ const questions = [
 
   // Analyst vs Executor
   {
+    id: "R08",
+    section: "Friction",
+
     sA: "When something goes wrong near a deadline, I naturally want to identify the source of the problem and what needs to change.",
     rA: "Analyst",
+
     sB: "When something goes wrong near a deadline, I naturally want to identify the most useful action we can take immediately.",
     rB: "Executor"
   },
@@ -279,8 +399,12 @@ const questions = [
 
   // Analyst vs Alchemist
   {
+    id: "R09",
+    section: "Friction",
+
     sA: "When an existing rule or limitation causes trouble, I naturally work out what the constraint actually is and how we can solve the problem around it.",
     rA: "Analyst",
+
     sB: "When an existing rule or limitation causes trouble, I naturally question the assumption behind it and explore whether we can approach the situation differently.",
     rB: "Alchemist"
   },
@@ -288,8 +412,12 @@ const questions = [
 
   // Analyst vs Curator
   {
+    id: "R10",
+    section: "Friction",
+
     sA: "When the quality of the work starts slipping, I naturally check whether the structure, process, or requirements have stopped working as intended.",
     rA: "Analyst",
+
     sB: "When the quality of the work starts slipping, I naturally check whether our choices still fit together and represent what the project is supposed to be.",
     rB: "Curator"
   },
@@ -297,8 +425,12 @@ const questions = [
 
   // Analyst vs Advocate
   {
+    id: "R11",
+    section: "Friction",
+
     sA: "When a team problem becomes complicated, I naturally separate the issues so we can understand the parts of the problem more clearly.",
     rA: "Analyst",
+
     sB: "When a team problem becomes complicated, I naturally separate the perspectives and concerns so we can understand what is happening between the people involved.",
     rB: "Advocate"
   },
@@ -306,8 +438,12 @@ const questions = [
 
   // Catalyst vs Executor
   {
+    id: "R12",
+    section: "Friction",
+
     sA: "When a project stalls, I naturally start reconnecting people to priorities, decisions, and next moves so momentum can return.",
     rA: "Catalyst",
+
     sB: "When a project stalls, I naturally identify something concrete that can be completed and begin moving the work forward.",
     rB: "Executor"
   },
@@ -315,8 +451,12 @@ const questions = [
 
   // Catalyst vs Alchemist
   {
+    id: "R13",
+    section: "Friction",
+
     sA: "When the group's current direction is no longer working, I naturally focus on finding a direction people can understand and move around together.",
     rA: "Catalyst",
+
     sB: "When the group's current direction is no longer working, I naturally focus on challenging the existing pattern and testing a different approach.",
     rB: "Alchemist"
   },
@@ -324,8 +464,12 @@ const questions = [
 
   // Catalyst vs Curator
   {
+    id: "R14",
+    section: "Friction",
+
     sA: "When people outside the group stop responding to a project, I naturally rethink how we are communicating it and inviting people into it.",
     rA: "Catalyst",
+
     sB: "When people outside the group stop responding to a project, I naturally rethink whether what we are presenting clearly reflects its strongest qualities and identity.",
     rB: "Curator"
   },
@@ -333,8 +477,12 @@ const questions = [
 
   // Catalyst vs Advocate
   {
+    id: "R15",
+    section: "Friction",
+
     sA: "When a group loses confidence, I naturally help reconnect people to what we can still accomplish and what we can do next.",
     rA: "Catalyst",
+
     sB: "When a group loses confidence, I naturally help identify what people need in order to feel able to participate and contribute again.",
     rB: "Advocate"
   },
@@ -342,8 +490,12 @@ const questions = [
 
   // Executor vs Alchemist
   {
+    id: "R16",
+    section: "Friction",
+
     sA: "When the original plan becomes impossible, I naturally choose the strongest workable alternative and begin building from there.",
     rA: "Executor",
+
     sB: "When the original plan becomes impossible, I naturally use the disruption as an opportunity to test a substantially different approach.",
     rB: "Alchemist"
   },
@@ -351,8 +503,12 @@ const questions = [
 
   // Executor vs Curator
   {
+    id: "R17",
+    section: "Friction",
+
     sA: "When time is running out, I naturally focus on making sure the essential pieces are completed and ready to use.",
     rA: "Executor",
+
     sB: "When time is running out, I naturally focus on making sure the most important choices still fit together and represent the project well.",
     rB: "Curator"
   },
@@ -360,8 +516,12 @@ const questions = [
 
   // Executor vs Advocate
   {
+    id: "R18",
+    section: "Friction",
+
     sA: "When teammates become overloaded, I naturally help by taking ownership of concrete responsibilities that need to be handled.",
     rA: "Executor",
+
     sB: "When teammates become overloaded, I naturally help by noticing where workload, communication, or expectations need to be adjusted.",
     rB: "Advocate"
   },
@@ -369,8 +529,12 @@ const questions = [
 
   // Alchemist vs Curator
   {
+    id: "R19",
+    section: "Friction",
+
     sA: "When a project starts feeling repetitive, I naturally look for an experiment, combination, or change that could transform what we are doing.",
     rA: "Alchemist",
+
     sB: "When a project starts feeling repetitive, I naturally look for what should be removed, strengthened, or refined so the work becomes more distinct again.",
     rB: "Curator"
   },
@@ -378,8 +542,12 @@ const questions = [
 
   // Alchemist vs Advocate
   {
+    id: "R20",
+    section: "Friction",
+
     sA: "When a group keeps avoiding an important issue, I naturally notice the pattern that is keeping us stuck and challenge it directly.",
     rA: "Alchemist",
+
     sB: "When a group keeps avoiding an important issue, I naturally notice what may be preventing people from speaking openly and work on those conditions.",
     rB: "Advocate"
   },
@@ -387,8 +555,12 @@ const questions = [
 
   // Curator vs Advocate
   {
+    id: "R21",
+    section: "Friction",
+
     sA: "When people disagree about what the work should become, I naturally look at the project's purpose, references, and strongest existing choices to guide the decision.",
     rA: "Curator",
+
     sB: "When people disagree about what the work should become, I naturally look at the needs, concerns, and priorities behind each person's position.",
     rB: "Advocate"
   },
@@ -397,13 +569,17 @@ const questions = [
 
   // =====================================
   // SECTION 3: SUSTAINABLE GROUP CONTRIBUTION
+  // What I can naturally keep contributing over time
   // =====================================
-
 
   // Ideator vs Analyst
   {
+    id: "S01",
+    section: "Sustainable",
+
     sA: "Over a long project, I naturally keep contributing by generating possibilities, making connections, and helping the group see additional directions.",
     rA: "Ideator",
+
     sB: "Over a long project, I naturally keep contributing by organizing complexity, identifying patterns, and helping the group understand how things fit together.",
     rB: "Analyst"
   },
@@ -411,8 +587,12 @@ const questions = [
 
   // Ideator vs Catalyst
   {
+    id: "S02",
+    section: "Sustainable",
+
     sA: "As a collaboration continues, I naturally keep bringing in fresh ideas, connections, and possibilities for the group to consider.",
     rA: "Ideator",
+
     sB: "As a collaboration continues, I naturally keep connecting people to priorities, opportunities, and the movement of the project.",
     rB: "Catalyst"
   },
@@ -420,8 +600,12 @@ const questions = [
 
   // Ideator vs Executor
   {
+    id: "S03",
+    section: "Sustainable",
+
     sA: "During a long collaboration, I naturally keep noticing additional directions, possibilities, or connections the group could explore.",
     rA: "Ideator",
+
     sB: "During a long collaboration, I naturally keep noticing concrete responsibilities I can take on to turn the group's plans into completed work.",
     rB: "Executor"
   },
@@ -429,8 +613,12 @@ const questions = [
 
   // Ideator vs Alchemist
   {
+    id: "S04",
+    section: "Sustainable",
+
     sA: "I can keep helping a group by expanding the range of ideas and possibilities available to us.",
     rA: "Ideator",
+
     sB: "I can keep helping a group by experimenting with existing ideas and finding ways to transform what we already have.",
     rB: "Alchemist"
   },
@@ -438,8 +626,12 @@ const questions = [
 
   // Ideator vs Curator
   {
+    id: "S05",
+    section: "Sustainable",
+
     sA: "As a project develops, I naturally keep looking for additional ideas, connections, and directions worth exploring.",
     rA: "Ideator",
+
     sB: "As a project develops, I naturally keep identifying which ideas, references, and choices are strongest and most fitting.",
     rB: "Curator"
   },
@@ -447,8 +639,12 @@ const questions = [
 
   // Ideator vs Advocate
   {
+    id: "S06",
+    section: "Sustainable",
+
     sA: "In an ongoing collaboration, I naturally keep contributing by bringing new possibilities and connections into the conversation.",
     rA: "Ideator",
+
     sB: "In an ongoing collaboration, I naturally keep contributing by noticing what would help people communicate, participate, and work well together.",
     rB: "Advocate"
   },
@@ -456,8 +652,12 @@ const questions = [
 
   // Analyst vs Catalyst
   {
+    id: "S07",
+    section: "Sustainable",
+
     sA: "I can consistently support a group by clarifying problems, organizing information, and making complicated situations easier to understand.",
     rA: "Analyst",
+
     sB: "I can consistently support a group by connecting people to priorities, coordinating movement, and helping maintain momentum.",
     rB: "Catalyst"
   },
@@ -465,8 +665,12 @@ const questions = [
 
   // Analyst vs Executor
   {
+    id: "S08",
+    section: "Sustainable",
+
     sA: "As a project continues, I naturally keep examining how the pieces work together, where problems may appear, and what could be improved.",
     rA: "Analyst",
+
     sB: "As a project continues, I naturally keep identifying what needs to be completed next and taking ownership of concrete work.",
     rB: "Executor"
   },
@@ -474,8 +678,12 @@ const questions = [
 
   // Analyst vs Alchemist
   {
+    id: "S09",
+    section: "Sustainable",
+
     sA: "I can stay engaged over time by understanding systems, identifying patterns, and improving how the existing pieces work together.",
     rA: "Analyst",
+
     sB: "I can stay engaged over time by questioning assumptions, experimenting with variations, and changing how the existing pieces are used.",
     rB: "Alchemist"
   },
@@ -483,8 +691,12 @@ const questions = [
 
   // Analyst vs Curator
   {
+    id: "S10",
+    section: "Sustainable",
+
     sA: "Throughout a project, I naturally keep checking whether the reasoning, structure, requirements, and processes still hold together.",
     rA: "Analyst",
+
     sB: "Throughout a project, I naturally keep checking whether the selections, references, presentation, and overall identity still hold together.",
     rB: "Curator"
   },
@@ -492,8 +704,12 @@ const questions = [
 
   // Analyst vs Advocate
   {
+    id: "S11",
+    section: "Sustainable",
+
     sA: "In a long-running group, I naturally keep helping clarify the issues, information, and relationships between different parts of the work.",
     rA: "Analyst",
+
     sB: "In a long-running group, I naturally keep helping clarify people's perspectives, needs, and relationships with one another.",
     rB: "Advocate"
   },
@@ -501,8 +717,12 @@ const questions = [
 
   // Catalyst vs Executor
   {
+    id: "S12",
+    section: "Sustainable",
+
     sA: "Over time, I naturally help a project keep moving by coordinating people around priorities, decisions, and next moves.",
     rA: "Catalyst",
+
     sB: "Over time, I naturally help a project keep moving by taking ownership of concrete responsibilities and steadily completing work.",
     rB: "Executor"
   },
@@ -510,8 +730,12 @@ const questions = [
 
   // Catalyst vs Alchemist
   {
+    id: "S13",
+    section: "Sustainable",
+
     sA: "I can keep contributing by helping people stay connected to a direction and maintaining movement around it.",
     rA: "Catalyst",
+
     sB: "I can keep contributing by challenging patterns that become limiting and introducing experiments that could change the direction.",
     rB: "Alchemist"
   },
@@ -519,8 +743,12 @@ const questions = [
 
   // Catalyst vs Curator
   {
+    id: "S14",
+    section: "Sustainable",
+
     sA: "As a project grows, I naturally keep thinking about how to communicate it, involve people, and build participation around it.",
     rA: "Catalyst",
+
     sB: "As a project grows, I naturally keep thinking about how to preserve its strongest qualities, identity, and coherence as more gets added.",
     rB: "Curator"
   },
@@ -528,8 +756,12 @@ const questions = [
 
   // Catalyst vs Advocate
   {
+    id: "S15",
+    section: "Sustainable",
+
     sA: "In an ongoing group, I naturally keep strengthening participation by connecting people to the goal, opportunities, and next moves.",
     rA: "Catalyst",
+
     sB: "In an ongoing group, I naturally keep strengthening participation by improving communication, trust, workload, and the conditions people need to contribute.",
     rB: "Advocate"
   },
@@ -537,8 +769,12 @@ const questions = [
 
   // Executor vs Alchemist
   {
+    id: "S16",
+    section: "Sustainable",
+
     sA: "I can keep contributing to a project by steadily turning decisions into finished, usable work.",
     rA: "Executor",
+
     sB: "I can keep contributing to a project by regularly testing variations, recombining ideas, and transforming how the work is being approached.",
     rB: "Alchemist"
   },
@@ -546,8 +782,12 @@ const questions = [
 
   // Executor vs Curator
   {
+    id: "S17",
+    section: "Sustainable",
+
     sA: "As a project continues, I naturally keep paying attention to what still needs to be completed so important pieces reach a usable state.",
     rA: "Executor",
+
     sB: "As a project continues, I naturally keep paying attention to what should be selected, removed, or refined so the work remains coherent.",
     rB: "Curator"
   },
@@ -555,8 +795,12 @@ const questions = [
 
   // Executor vs Advocate
   {
+    id: "S18",
+    section: "Sustainable",
+
     sA: "In a long collaboration, I naturally keep noticing concrete responsibilities that need an owner and taking responsibility for getting them done.",
     rA: "Executor",
+
     sB: "In a long collaboration, I naturally keep noticing adjustments in communication, workload, or expectations that could help people contribute better.",
     rB: "Advocate"
   },
@@ -564,8 +808,12 @@ const questions = [
 
   // Alchemist vs Curator
   {
+    id: "S19",
+    section: "Sustainable",
+
     sA: "As a project develops, I naturally keep looking for opportunities to recombine, challenge, or transform what we have already created.",
     rA: "Alchemist",
+
     sB: "As a project develops, I naturally keep looking for opportunities to select, refine, and strengthen what we have already created.",
     rB: "Curator"
   },
@@ -573,8 +821,12 @@ const questions = [
 
   // Alchemist vs Advocate
   {
+    id: "S20",
+    section: "Sustainable",
+
     sA: "Over time, I naturally notice patterns in the work or process that have become limiting and look for ways to change them.",
     rA: "Alchemist",
+
     sB: "Over time, I naturally notice patterns between people that have become limiting and look for ways to improve how the group works together.",
     rB: "Advocate"
   },
@@ -582,8 +834,12 @@ const questions = [
 
   // Curator vs Advocate
   {
+    id: "S21",
+    section: "Sustainable",
+
     sA: "In an ongoing collaboration, I naturally keep paying attention to whether the work remains coherent, intentional, and true to what the group is creating.",
     rA: "Curator",
+
     sB: "In an ongoing collaboration, I naturally keep paying attention to whether the people remain supported, understood, and able to contribute effectively.",
     rB: "Advocate"
   }
@@ -1020,9 +1276,9 @@ const roleDetails = {
 // =====================================
 // COMPLEMENTARY ROLE RECOMMENDATIONS
 //
-// Provisional group-building recommendations.
-// These are not psychometrically validated
-// compatibility matches.
+// These are provisional group-building
+// recommendations rather than validated
+// compatibility scores.
 // =====================================
 
 const complementaryPairings = {
@@ -1116,10 +1372,13 @@ const roleNames = [
 
 
 // =====================================
-// CREATE PAIR KEY
+// CREATE PRIMARY + SECONDARY PAIR KEY
 // =====================================
 
-function getPairKey(roleA, roleB) {
+function getPairKey(
+  roleA,
+  roleB
+) {
 
   const indexA =
     roleNames.indexOf(roleA);
@@ -1182,40 +1441,10 @@ let answerLocked = false;
 
 
 // =====================================
-// IDENTIFY QUESTION SECTION
-// =====================================
-
-function getSectionName(questionIndex) {
-
-  if (questionIndex < 21) {
-
-    return "Foundational";
-  }
-
-
-  if (questionIndex < 42) {
-
-    return "Friction";
-  }
-
-
-  return "Sustainable";
-}
-
-
-
-// =====================================
 // START ASSESSMENT
 // =====================================
 
 function startTest() {
-
-  /*
-     Lock both the HTML root and body.
-
-     This only happens while the actual
-     assessment is being taken.
-  */
 
   document
     .documentElement
@@ -1230,13 +1459,17 @@ function startTest() {
 
 
   document
-    .getElementById("welcome-screen")
+    .getElementById(
+      "welcome-screen"
+    )
     .classList
     .add("hide");
 
 
   document
-    .getElementById("quiz-screen")
+    .getElementById(
+      "quiz-screen"
+    )
     .classList
     .remove("hide");
 
@@ -1274,19 +1507,24 @@ function loadQuestion() {
 
 
   /*
-     The +1 makes the blue progress
-     visible even on Question 1.
+     +1 makes progress visible
+     starting on Question 1.
   */
 
   const percent =
     (
-      (currentQuestionIndex + 1) /
+      (
+        currentQuestionIndex + 1
+      ) /
       questions.length
-    ) * 100;
+    ) *
+    100;
 
 
   document
-    .getElementById("progress")
+    .getElementById(
+      "progress"
+    )
     .style
     .width =
     `${percent}%`;
@@ -1299,13 +1537,17 @@ function loadQuestion() {
 
 
   document
-    .getElementById("btn-sideA")
+    .getElementById(
+      "btn-sideA"
+    )
     .textContent =
     q.sA;
 
 
   document
-    .getElementById("btn-sideB")
+    .getElementById(
+      "btn-sideB"
+    )
     .textContent =
     q.sB;
 
@@ -1326,25 +1568,31 @@ function loadQuestion() {
 
 
   timerInterval =
-    setInterval(() => {
+    setInterval(
+      () => {
 
-      timeLeft--;
-
-
-      if (timeLeft <= 0) {
-
-        timeLeft = 0;
-
-        clearInterval(
-          timerInterval
-        );
-
-      }
+        timeLeft--;
 
 
-      updateTimerDisplay();
+        if (
+          timeLeft <= 0
+        ) {
 
-    }, 1000);
+          timeLeft = 0;
+
+
+          clearInterval(
+            timerInterval
+          );
+
+        }
+
+
+        updateTimerDisplay();
+
+      },
+      1000
+    );
 }
 
 
@@ -1362,7 +1610,9 @@ function updateTimerDisplay() {
 
 
   document
-    .getElementById("timer")
+    .getElementById(
+      "timer"
+    )
     .textContent =
     `00:${formattedTime}`;
 }
@@ -1427,36 +1677,37 @@ function handleAnswer(choice) {
             1000
           ) *
           10
-        ) / 10
+        ) /
+        10
       : null;
 
 
-  /*
-     Current provisional scoring.
-
-     This can later be replaced with
-     calibrated Thurstonian IRT scoring.
-  */
+  // =====================================
+  // CURRENT PROVISIONAL SCORING
+  // =====================================
 
   scores[
     chosenRole
   ] += 1;
 
 
-  /*
-     Preserve complete response pattern
-     for later analysis/calibration.
-  */
+  // =====================================
+  // PRESERVE COMPLETE RESPONSE DATA
+  //
+  // questionId remains stable even if
+  // the question order changes later.
+  // =====================================
 
   responses.push({
+
+    questionId:
+      q.id,
 
     questionNumber:
       currentQuestionIndex + 1,
 
     section:
-      getSectionName(
-        currentQuestionIndex
-      ),
+      q.section,
 
     choice:
       choice,
@@ -1466,6 +1717,12 @@ function handleAnswer(choice) {
 
     rejectedRole:
       rejectedRole,
+
+    roleA:
+      q.rA,
+
+    roleB:
+      q.rB,
 
     elapsedSeconds:
       elapsedSeconds
@@ -1483,6 +1740,7 @@ function handleAnswer(choice) {
 
 // =====================================
 // SECTION SCORES
+// Used only for current tie resolution
 // =====================================
 
 function getSectionScores(role) {
@@ -1595,7 +1853,9 @@ function rankRoles() {
 
 
       if (
-        !groupedByScore[score]
+        !groupedByScore[
+          score
+        ]
       ) {
 
         groupedByScore[
@@ -1607,7 +1867,8 @@ function rankRoles() {
 
       groupedByScore[
         score
-      ].push(role);
+      ]
+        .push(role);
 
     }
   );
@@ -1645,14 +1906,16 @@ function rankRoles() {
           tiedRoles[0]
         );
 
-        return;
 
+        return;
       }
 
 
       tiedRoles.sort(
-        (roleA, roleB) => {
-
+        (
+          roleA,
+          roleB
+        ) => {
 
           // -----------------------------
           // Tie-breaker 1:
@@ -1717,7 +1980,7 @@ function rankRoles() {
 
 
           // -----------------------------
-          // Final deterministic fallback
+          // Deterministic fallback
           // No psychometric meaning
           // -----------------------------
 
@@ -1758,9 +2021,7 @@ function showResults() {
   );
 
 
-  /*
-     Restore normal browser scrolling.
-  */
+  // Restore normal page scrolling.
 
   document
     .documentElement
@@ -1775,13 +2036,17 @@ function showResults() {
 
 
   document
-    .getElementById("quiz-screen")
+    .getElementById(
+      "quiz-screen"
+    )
     .classList
     .add("hide");
 
 
   document
-    .getElementById("results-screen")
+    .getElementById(
+      "results-screen"
+    )
     .classList
     .remove("hide");
 
@@ -1800,7 +2065,7 @@ function showResults() {
 
 
   // =====================================
-  // COMPLEMENTARY ROLES
+  // FIND COMPLEMENTARY ROLES
   // =====================================
 
   const pairKey =
@@ -1840,7 +2105,7 @@ function showResults() {
 
 
   // =====================================
-  // ALL SEVEN ROLES
+  // BUILD FULL ROLE DIRECTORY
   // =====================================
 
   const allRolesHTML =
@@ -1861,7 +2126,7 @@ function showResults() {
 
 
   // =====================================
-  // BUILD RESULTS
+  // DISPLAY RESULTS
   // =====================================
 
   document
@@ -1881,7 +2146,7 @@ function showResults() {
           They are not a limit on what you can do.
         </b>
 
-        Screenshot or share your results with
+        Screenshot and share your results with
         family or friends to compare perspectives
         and discuss how accurately they reflect you.
 
@@ -1988,11 +2253,6 @@ function showResults() {
 
     `;
 
-
-  /*
-     When the fixed assessment is removed,
-     explicitly return the results page to top.
-  */
 
   requestAnimationFrame(
     () => {
