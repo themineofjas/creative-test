@@ -1,9 +1,14 @@
 // =====================================
-// SECTION 1: FOUNDATIONAL ROLE PAIRS
-// Preferred contribution in a group
+// QUESTION BANK
 // =====================================
 
 const questions = [
+
+  // =====================================
+  // SECTION 1: FOUNDATIONAL ROLE PAIRS
+  // Preferred contribution in a group
+  // =====================================
+
 
   // Ideator vs Analyst
   {
@@ -13,6 +18,7 @@ const questions = [
     rB: "Analyst"
   },
 
+
   // Catalyst vs Executor
   {
     sA: "Once a group has a direction, I naturally help create momentum by coordinating people around what we are trying to accomplish.",
@@ -20,6 +26,7 @@ const questions = [
     sB: "Once a group has a direction, I naturally help create momentum by turning what we decided into concrete work that can be completed.",
     rB: "Executor"
   },
+
 
   // Alchemist vs Curator
   {
@@ -29,6 +36,7 @@ const questions = [
     rB: "Curator"
   },
 
+
   // Advocate vs Ideator
   {
     sA: "Early in a collaboration, I naturally notice what would help the people involved communicate, participate, and work well together.",
@@ -36,6 +44,7 @@ const questions = [
     sB: "Early in a collaboration, I naturally notice ideas, connections, and possible directions the group has not explored yet.",
     rB: "Ideator"
   },
+
 
   // Analyst vs Catalyst
   {
@@ -45,6 +54,7 @@ const questions = [
     rB: "Catalyst"
   },
 
+
   // Executor vs Alchemist
   {
     sA: "When a group has a rough idea, I naturally want to start turning it into something concrete that we can use, test, or build on.",
@@ -52,6 +62,7 @@ const questions = [
     sB: "When a group has a rough idea, I naturally want to experiment with it, alter it, or combine it with something unexpected.",
     rB: "Alchemist"
   },
+
 
   // Curator vs Advocate
   {
@@ -61,6 +72,7 @@ const questions = [
     rB: "Advocate"
   },
 
+
   // Ideator vs Catalyst
   {
     sA: "When a promising direction appears, I naturally want to keep exploring what else it could become or connect to.",
@@ -68,6 +80,7 @@ const questions = [
     sB: "When a promising direction appears, I naturally want to help people understand it, get behind it, and move it forward.",
     rB: "Catalyst"
   },
+
 
   // Analyst vs Executor
   {
@@ -77,6 +90,7 @@ const questions = [
     rB: "Executor"
   },
 
+
   // Alchemist vs Advocate
   {
     sA: "In a collaborative group, I naturally notice assumptions or patterns that could be challenged to change the work.",
@@ -84,6 +98,7 @@ const questions = [
     sB: "In a collaborative group, I naturally notice interpersonal patterns that could be adjusted to help people work better together.",
     rB: "Advocate"
   },
+
 
   // Curator vs Ideator
   {
@@ -93,6 +108,7 @@ const questions = [
     rB: "Ideator"
   },
 
+
   // Catalyst vs Advocate
   {
     sA: "When people come together around a shared project, I naturally help connect people to the goal, opportunities, and next moves.",
@@ -100,6 +116,7 @@ const questions = [
     sB: "When people come together around a shared project, I naturally help strengthen the trust, communication, and working relationships between them.",
     rB: "Advocate"
   },
+
 
   // Executor vs Curator
   {
@@ -109,6 +126,7 @@ const questions = [
     rB: "Curator"
   },
 
+
   // Analyst vs Alchemist
   {
     sA: "When a group inherits an existing approach, I naturally want to understand how it works, where it breaks down, and what could be improved.",
@@ -116,6 +134,7 @@ const questions = [
     sB: "When a group inherits an existing approach, I naturally want to question its assumptions and explore substantially different ways of doing it.",
     rB: "Alchemist"
   },
+
 
   // Ideator vs Executor
   {
@@ -125,6 +144,7 @@ const questions = [
     rB: "Executor"
   },
 
+
   // Analyst vs Curator
   {
     sA: "When reviewing the group's work, I naturally notice whether the reasoning, structure, and practical requirements hold together.",
@@ -132,6 +152,7 @@ const questions = [
     sB: "When reviewing the group's work, I naturally notice whether the selection, presentation, and overall identity hold together.",
     rB: "Curator"
   },
+
 
   // Catalyst vs Alchemist
   {
@@ -141,6 +162,7 @@ const questions = [
     rB: "Alchemist"
   },
 
+
   // Executor vs Advocate
   {
     sA: "When a group needs support moving forward, I naturally notice concrete responsibilities I can take ownership of.",
@@ -148,6 +170,7 @@ const questions = [
     sB: "When a group needs support moving forward, I naturally notice adjustments in communication, workload, or coordination that could help people contribute better.",
     rB: "Advocate"
   },
+
 
   // Analyst vs Advocate
   {
@@ -157,6 +180,7 @@ const questions = [
     rB: "Advocate"
   },
 
+
   // Catalyst vs Curator
   {
     sA: "When a group is ready to share its work with others, I naturally think about how to communicate it, attract interest, and build participation.",
@@ -164,6 +188,7 @@ const questions = [
     sB: "When a group is ready to share its work with others, I naturally think about whether the presentation accurately reflects its quality and identity.",
     rB: "Curator"
   },
+
 
   // Ideator vs Alchemist
   {
@@ -174,9 +199,11 @@ const questions = [
   },
 
 
+
   // =====================================
   // SECTION 2: GROUP CONTRIBUTION UNDER FRICTION
   // =====================================
+
 
   // Ideator vs Analyst
   {
@@ -186,6 +213,7 @@ const questions = [
     rB: "Analyst"
   },
 
+
   // Ideator vs Catalyst
   {
     sA: "When a group loses momentum, I naturally help by opening up fresh possibilities for what we could try next.",
@@ -193,6 +221,7 @@ const questions = [
     sB: "When a group loses momentum, I naturally help by reconnecting people to a direction and getting movement started again.",
     rB: "Catalyst"
   },
+
 
   // Ideator vs Executor
   {
@@ -202,6 +231,7 @@ const questions = [
     rB: "Executor"
   },
 
+
   // Ideator vs Alchemist
   {
     sA: "When the group's first solution fails, I naturally generate several other possible solutions.",
@@ -209,6 +239,7 @@ const questions = [
     sB: "When the group's first solution fails, I naturally question the original assumptions and try changing the approach itself.",
     rB: "Alchemist"
   },
+
 
   // Ideator vs Curator
   {
@@ -218,6 +249,7 @@ const questions = [
     rB: "Curator"
   },
 
+
   // Ideator vs Advocate
   {
     sA: "When disagreement starts blocking progress, I naturally introduce new possibilities that might help the group find another way forward.",
@@ -225,6 +257,7 @@ const questions = [
     sB: "When disagreement starts blocking progress, I naturally try to understand what people are reacting to or needing before we decide how to move forward.",
     rB: "Advocate"
   },
+
 
   // Analyst vs Catalyst
   {
@@ -234,6 +267,7 @@ const questions = [
     rB: "Catalyst"
   },
 
+
   // Analyst vs Executor
   {
     sA: "When something goes wrong near a deadline, I naturally want to identify the source of the problem and what needs to change.",
@@ -241,6 +275,7 @@ const questions = [
     sB: "When something goes wrong near a deadline, I naturally want to identify the most useful action we can take immediately.",
     rB: "Executor"
   },
+
 
   // Analyst vs Alchemist
   {
@@ -250,6 +285,7 @@ const questions = [
     rB: "Alchemist"
   },
 
+
   // Analyst vs Curator
   {
     sA: "When the quality of the work starts slipping, I naturally check whether the structure, process, or requirements have stopped working as intended.",
@@ -257,6 +293,7 @@ const questions = [
     sB: "When the quality of the work starts slipping, I naturally check whether our choices still fit together and represent what the project is supposed to be.",
     rB: "Curator"
   },
+
 
   // Analyst vs Advocate
   {
@@ -266,6 +303,7 @@ const questions = [
     rB: "Advocate"
   },
 
+
   // Catalyst vs Executor
   {
     sA: "When a project stalls, I naturally start reconnecting people to priorities, decisions, and next moves so momentum can return.",
@@ -273,6 +311,7 @@ const questions = [
     sB: "When a project stalls, I naturally identify something concrete that can be completed and begin moving the work forward.",
     rB: "Executor"
   },
+
 
   // Catalyst vs Alchemist
   {
@@ -282,6 +321,7 @@ const questions = [
     rB: "Alchemist"
   },
 
+
   // Catalyst vs Curator
   {
     sA: "When people outside the group stop responding to a project, I naturally rethink how we are communicating it and inviting people into it.",
@@ -289,6 +329,7 @@ const questions = [
     sB: "When people outside the group stop responding to a project, I naturally rethink whether what we are presenting clearly reflects its strongest qualities and identity.",
     rB: "Curator"
   },
+
 
   // Catalyst vs Advocate
   {
@@ -298,6 +339,7 @@ const questions = [
     rB: "Advocate"
   },
 
+
   // Executor vs Alchemist
   {
     sA: "When the original plan becomes impossible, I naturally choose the strongest workable alternative and begin building from there.",
@@ -305,6 +347,7 @@ const questions = [
     sB: "When the original plan becomes impossible, I naturally use the disruption as an opportunity to test a substantially different approach.",
     rB: "Alchemist"
   },
+
 
   // Executor vs Curator
   {
@@ -314,6 +357,7 @@ const questions = [
     rB: "Curator"
   },
 
+
   // Executor vs Advocate
   {
     sA: "When teammates become overloaded, I naturally help by taking ownership of concrete responsibilities that need to be handled.",
@@ -321,6 +365,7 @@ const questions = [
     sB: "When teammates become overloaded, I naturally help by noticing where workload, communication, or expectations need to be adjusted.",
     rB: "Advocate"
   },
+
 
   // Alchemist vs Curator
   {
@@ -330,6 +375,7 @@ const questions = [
     rB: "Curator"
   },
 
+
   // Alchemist vs Advocate
   {
     sA: "When a group keeps avoiding an important issue, I naturally notice the pattern that is keeping us stuck and challenge it directly.",
@@ -337,6 +383,7 @@ const questions = [
     sB: "When a group keeps avoiding an important issue, I naturally notice what may be preventing people from speaking openly and work on those conditions.",
     rB: "Advocate"
   },
+
 
   // Curator vs Advocate
   {
@@ -347,9 +394,11 @@ const questions = [
   },
 
 
+
   // =====================================
   // SECTION 3: SUSTAINABLE GROUP CONTRIBUTION
   // =====================================
+
 
   // Ideator vs Analyst
   {
@@ -359,6 +408,7 @@ const questions = [
     rB: "Analyst"
   },
 
+
   // Ideator vs Catalyst
   {
     sA: "As a collaboration continues, I naturally keep bringing in fresh ideas, connections, and possibilities for the group to consider.",
@@ -366,6 +416,7 @@ const questions = [
     sB: "As a collaboration continues, I naturally keep connecting people to priorities, opportunities, and the movement of the project.",
     rB: "Catalyst"
   },
+
 
   // Ideator vs Executor
   {
@@ -375,6 +426,7 @@ const questions = [
     rB: "Executor"
   },
 
+
   // Ideator vs Alchemist
   {
     sA: "I can keep helping a group by expanding the range of ideas and possibilities available to us.",
@@ -382,6 +434,7 @@ const questions = [
     sB: "I can keep helping a group by experimenting with existing ideas and finding ways to transform what we already have.",
     rB: "Alchemist"
   },
+
 
   // Ideator vs Curator
   {
@@ -391,6 +444,7 @@ const questions = [
     rB: "Curator"
   },
 
+
   // Ideator vs Advocate
   {
     sA: "In an ongoing collaboration, I naturally keep contributing by bringing new possibilities and connections into the conversation.",
@@ -398,6 +452,7 @@ const questions = [
     sB: "In an ongoing collaboration, I naturally keep contributing by noticing what would help people communicate, participate, and work well together.",
     rB: "Advocate"
   },
+
 
   // Analyst vs Catalyst
   {
@@ -407,6 +462,7 @@ const questions = [
     rB: "Catalyst"
   },
 
+
   // Analyst vs Executor
   {
     sA: "As a project continues, I naturally keep examining how the pieces work together, where problems may appear, and what could be improved.",
@@ -414,6 +470,7 @@ const questions = [
     sB: "As a project continues, I naturally keep identifying what needs to be completed next and taking ownership of concrete work.",
     rB: "Executor"
   },
+
 
   // Analyst vs Alchemist
   {
@@ -423,6 +480,7 @@ const questions = [
     rB: "Alchemist"
   },
 
+
   // Analyst vs Curator
   {
     sA: "Throughout a project, I naturally keep checking whether the reasoning, structure, requirements, and processes still hold together.",
@@ -430,6 +488,7 @@ const questions = [
     sB: "Throughout a project, I naturally keep checking whether the selections, references, presentation, and overall identity still hold together.",
     rB: "Curator"
   },
+
 
   // Analyst vs Advocate
   {
@@ -439,6 +498,7 @@ const questions = [
     rB: "Advocate"
   },
 
+
   // Catalyst vs Executor
   {
     sA: "Over time, I naturally help a project keep moving by coordinating people around priorities, decisions, and next moves.",
@@ -446,6 +506,7 @@ const questions = [
     sB: "Over time, I naturally help a project keep moving by taking ownership of concrete responsibilities and steadily completing work.",
     rB: "Executor"
   },
+
 
   // Catalyst vs Alchemist
   {
@@ -455,6 +516,7 @@ const questions = [
     rB: "Alchemist"
   },
 
+
   // Catalyst vs Curator
   {
     sA: "As a project grows, I naturally keep thinking about how to communicate it, involve people, and build participation around it.",
@@ -462,6 +524,7 @@ const questions = [
     sB: "As a project grows, I naturally keep thinking about how to preserve its strongest qualities, identity, and coherence as more gets added.",
     rB: "Curator"
   },
+
 
   // Catalyst vs Advocate
   {
@@ -471,6 +534,7 @@ const questions = [
     rB: "Advocate"
   },
 
+
   // Executor vs Alchemist
   {
     sA: "I can keep contributing to a project by steadily turning decisions into finished, usable work.",
@@ -478,6 +542,7 @@ const questions = [
     sB: "I can keep contributing to a project by regularly testing variations, recombining ideas, and transforming how the work is being approached.",
     rB: "Alchemist"
   },
+
 
   // Executor vs Curator
   {
@@ -487,6 +552,7 @@ const questions = [
     rB: "Curator"
   },
 
+
   // Executor vs Advocate
   {
     sA: "In a long collaboration, I naturally keep noticing concrete responsibilities that need an owner and taking responsibility for getting them done.",
@@ -494,6 +560,7 @@ const questions = [
     sB: "In a long collaboration, I naturally keep noticing adjustments in communication, workload, or expectations that could help people contribute better.",
     rB: "Advocate"
   },
+
 
   // Alchemist vs Curator
   {
@@ -503,6 +570,7 @@ const questions = [
     rB: "Curator"
   },
 
+
   // Alchemist vs Advocate
   {
     sA: "Over time, I naturally notice patterns in the work or process that have become limiting and look for ways to change them.",
@@ -510,6 +578,7 @@ const questions = [
     sB: "Over time, I naturally notice patterns between people that have become limiting and look for ways to improve how the group works together.",
     rB: "Advocate"
   },
+
 
   // Curator vs Advocate
   {
@@ -522,6 +591,7 @@ const questions = [
 ];
 
 
+
 // =====================================
 // ROLE RESULT TEXT
 // =====================================
@@ -529,201 +599,350 @@ const questions = [
 const profiles = {
 
   Advocate: `
-    <h2 class="profile-title">The Advocate</h2>
-    <div class="profile-sub">The Human Conditions Anchor</div>
+    <section class="role-profile">
 
-    <h3 class="section-title">Your Natural Group Contribution</h3>
+      <h2 class="profile-title">
+        The Advocate
+      </h2>
 
-    <p class="profile-text">
-      You naturally pay attention to the conditions that help people contribute well together.
-      You notice communication, trust, workload, capacity, tension, and the needs that may be
-      affecting participation. In a group, you are often drawn toward strengthening the human
-      side of collaboration so people can do their best work.
-    </p>
+      <div class="profile-sub">
+        The Human Conditions Anchor
+      </div>
 
-    <h3 class="section-title">Your Group Superpowers</h3>
+      <h3 class="section-title">
+        Your Natural Group Contribution
+      </h3>
 
-    <p class="profile-text">
-      <b>Participation Support:</b>
-      You notice what may be preventing people from contributing fully and help improve the
-      conditions around them.
+      <p class="profile-text">
+        You naturally pay attention to the conditions
+        that help people contribute well together.
+        You notice communication, trust, workload,
+        capacity, tension, and the needs that may be
+        affecting participation. In a group, you are
+        often drawn toward strengthening the human
+        side of collaboration so people can do their
+        best work.
+      </p>
 
-      <br><br>
+      <h3 class="section-title">
+        Your Group Superpowers
+      </h3>
 
-      <b>Relational Awareness:</b>
-      You recognize interpersonal patterns, unspoken concerns, and communication problems
-      that can quietly affect the work.
-    </p>
+      <p class="profile-text">
+
+        <b>Participation Support:</b>
+        You notice what may be preventing people from
+        contributing fully and help improve the
+        conditions around them.
+
+        <br><br>
+
+        <b>Relational Awareness:</b>
+        You recognize interpersonal patterns,
+        unspoken concerns, and communication problems
+        that can quietly affect the work.
+
+      </p>
+
+    </section>
   `,
+
 
   Ideator: `
-    <h2 class="profile-title">The Ideator</h2>
-    <div class="profile-sub">The Possibility Generator</div>
+    <section class="role-profile">
 
-    <h3 class="section-title">Your Natural Group Contribution</h3>
+      <h2 class="profile-title">
+        The Ideator
+      </h2>
 
-    <p class="profile-text">
-      You naturally expand what a group can imagine. You notice possibilities, connections,
-      questions, and directions that other people may not have considered yet. In a group,
-      you are often drawn toward opening the field of options and giving the project more
-      places it could go.
-    </p>
+      <div class="profile-sub">
+        The Possibility Generator
+      </div>
 
-    <h3 class="section-title">Your Group Superpowers</h3>
+      <h3 class="section-title">
+        Your Natural Group Contribution
+      </h3>
 
-    <p class="profile-text">
-      <b>Possibility Expansion:</b>
-      You help groups move beyond the first obvious answer by generating additional
-      directions and connections.
+      <p class="profile-text">
+        You naturally expand what a group can imagine.
+        You notice possibilities, connections,
+        questions, and directions that other people
+        may not have considered yet. In a group, you
+        are often drawn toward opening the field of
+        options and giving the project more places
+        it could go.
+      </p>
 
-      <br><br>
+      <h3 class="section-title">
+        Your Group Superpowers
+      </h3>
 
-      <b>Concept Discovery:</b>
-      You often spot promising ideas or relationships between ideas before they have
-      been fully developed.
-    </p>
+      <p class="profile-text">
+
+        <b>Possibility Expansion:</b>
+        You help groups move beyond the first obvious
+        answer by generating additional directions
+        and connections.
+
+        <br><br>
+
+        <b>Concept Discovery:</b>
+        You often spot promising ideas or
+        relationships between ideas before they
+        have been fully developed.
+
+      </p>
+
+    </section>
   `,
+
 
   Analyst: `
-    <h2 class="profile-title">The Analyst</h2>
-    <div class="profile-sub">The Structure & Sense-Making Anchor</div>
+    <section class="role-profile">
 
-    <h3 class="section-title">Your Natural Group Contribution</h3>
+      <h2 class="profile-title">
+        The Analyst
+      </h2>
 
-    <p class="profile-text">
-      You naturally make complexity easier to understand. You notice structure,
-      dependencies, constraints, evidence, patterns, and places where something may not
-      fit together yet. In a group, you are often drawn toward clarifying how the work
-      functions and helping people make better-informed decisions.
-    </p>
+      <div class="profile-sub">
+        The Structure & Sense-Making Anchor
+      </div>
 
-    <h3 class="section-title">Your Group Superpowers</h3>
+      <h3 class="section-title">
+        Your Natural Group Contribution
+      </h3>
 
-    <p class="profile-text">
-      <b>Structural Clarity:</b>
-      You organize complicated information into frameworks that make the situation
-      easier to understand.
+      <p class="profile-text">
+        You naturally make complexity easier to
+        understand. You notice structure,
+        dependencies, constraints, evidence,
+        patterns, and places where something may
+        not fit together yet. In a group, you are
+        often drawn toward clarifying how the work
+        functions and helping people make
+        better-informed decisions.
+      </p>
 
-      <br><br>
+      <h3 class="section-title">
+        Your Group Superpowers
+      </h3>
 
-      <b>Problem Diagnosis:</b>
-      You notice gaps, risks, dependencies, and breakdowns that the group may need
-      to address.
-    </p>
+      <p class="profile-text">
+
+        <b>Structural Clarity:</b>
+        You organize complicated information into
+        frameworks that make the situation easier
+        to understand.
+
+        <br><br>
+
+        <b>Problem Diagnosis:</b>
+        You notice gaps, risks, dependencies, and
+        breakdowns that the group may need to address.
+
+      </p>
+
+    </section>
   `,
+
 
   Catalyst: `
-    <h2 class="profile-title">The Catalyst</h2>
-    <div class="profile-sub">The Movement & Mobilization Engine</div>
+    <section class="role-profile">
 
-    <h3 class="section-title">Your Natural Group Contribution</h3>
+      <h2 class="profile-title">
+        The Catalyst
+      </h2>
 
-    <p class="profile-text">
-      You naturally help collective energy become movement. You notice where people need
-      a clearer direction, stronger connection to the goal, better coordination, or a
-      reason to engage. In a group, you are often drawn toward connecting people to
-      opportunities, decisions, and next moves so the project gains traction.
-    </p>
+      <div class="profile-sub">
+        The Movement & Mobilization Engine
+      </div>
 
-    <h3 class="section-title">Your Group Superpowers</h3>
+      <h3 class="section-title">
+        Your Natural Group Contribution
+      </h3>
 
-    <p class="profile-text">
-      <b>Momentum Building:</b>
-      You help groups move from discussion into coordinated forward motion.
+      <p class="profile-text">
+        You naturally help collective energy become
+        movement. You notice where people need a
+        clearer direction, stronger connection to
+        the goal, better coordination, or a reason
+        to engage. In a group, you are often drawn
+        toward connecting people to opportunities,
+        decisions, and next moves so the project
+        gains traction.
+      </p>
 
-      <br><br>
+      <h3 class="section-title">
+        Your Group Superpowers
+      </h3>
 
-      <b>Connection to Action:</b>
-      You help people understand where they fit, what matters now, and how they can
-      participate in what comes next.
-    </p>
+      <p class="profile-text">
+
+        <b>Momentum Building:</b>
+        You help groups move from discussion into
+        coordinated forward motion.
+
+        <br><br>
+
+        <b>Connection to Action:</b>
+        You help people understand where they fit,
+        what matters now, and how they can participate
+        in what comes next.
+
+      </p>
+
+    </section>
   `,
+
 
   Executor: `
-    <h2 class="profile-title">The Executor</h2>
-    <div class="profile-sub">The Implementation & Completion Engine</div>
+    <section class="role-profile">
 
-    <h3 class="section-title">Your Natural Group Contribution</h3>
+      <h2 class="profile-title">
+        The Executor
+      </h2>
 
-    <p class="profile-text">
-      You naturally turn shared intentions into tangible progress. You notice concrete
-      responsibilities, unfinished pieces, and the next actions required to make something
-      real. In a group, you are often drawn toward taking ownership of work and helping
-      ideas reach a usable or completed state.
-    </p>
+      <div class="profile-sub">
+        The Implementation & Completion Engine
+      </div>
 
-    <h3 class="section-title">Your Group Superpowers</h3>
+      <h3 class="section-title">
+        Your Natural Group Contribution
+      </h3>
 
-    <p class="profile-text">
-      <b>Implementation:</b>
-      You translate decisions and plans into concrete work that people can see, use,
-      test, or build on.
+      <p class="profile-text">
+        You naturally turn shared intentions into
+        tangible progress. You notice concrete
+        responsibilities, unfinished pieces, and
+        the next actions required to make something
+        real. In a group, you are often drawn toward
+        taking ownership of work and helping ideas
+        reach a usable or completed state.
+      </p>
 
-      <br><br>
+      <h3 class="section-title">
+        Your Group Superpowers
+      </h3>
 
-      <b>Completion:</b>
-      You keep track of what still needs an owner and help important pieces cross
-      the finish line.
-    </p>
+      <p class="profile-text">
+
+        <b>Implementation:</b>
+        You translate decisions and plans into
+        concrete work that people can see, use,
+        test, or build on.
+
+        <br><br>
+
+        <b>Completion:</b>
+        You keep track of what still needs an owner
+        and help important pieces cross the finish line.
+
+      </p>
+
+    </section>
   `,
+
 
   Alchemist: `
-    <h2 class="profile-title">The Alchemist</h2>
-    <div class="profile-sub">The Transformation & Experimentation Engine</div>
+    <section class="role-profile">
 
-    <h3 class="section-title">Your Natural Group Contribution</h3>
+      <h2 class="profile-title">
+        The Alchemist
+      </h2>
 
-    <p class="profile-text">
-      You naturally look for ways to transform what already exists. You notice assumptions,
-      patterns, combinations, and conventions that could be challenged, recombined, or
-      tested differently. In a group, you are often drawn toward experimentation that
-      changes how the project is understood or approached.
-    </p>
+      <div class="profile-sub">
+        The Transformation & Experimentation Engine
+      </div>
 
-    <h3 class="section-title">Your Group Superpowers</h3>
+      <h3 class="section-title">
+        Your Natural Group Contribution
+      </h3>
 
-    <p class="profile-text">
-      <b>Pattern Disruption:</b>
-      You notice when an established approach has become limiting and introduce
-      alternatives that can shift the work.
+      <p class="profile-text">
+        You naturally look for ways to transform what
+        already exists. You notice assumptions,
+        patterns, combinations, and conventions that
+        could be challenged, recombined, or tested
+        differently. In a group, you are often drawn
+        toward experimentation that changes how the
+        project is understood or approached.
+      </p>
 
-      <br><br>
+      <h3 class="section-title">
+        Your Group Superpowers
+      </h3>
 
-      <b>Creative Recombination:</b>
-      You bring distant ideas, methods, or elements together in ways that can produce
-      something genuinely different.
-    </p>
+      <p class="profile-text">
+
+        <b>Pattern Disruption:</b>
+        You notice when an established approach has
+        become limiting and introduce alternatives
+        that can shift the work.
+
+        <br><br>
+
+        <b>Creative Recombination:</b>
+        You bring distant ideas, methods, or elements
+        together in ways that can produce something
+        genuinely different.
+
+      </p>
+
+    </section>
   `,
 
+
   Curator: `
-    <h2 class="profile-title">The Curator</h2>
-    <div class="profile-sub">The Discernment & Coherence Anchor</div>
+    <section class="role-profile">
 
-    <h3 class="section-title">Your Natural Group Contribution</h3>
+      <h2 class="profile-title">
+        The Curator
+      </h2>
 
-    <p class="profile-text">
-      You naturally notice what belongs, what is strongest, and what should be refined
-      or removed. You pay attention to quality, context, references, consistency,
-      presentation, and the identity of the work as a whole. In a group, you are often
-      drawn toward helping the project become more coherent and intentional.
-    </p>
+      <div class="profile-sub">
+        The Discernment & Coherence Anchor
+      </div>
 
-    <h3 class="section-title">Your Group Superpowers</h3>
+      <h3 class="section-title">
+        Your Natural Group Contribution
+      </h3>
 
-    <p class="profile-text">
-      <b>Discernment:</b>
-      You help groups distinguish between what is merely available and what is actually
-      worth keeping or developing.
+      <p class="profile-text">
+        You naturally notice what belongs, what is
+        strongest, and what should be refined or
+        removed. You pay attention to quality,
+        context, references, consistency,
+        presentation, and the identity of the work
+        as a whole. In a group, you are often drawn
+        toward helping the project become more
+        coherent and intentional.
+      </p>
 
-      <br><br>
+      <h3 class="section-title">
+        Your Group Superpowers
+      </h3>
 
-      <b>Coherence:</b>
-      You protect the relationship between individual choices and the larger identity,
-      quality, or purpose of the project.
-    </p>
+      <p class="profile-text">
+
+        <b>Discernment:</b>
+        You help groups distinguish between what is
+        merely available and what is actually worth
+        keeping or developing.
+
+        <br><br>
+
+        <b>Coherence:</b>
+        You protect the relationship between individual
+        choices and the larger identity, quality, or
+        purpose of the project.
+
+      </p>
+
+    </section>
   `
 
 };
+
 
 
 // =====================================
@@ -733,43 +952,63 @@ const profiles = {
 const roleDetails = {
 
   Ideator: {
-    fullName: "The Ideator — Possibility Generator",
+    fullName:
+      "The Ideator — Possibility Generator",
+
     contribution:
       "Adds possibilities, connections, concepts, and new directions."
   },
 
+
   Analyst: {
-    fullName: "The Analyst — Structure & Sense-Making Anchor",
+    fullName:
+      "The Analyst — Structure & Sense-Making Anchor",
+
     contribution:
       "Adds clarity, structure, analysis, and understanding of how the pieces fit together."
   },
 
+
   Catalyst: {
-    fullName: "The Catalyst — Movement & Mobilization Engine",
+    fullName:
+      "The Catalyst — Movement & Mobilization Engine",
+
     contribution:
       "Adds momentum, coordination, participation, and forward movement."
   },
 
+
   Executor: {
-    fullName: "The Executor — Implementation & Completion Engine",
+    fullName:
+      "The Executor — Implementation & Completion Engine",
+
     contribution:
       "Adds concrete action, ownership, implementation, and completion."
   },
 
+
   Alchemist: {
-    fullName: "The Alchemist — Transformation & Experimentation Engine",
+    fullName:
+      "The Alchemist — Transformation & Experimentation Engine",
+
     contribution:
       "Adds experimentation, reframing, recombination, and transformation."
   },
 
+
   Curator: {
-    fullName: "The Curator — Discernment & Coherence Anchor",
+    fullName:
+      "The Curator — Discernment & Coherence Anchor",
+
     contribution:
       "Adds discernment, quality control, context, selection, and coherence."
   },
 
+
   Advocate: {
-    fullName: "The Advocate — Human Conditions Anchor",
+    fullName:
+      "The Advocate — Human Conditions Anchor",
+
     contribution:
       "Adds attention to communication, trust, capacity, relationships, and healthy collaboration."
   }
@@ -777,8 +1016,13 @@ const roleDetails = {
 };
 
 
+
 // =====================================
 // COMPLEMENTARY ROLE RECOMMENDATIONS
+//
+// Provisional group-building recommendations.
+// These are not psychometrically validated
+// compatibility matches.
 // =====================================
 
 const complementaryPairings = {
@@ -801,6 +1045,7 @@ const complementaryPairings = {
   "Ideator|Advocate":
     ["Analyst", "Catalyst", "Executor"],
 
+
   "Analyst|Catalyst":
     ["Ideator", "Executor", "Advocate"],
 
@@ -816,6 +1061,7 @@ const complementaryPairings = {
   "Analyst|Advocate":
     ["Ideator", "Catalyst", "Executor"],
 
+
   "Catalyst|Executor":
     ["Ideator", "Analyst", "Advocate"],
 
@@ -828,6 +1074,7 @@ const complementaryPairings = {
   "Catalyst|Advocate":
     ["Ideator", "Analyst", "Executor"],
 
+
   "Executor|Alchemist":
     ["Analyst", "Curator", "Advocate"],
 
@@ -837,11 +1084,13 @@ const complementaryPairings = {
   "Executor|Advocate":
     ["Ideator", "Analyst", "Catalyst"],
 
+
   "Alchemist|Curator":
     ["Analyst", "Executor", "Advocate"],
 
   "Alchemist|Advocate":
     ["Analyst", "Catalyst", "Executor"],
+
 
   "Curator|Advocate":
     ["Ideator", "Catalyst", "Executor"]
@@ -849,8 +1098,9 @@ const complementaryPairings = {
 };
 
 
+
 // =====================================
-// APPLICATION STATE
+// ROLE ORDER
 // =====================================
 
 const roleNames = [
@@ -864,8 +1114,9 @@ const roleNames = [
 ];
 
 
+
 // =====================================
-// CREATE PRIMARY + SECONDARY PAIR KEY
+// CREATE PAIR KEY
 // =====================================
 
 function getPairKey(roleA, roleB) {
@@ -878,36 +1129,56 @@ function getPairKey(roleA, roleB) {
 
 
   if (indexA < indexB) {
+
     return `${roleA}|${roleB}`;
   }
+
 
   return `${roleB}|${roleA}`;
 }
 
 
+
+// =====================================
+// APPLICATION STATE
+// =====================================
+
 let currentQuestionIndex = 0;
 
 
 let scores = {
+
   Ideator: 0,
+
   Analyst: 0,
+
   Catalyst: 0,
+
   Executor: 0,
+
   Alchemist: 0,
+
   Curator: 0,
+
   Advocate: 0
+
 };
 
 
 let responses = [];
 
+
 let timerInterval;
+
 
 let timeLeft = 45;
 
+
 let questionStartedAt = null;
 
+
 let answerLocked = false;
+
 
 
 // =====================================
@@ -917,15 +1188,20 @@ let answerLocked = false;
 function getSectionName(questionIndex) {
 
   if (questionIndex < 21) {
+
     return "Foundational";
   }
 
+
   if (questionIndex < 42) {
+
     return "Friction";
   }
 
+
   return "Sustainable";
 }
+
 
 
 // =====================================
@@ -934,8 +1210,23 @@ function getSectionName(questionIndex) {
 
 function startTest() {
 
-  // Only the assessment screen is scroll-locked.
-  document.body.classList.add("quiz-active");
+  /*
+     Lock both the HTML root and body.
+
+     This only happens while the actual
+     assessment is being taken.
+  */
+
+  document
+    .documentElement
+    .classList
+    .add("quiz-active");
+
+
+  document
+    .body
+    .classList
+    .add("quiz-active");
 
 
   document
@@ -950,17 +1241,28 @@ function startTest() {
     .remove("hide");
 
 
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "auto"
+  });
+
+
   loadQuestion();
 }
 
 
+
 // =====================================
-// LOAD CURRENT QUESTION
+// LOAD QUESTION
 // =====================================
 
 function loadQuestion() {
 
-  if (currentQuestionIndex >= questions.length) {
+  if (
+    currentQuestionIndex >=
+    questions.length
+  ) {
 
     showResults();
 
@@ -971,34 +1273,50 @@ function loadQuestion() {
   answerLocked = false;
 
 
+  /*
+     The +1 makes the blue progress
+     visible even on Question 1.
+  */
+
   const percent =
-    (currentQuestionIndex / questions.length) * 100;
+    (
+      (currentQuestionIndex + 1) /
+      questions.length
+    ) * 100;
 
 
   document
     .getElementById("progress")
     .style
-    .width = percent + "%";
+    .width =
+    `${percent}%`;
 
 
   const q =
-    questions[currentQuestionIndex];
+    questions[
+      currentQuestionIndex
+    ];
 
 
   document
     .getElementById("btn-sideA")
-    .textContent = q.sA;
+    .textContent =
+    q.sA;
 
 
   document
     .getElementById("btn-sideB")
-    .textContent = q.sB;
+    .textContent =
+    q.sB;
 
 
-  clearInterval(timerInterval);
+  clearInterval(
+    timerInterval
+  );
 
 
   timeLeft = 45;
+
 
   questionStartedAt =
     Date.now();
@@ -1017,7 +1335,10 @@ function loadQuestion() {
 
         timeLeft = 0;
 
-        clearInterval(timerInterval);
+        clearInterval(
+          timerInterval
+        );
+
       }
 
 
@@ -1025,6 +1346,7 @@ function loadQuestion() {
 
     }, 1000);
 }
+
 
 
 // =====================================
@@ -1042,8 +1364,9 @@ function updateTimerDisplay() {
   document
     .getElementById("timer")
     .textContent =
-    `⏱️ 00:${formattedTime}`;
+    `00:${formattedTime}`;
 }
+
 
 
 // =====================================
@@ -1053,6 +1376,7 @@ function updateTimerDisplay() {
 function handleAnswer(choice) {
 
   if (answerLocked) {
+
     return;
   }
 
@@ -1061,6 +1385,7 @@ function handleAnswer(choice) {
     choice !== "A" &&
     choice !== "B"
   ) {
+
     return;
   }
 
@@ -1068,11 +1393,15 @@ function handleAnswer(choice) {
   answerLocked = true;
 
 
-  clearInterval(timerInterval);
+  clearInterval(
+    timerInterval
+  );
 
 
   const q =
-    questions[currentQuestionIndex];
+    questions[
+      currentQuestionIndex
+    ];
 
 
   const chosenRole =
@@ -1090,13 +1419,34 @@ function handleAnswer(choice) {
   const elapsedSeconds =
     questionStartedAt
       ? Math.round(
-          ((Date.now() - questionStartedAt) / 1000) * 10
+          (
+            (
+              Date.now() -
+              questionStartedAt
+            ) /
+            1000
+          ) *
+          10
         ) / 10
       : null;
 
 
-  scores[chosenRole] += 1;
+  /*
+     Current provisional scoring.
 
+     This can later be replaced with
+     calibrated Thurstonian IRT scoring.
+  */
+
+  scores[
+    chosenRole
+  ] += 1;
+
+
+  /*
+     Preserve complete response pattern
+     for later analysis/calibration.
+  */
 
   responses.push({
 
@@ -1104,7 +1454,9 @@ function handleAnswer(choice) {
       currentQuestionIndex + 1,
 
     section:
-      getSectionName(currentQuestionIndex),
+      getSectionName(
+        currentQuestionIndex
+      ),
 
     choice:
       choice,
@@ -1128,6 +1480,7 @@ function handleAnswer(choice) {
 }
 
 
+
 // =====================================
 // SECTION SCORES
 // =====================================
@@ -1135,28 +1488,36 @@ function handleAnswer(choice) {
 function getSectionScores(role) {
 
   const sectionScores = {
+
     Foundational: 0,
+
     Friction: 0,
+
     Sustainable: 0
+
   };
 
 
-  responses.forEach(response => {
+  responses.forEach(
+    response => {
 
-    if (
-      response.chosenRole === role
-    ) {
+      if (
+        response.chosenRole === role
+      ) {
 
-      sectionScores[
-        response.section
-      ] += 1;
+        sectionScores[
+          response.section
+        ] += 1;
+
+      }
+
     }
-
-  });
+  );
 
 
   return sectionScores;
 }
+
 
 
 // =====================================
@@ -1170,11 +1531,16 @@ function getConsistencyScore(role) {
 
 
   return Math.min(
+
     sectionScores.Foundational,
+
     sectionScores.Friction,
+
     sectionScores.Sustainable
+
   );
 }
+
 
 
 // =====================================
@@ -1189,23 +1555,27 @@ function getHeadToHeadTieScore(
   let tieScore = 0;
 
 
-  responses.forEach(response => {
+  responses.forEach(
+    response => {
 
-    if (
-      response.chosenRole === role &&
-      tiedRoles.includes(
-        response.rejectedRole
-      )
-    ) {
+      if (
+        response.chosenRole === role &&
+        tiedRoles.includes(
+          response.rejectedRole
+        )
+      ) {
 
-      tieScore++;
+        tieScore++;
+
+      }
+
     }
-
-  });
+  );
 
 
   return tieScore;
 }
+
 
 
 // =====================================
@@ -1217,29 +1587,42 @@ function rankRoles() {
   const groupedByScore = {};
 
 
-  roleNames.forEach(role => {
+  roleNames.forEach(
+    role => {
 
-    const score =
-      scores[role];
+      const score =
+        scores[role];
 
 
-    if (!groupedByScore[score]) {
+      if (
+        !groupedByScore[score]
+      ) {
 
-      groupedByScore[score] = [];
+        groupedByScore[
+          score
+        ] = [];
+
+      }
+
+
+      groupedByScore[
+        score
+      ].push(role);
+
     }
-
-
-    groupedByScore[score]
-      .push(role);
-
-  });
+  );
 
 
   const scoreLevels =
     Object
-      .keys(groupedByScore)
+      .keys(
+        groupedByScore
+      )
       .map(Number)
-      .sort((a, b) => b - a);
+      .sort(
+        (a, b) =>
+          b - a
+      );
 
 
   const rankedRoles = [];
@@ -1254,18 +1637,27 @@ function rankRoles() {
         ];
 
 
-      if (tiedRoles.length === 1) {
+      if (
+        tiedRoles.length === 1
+      ) {
 
         rankedRoles.push(
           tiedRoles[0]
         );
 
         return;
+
       }
 
 
       tiedRoles.sort(
         (roleA, roleB) => {
+
+
+          // -----------------------------
+          // Tie-breaker 1:
+          // direct comparisons
+          // -----------------------------
 
           const headToHeadA =
             getHeadToHeadTieScore(
@@ -1290,8 +1682,14 @@ function rankRoles() {
               headToHeadB -
               headToHeadA
             );
+
           }
 
+
+          // -----------------------------
+          // Tie-breaker 2:
+          // cross-section consistency
+          // -----------------------------
 
           const consistencyA =
             getConsistencyScore(
@@ -1314,12 +1712,22 @@ function rankRoles() {
               consistencyB -
               consistencyA
             );
+
           }
 
 
+          // -----------------------------
+          // Final deterministic fallback
+          // No psychometric meaning
+          // -----------------------------
+
           return (
-            roleNames.indexOf(roleA) -
-            roleNames.indexOf(roleB)
+            roleNames.indexOf(
+              roleA
+            ) -
+            roleNames.indexOf(
+              roleB
+            )
           );
 
         }
@@ -1338,18 +1746,32 @@ function rankRoles() {
 }
 
 
+
 // =====================================
 // SHOW RESULTS
 // =====================================
 
 function showResults() {
 
-  clearInterval(timerInterval);
+  clearInterval(
+    timerInterval
+  );
 
 
-  // Re-enable normal page scrolling
-  // once the assessment is finished.
-  document.body.classList.remove("quiz-active");
+  /*
+     Restore normal browser scrolling.
+  */
+
+  document
+    .documentElement
+    .classList
+    .remove("quiz-active");
+
+
+  document
+    .body
+    .classList
+    .remove("quiz-active");
 
 
   document
@@ -1376,8 +1798,9 @@ function showResults() {
     rankedRoles[1];
 
 
+
   // =====================================
-  // FIND COMPLEMENTARY ROLES
+  // COMPLEMENTARY ROLES
   // =====================================
 
   const pairKey =
@@ -1395,51 +1818,61 @@ function showResults() {
 
   const recommendationsHTML =
     recommendedRoles
-      .map(role => `
+      .map(
+        role => `
 
-        <div class="recommended-role">
+          <div class="recommended-role">
 
-          <h3 class="section-title">
-            ${roleDetails[role].fullName}
-          </h3>
+            <h3 class="section-title">
+              ${roleDetails[role].fullName}
+            </h3>
 
-          <p class="profile-text">
-            ${roleDetails[role].contribution}
-          </p>
+            <p class="profile-text">
+              ${roleDetails[role].contribution}
+            </p>
 
-        </div>
+          </div>
 
-      `)
+        `
+      )
       .join("");
 
 
+
   // =====================================
-  // BUILD FULL ROLE DIRECTORY
+  // ALL SEVEN ROLES
   // =====================================
 
   const allRolesHTML =
     roleNames
-      .map(role => `
+      .map(
+        role => `
 
-        <li>
-          <b>
-            ${roleDetails[role].fullName}
-          </b>
-        </li>
+          <li>
+            <b>
+              ${roleDetails[role].fullName}
+            </b>
+          </li>
 
-      `)
+        `
+      )
       .join("");
 
 
+
   // =====================================
-  // DISPLAY RESULTS
+  // BUILD RESULTS
   // =====================================
 
   document
-    .getElementById("results-content")
+    .getElementById(
+      "results-content"
+    )
     .innerHTML = `
 
+
       <p class="profile-text">
+
         Your results describe the kinds of
         contributions you appear most naturally
         drawn to make when working with other people.
@@ -1448,31 +1881,39 @@ function showResults() {
           They are not a limit on what you can do.
         </b>
 
-        Screenshot and share your results with
+        Screenshot or share your results with
         family or friends to compare perspectives
         and discuss how accurately they reflect you.
+
       </p>
+
 
 
       <h3 class="section-title">
         Your Primary Role
       </h3>
 
+
       ${profiles[primaryRole]}
+
 
 
       <h3 class="section-title">
         Your Secondary Role
       </h3>
 
+
       ${profiles[secondaryRole]}
+
 
 
       <h3 class="section-title">
         Your Combination
       </h3>
 
+
       <p class="profile-text">
+
         Your Primary Role represents the contribution
         pattern that emerged most strongly across your
         responses. Your Secondary Role represents
@@ -1484,19 +1925,26 @@ function showResults() {
         picture of how you are naturally inclined to
         contribute in collaborative work than either
         Role alone.
+
       </p>
 
 
+
       <h2 class="results-section-heading">
+
         Three Complementary Roles to Look For
+
       </h2>
 
+
       <p class="profile-text">
+
         A productive creative group can benefit from
         people who contribute in different ways.
         Based on your Primary and Secondary Roles,
         these three Roles may bring contributions
         that are less represented in your own result.
+
       </p>
 
 
@@ -1504,32 +1952,62 @@ function showResults() {
 
 
       <p class="profile-text">
+
         These are not rules about who you should
         work with. Think of them as useful Roles to
         look for when building a group with a broader
         mix of strengths, perspectives, and ways of
         contributing.
+
       </p>
 
 
+
       <h2 class="results-section-heading">
+
         The Seven Creative Roles
+
       </h2>
 
+
       <p class="profile-text">
+
         Every Role represents a different contribution
         to collaborative creative work. A person can
         use all seven. Your results simply highlight
         the patterns that emerged most strongly for you.
+
       </p>
 
 
       <ul class="profile-text role-directory">
+
         ${allRolesHTML}
+
       </ul>
 
     `;
+
+
+  /*
+     When the fixed assessment is removed,
+     explicitly return the results page to top.
+  */
+
+  requestAnimationFrame(
+    () => {
+
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto"
+      });
+
+    }
+  );
+
 }
+
 
 
 // =====================================
@@ -1539,7 +2017,9 @@ function showResults() {
 function downloadResultsPDF() {
 
   const results =
-    document.getElementById("results-screen");
+    document.getElementById(
+      "results-screen"
+    );
 
 
   const rankedRoles =
@@ -1562,38 +2042,72 @@ function downloadResultsPDF() {
 
     margin: 0.5,
 
-    filename: filename,
+
+    filename:
+      filename,
+
 
     image: {
-      type: "jpeg",
-      quality: 0.98
+
+      type:
+        "jpeg",
+
+      quality:
+        0.98
+
     },
+
 
     html2canvas: {
 
       scale: 2,
 
-      backgroundColor: "#FFFFFF",
+      backgroundColor:
+        "#FFFFFF",
 
-      ignoreElements: element => {
+      useCORS:
+        true,
 
-        return (
-          element.tagName === "BUTTON" ||
-          element.classList.contains("results-buttons")
-        );
+      ignoreElements:
+        element => {
 
-      }
+          return (
+
+            element.tagName ===
+              "BUTTON" ||
+
+            element.classList.contains(
+              "results-buttons"
+            )
+
+          );
+
+        }
 
     },
+
 
     jsPDF: {
-      unit: "in",
-      format: "letter",
-      orientation: "portrait"
+
+      unit:
+        "in",
+
+      format:
+        "letter",
+
+      orientation:
+        "portrait"
+
     },
 
+
     pagebreak: {
-      mode: ["css", "legacy"]
+
+      mode: [
+        "css",
+        "legacy"
+      ]
+
     }
 
   };
@@ -1603,4 +2117,5 @@ function downloadResultsPDF() {
     .set(options)
     .from(results)
     .save();
+
 }
