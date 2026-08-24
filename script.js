@@ -1555,18 +1555,6 @@ function showResults() {
         ${allRolesHTML}
       </ul>
 
-      <div class="results-actions">
-
-  <button
-    class="pdf-button"
-    onclick="downloadResultsPDF()"
-    data-html2canvas-ignore="true"
-  >
-    Download PDF
-  </button>
-
-</div>
-
     `;
 }
 
