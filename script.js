@@ -878,6 +878,28 @@ const roleNames = [
   "Advocate"
 ];
 
+// =====================================
+// CREATE PRIMARY + SECONDARY PAIR KEY
+// =====================================
+
+function getPairKey(roleA, roleB) {
+
+  const indexA =
+    roleNames.indexOf(roleA);
+
+  const indexB =
+    roleNames.indexOf(roleB);
+
+
+  if (indexA < indexB) {
+
+    return `${roleA}|${roleB}`;
+  }
+
+
+  return `${roleB}|${roleA}`;
+}
+
 
 let currentQuestionIndex = 0;
 
@@ -1346,24 +1368,81 @@ function showResults() {
     rankedRoles[1];
 
 
+  // =====================================
+  // FIND COMPLEMENTARY ROLES
+  // =====================================
+
+  const pairKey =
+    getPairKey(
+      primaryRole,
+      secondaryRole
+    );
+
+
+  const recommendedRoles =
+    complementaryPairings[pairKey] || [];
+
+
+  const recommendationsHTML =
+    recommendedRoles
+      .map(role => `
+
+        <div class="recommended-role">
+
+          <h3 class="section-title">
+            ${roleDetails[role].fullName}
+          </h3>
+
+          <p class="profile-text">
+            ${roleDetails[role].contribution}
+          </p>
+
+        </div>
+
+      `)
+      .join("");
+
+
+  // =====================================
+  // BUILD FULL ROLE DIRECTORY
+  // =====================================
+
+  const allRolesHTML =
+    roleNames
+      .map(role => `
+
+        <li>
+          <b>${roleDetails[role].fullName}</b>
+        </li>
+
+      `)
+      .join("");
+
+
+  // =====================================
+  // DISPLAY RESULTS
+  // =====================================
+
   document
     .getElementById("results-content")
     .innerHTML = `
 
       <p class="profile-text">
-  Your results describe the kinds of contributions
-  you appear most naturally drawn to make when
-  working with other people. <b>They are not a limit
-  on what you can do.</b> Screenshot and share your results
-  with family or friends to compare perspectives and discuss
-  how accurately they reflect you.
-</p>
+        Your results describe the kinds of contributions
+        you appear most naturally drawn to make when
+        working with other people.
+
+        <b>They are not a limit on what you can do.</b>
+
+        Screenshot and share your results with family
+        or friends to compare perspectives and discuss
+        how accurately they reflect you.
+      </p>
 
 
       <h3 class="section-title">
         Your Primary Role
       </h3>
-
 
       ${profiles[primaryRole]}
 
@@ -1372,26 +1451,67 @@ function showResults() {
         Your Secondary Role
       </h3>
 
+      ${profiles[secondaryRole]}
 
-      <h2 class="profile-title">
-        The ${secondaryRole}
-      </h2>
 
+      <h3 class="section-title">
+        Your Combination
+      </h3>
 
       <p class="profile-text">
-        ${roleSummaries[secondaryRole]}
+        Your Primary Role represents the contribution
+        pattern that emerged most strongly across your
+        responses. Your Secondary Role represents another
+        prominent contribution pattern.
+
+        <br><br>
+
+        Together, these two Roles offer a more useful
+        picture of how you are naturally inclined to
+        contribute in collaborative work than either
+        Role alone.
       </p>
 
 
+      <h2 class="profile-title">
+        Three Complementary Roles to Look For
+      </h2>
+
       <p class="profile-text">
-  <b>Your combination:</b>
-  Your Primary Role represents the contribution pattern
-  that emerged most strongly across your responses.
-  Your Secondary Role represents another prominent
-  contribution pattern. Together, these two Roles offer
-  a more useful picture of how you are naturally inclined
-  to contribute in collaborative work than either Role alone.
-</p>
+        A productive creative group can benefit from
+        people who contribute in different ways.
+        Based on your Primary and Secondary Roles,
+        these three Roles may bring contributions
+        that are less represented in your own result.
+      </p>
+
+
+      ${recommendationsHTML}
+
+
+      <p class="profile-text">
+        These are not rules about who you should work with.
+        Think of them as useful Roles to look for when
+        building a group with a broader mix of strengths,
+        perspectives, and ways of contributing.
+      </p>
+
+
+      <h2 class="profile-title">
+        The Seven Creative Roles
+      </h2>
+
+      <p class="profile-text">
+        Every Role represents a different contribution
+        to collaborative creative work. A person can
+        use all seven. Your results simply highlight
+        the patterns that emerged most strongly for you.
+      </p>
+
+
+      <ul class="profile-text role-directory">
+        ${allRolesHTML}
+      </ul>
 
     `;
 }
