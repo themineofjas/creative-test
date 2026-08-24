@@ -983,3 +983,79 @@ body {
   }
 
 }
+
+/* =====================================
+   SCREEN VISIBILITY FIX
+===================================== */
+
+.hide {
+  display: none !important;
+}
+
+#welcome-screen:not(.hide),
+#quiz-screen:not(.hide),
+#results-screen:not(.hide) {
+  visibility: visible;
+  opacity: 1;
+}
+
+#results-screen:not(.hide) {
+  display: block !important;
+}
+
+/* =====================================
+   RESULTS BUTTONS
+===================================== */
+
+.results-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  width: 100%;
+
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+
+#retake-button,
+#download-button {
+  flex: 1;
+
+  min-height: 48px;
+
+  margin: 0;
+
+  padding: 0.8rem 1rem;
+
+  background: #1BCEEE;
+  color: #000000;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+
+@media (min-width: 600px) {
+
+  .results-buttons {
+    justify-content: flex-end;
+  }
+
+  #retake-button,
+  #download-button {
+    flex: 0 1 190px;
+  }
+
+}
