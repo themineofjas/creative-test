@@ -1155,4 +1155,12 @@ button {
   -webkit-touch-callout: none;
 
   -webkit-tap-highlight-color: transparent;
+}/* =====================================
+   ASSESSMENT-ONLY SCROLL LOCK
+===================================== */
+
+body.quiz-active {
+  overflow: hidden;
+  overscroll-behavior: none;
+  height: 100dvh;
 }
