@@ -1550,8 +1550,7 @@ function showResults() {
         the patterns that emerged most strongly for you.
       </p>
 
-
-      <ul class="profile-text role-directory">
+            <ul class="profile-text role-directory">
         ${allRolesHTML}
       </ul>
 
