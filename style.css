@@ -552,3 +552,38 @@ a:focus-visible {
   }
 
 }
+
+/* =====================================
+   RESULTS ACTIONS
+===================================== */
+
+.results-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+
+/* Download PDF button */
+
+.pdf-button {
+  background: #000000;
+  color: #FFFFFF;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 0.8rem 1.2rem;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.pdf-button:hover {
+  background: #1BCEEE;
+  color: #000000;
+}
