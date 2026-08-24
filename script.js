@@ -1,4 +1,4 @@
-// =====================================
+/// =====================================
 // SECTION 1: FOUNDATIONAL ROLE PAIRS
 // Preferred contribution in a group
 // =====================================
@@ -15,9 +15,9 @@ const questions = [
 
   // Catalyst vs Executor
   {
-    sA: "Once a group has a direction, I naturally help create momentum by getting people aligned, involved, and ready to move.",
+    sA: "Once a group has a direction, I naturally help create momentum by coordinating people around what we are trying to accomplish.",
     rA: "Catalyst",
-    sB: "Once a group has a direction, I naturally help create momentum by turning the plan into concrete tasks and visible progress.",
+    sB: "Once a group has a direction, I naturally help create momentum by turning what we decided into concrete work that can be completed.",
     rB: "Executor"
   },
 
@@ -31,17 +31,17 @@ const questions = [
 
   // Advocate vs Ideator
   {
-    sA: "Early in a collaboration, I naturally pay attention to what the people involved need in order to contribute well together.",
+    sA: "Early in a collaboration, I naturally notice what would help the people involved communicate, participate, and work well together.",
     rA: "Advocate",
-    sB: "Early in a collaboration, I naturally pay attention to what ideas, possibilities, or directions the group has not considered yet.",
+    sB: "Early in a collaboration, I naturally notice ideas, connections, and possible directions the group has not explored yet.",
     rB: "Ideator"
   },
 
   // Analyst vs Catalyst
   {
-    sA: "At the beginning of a group project, I naturally help clarify the goal, constraints, resources, and how the pieces fit together.",
+    sA: "At the beginning of a group project, I naturally help make the situation clearer by organizing what we know and how the pieces relate.",
     rA: "Analyst",
-    sB: "At the beginning of a group project, I naturally help turn the shared goal into energy, commitment, and forward movement.",
+    sB: "At the beginning of a group project, I naturally help create movement by connecting people to a direction and getting participation started.",
     rB: "Catalyst"
   },
 
@@ -79,9 +79,9 @@ const questions = [
 
   // Alchemist vs Advocate
   {
-    sA: "In a collaborative group, I naturally contribute by questioning assumptions and introducing perspectives that may change how we see the work.",
+    sA: "In a collaborative group, I naturally notice assumptions or patterns that could be challenged to change the work.",
     rA: "Alchemist",
-    sB: "In a collaborative group, I naturally contribute by noticing the human dynamics and helping create conditions where people can participate honestly.",
+    sB: "In a collaborative group, I naturally notice interpersonal patterns that could be adjusted to help people work better together.",
     rB: "Advocate"
   },
 
@@ -95,25 +95,25 @@ const questions = [
 
   // Catalyst vs Advocate
   {
-    sA: "When people come together around a shared project, I naturally help create movement by connecting people to the goal and encouraging participation.",
+    sA: "When people come together around a shared project, I naturally help connect people to the goal, opportunities, and next moves.",
     rA: "Catalyst",
-    sB: "When people come together around a shared project, I naturally help strengthen the relationships and trust that allow people to contribute well.",
+    sB: "When people come together around a shared project, I naturally help strengthen the trust, communication, and working relationships between them.",
     rB: "Advocate"
   },
 
   // Executor vs Curator
   {
-    sA: "As a group approaches a finished result, I naturally focus on making sure the essential pieces are completed and usable.",
+    sA: "As a group approaches a finished result, I naturally focus on making sure the essential pieces are completed and ready to use.",
     rA: "Executor",
-    sB: "As a group approaches a finished result, I naturally focus on making sure the final choices feel intentional, coherent, and true to the project.",
+    sB: "As a group approaches a finished result, I naturally focus on making sure the final choices fit together and clearly represent what we intended.",
     rB: "Curator"
   },
 
   // Analyst vs Alchemist
   {
-    sA: "When a group inherits an existing approach, I naturally want to understand how it works and where its structure could be improved.",
+    sA: "When a group inherits an existing approach, I naturally want to understand how it works, where it breaks down, and what could be improved.",
     rA: "Analyst",
-    sB: "When a group inherits an existing approach, I naturally want to question its assumptions and experiment with doing it differently.",
+    sB: "When a group inherits an existing approach, I naturally want to question its assumptions and explore substantially different ways of doing it.",
     rB: "Alchemist"
   },
 
@@ -135,25 +135,25 @@ const questions = [
 
   // Catalyst vs Alchemist
   {
-    sA: "When a group needs a new direction, I naturally want to build enthusiasm and organize people around a path forward.",
+    sA: "When a group needs a new direction, I naturally focus on finding a direction people can understand, commit to, and move around.",
     rA: "Catalyst",
-    sB: "When a group needs a new direction, I naturally want to disrupt the existing pattern and introduce an experiment that could change the work.",
+    sB: "When a group needs a new direction, I naturally focus on introducing an experiment or reframing that could change how we see the work.",
     rB: "Alchemist"
   },
 
   // Executor vs Advocate
   {
-    sA: "When several people need help moving a project forward, I naturally contribute by taking ownership of concrete work that needs to get done.",
+    sA: "When a group needs support moving forward, I naturally notice concrete responsibilities I can take ownership of.",
     rA: "Executor",
-    sB: "When several people need help moving a project forward, I naturally contribute by noticing people's needs, capacity, and ability to work well together.",
+    sB: "When a group needs support moving forward, I naturally notice adjustments in communication, workload, or coordination that could help people contribute better.",
     rB: "Advocate"
   },
 
   // Analyst vs Advocate
   {
-    sA: "When a group sees a situation differently, I naturally help by separating the issues, identifying what we know, and clarifying the problem.",
+    sA: "When a group sees a situation differently, I naturally try to clarify the issues, evidence, and relationships between the parts of the problem.",
     rA: "Analyst",
-    sB: "When a group sees a situation differently, I naturally help by understanding the perspectives, concerns, and needs behind people's positions.",
+    sB: "When a group sees a situation differently, I naturally try to clarify the perspectives, concerns, and relationships between the people involved.",
     rB: "Advocate"
   },
 
