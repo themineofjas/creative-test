@@ -347,21 +347,22 @@ const questions = [
   
   // =====================================
 // SECTION 3: SUSTAINABLE GROUP CONTRIBUTION
+// What I can naturally keep contributing over time
 // =====================================
 
 // Ideator vs Analyst
 {
-  sA: "Over a long project, I can keep contributing by generating possibilities, making connections, and helping the group see new directions.",
+  sA: "Over a long project, I naturally keep contributing by generating possibilities, making connections, and helping the group see additional directions.",
   rA: "Ideator",
-  sB: "Over a long project, I can keep contributing by making sense of complexity, clarifying information, and helping the group understand how things fit together.",
+  sB: "Over a long project, I naturally keep contributing by organizing complexity, identifying patterns, and helping the group understand how things fit together.",
   rB: "Analyst"
 },
 
 // Ideator vs Catalyst
 {
-  sA: "I can repeatedly contribute to a group by bringing in fresh ideas and opening up possibilities that were not previously considered.",
+  sA: "As a collaboration continues, I naturally keep bringing in fresh ideas, connections, and possibilities for the group to consider.",
   rA: "Ideator",
-  sB: "I can repeatedly contribute to a group by keeping people connected to the goal and helping maintain forward movement.",
+  sB: "As a collaboration continues, I naturally keep connecting people to priorities, opportunities, and the movement of the project.",
   rB: "Catalyst"
 },
 
@@ -369,7 +370,7 @@ const questions = [
 {
   sA: "During a long collaboration, I naturally keep noticing additional directions, possibilities, or connections the group could explore.",
   rA: "Ideator",
-  sB: "During a long collaboration, I naturally keep noticing concrete work that can be completed to turn the group's plans into reality.",
+  sB: "During a long collaboration, I naturally keep noticing concrete responsibilities I can take on to turn the group's plans into completed work.",
   rB: "Executor"
 },
 
@@ -377,23 +378,23 @@ const questions = [
 {
   sA: "I can keep helping a group by expanding the range of ideas and possibilities available to us.",
   rA: "Ideator",
-  sB: "I can keep helping a group by experimenting with existing ideas and transforming them into something unexpected.",
+  sB: "I can keep helping a group by experimenting with existing ideas and finding ways to transform what we already have.",
   rB: "Alchemist"
 },
 
 // Ideator vs Curator
 {
-  sA: "When a project develops over time, I naturally keep looking for additional ideas, connections, and directions worth exploring.",
+  sA: "As a project develops, I naturally keep looking for additional ideas, connections, and directions worth exploring.",
   rA: "Ideator",
-  sB: "When a project develops over time, I naturally keep identifying which ideas, references, and choices are strongest and most fitting.",
+  sB: "As a project develops, I naturally keep identifying which ideas, references, and choices are strongest and most fitting.",
   rB: "Curator"
 },
 
 // Ideator vs Advocate
 {
-  sA: "In an ongoing collaboration, I naturally keep contributing by bringing new possibilities into the conversation.",
+  sA: "In an ongoing collaboration, I naturally keep contributing by bringing new possibilities and connections into the conversation.",
   rA: "Ideator",
-  sB: "In an ongoing collaboration, I naturally keep contributing by noticing what people need in order to participate and work well together.",
+  sB: "In an ongoing collaboration, I naturally keep contributing by noticing what would help people communicate, participate, and work well together.",
   rB: "Advocate"
 },
 
@@ -401,55 +402,55 @@ const questions = [
 {
   sA: "I can consistently support a group by clarifying problems, organizing information, and making complicated situations easier to understand.",
   rA: "Analyst",
-  sB: "I can consistently support a group by helping people stay engaged, coordinated, and moving toward the shared goal.",
+  sB: "I can consistently support a group by connecting people to priorities, coordinating movement, and helping maintain momentum.",
   rB: "Catalyst"
 },
 
 // Analyst vs Executor
 {
-  sA: "As a project continues, I naturally keep examining how the pieces work together and where the structure may need adjustment.",
+  sA: "As a project continues, I naturally keep examining how the pieces work together, where problems may appear, and what could be improved.",
   rA: "Analyst",
-  sB: "As a project continues, I naturally keep identifying what needs to be done next and turning plans into completed work.",
+  sB: "As a project continues, I naturally keep identifying what needs to be completed next and taking ownership of concrete work.",
   rB: "Executor"
 },
 
 // Analyst vs Alchemist
 {
-  sA: "I can stay engaged for a long time when my contribution involves understanding systems, identifying patterns, and improving how things work.",
+  sA: "I can stay engaged over time by understanding systems, identifying patterns, and improving how the existing pieces work together.",
   rA: "Analyst",
-  sB: "I can stay engaged for a long time when my contribution involves questioning assumptions, experimenting, and changing how things are done.",
+  sB: "I can stay engaged over time by questioning assumptions, experimenting with variations, and changing how the existing pieces are used.",
   rB: "Alchemist"
 },
 
 // Analyst vs Curator
 {
-  sA: "Throughout a project, I naturally keep checking whether the reasoning, structure, requirements, and processes still make sense.",
+  sA: "Throughout a project, I naturally keep checking whether the reasoning, structure, requirements, and processes still hold together.",
   rA: "Analyst",
-  sB: "Throughout a project, I naturally keep checking whether the choices, references, presentation, and overall identity still make sense together.",
+  sB: "Throughout a project, I naturally keep checking whether the selections, references, presentation, and overall identity still hold together.",
   rB: "Curator"
 },
 
 // Analyst vs Advocate
 {
-  sA: "In a long-running group, I naturally keep helping people understand problems, decisions, and how different parts of the work relate.",
+  sA: "In a long-running group, I naturally keep helping clarify the issues, information, and relationships between different parts of the work.",
   rA: "Analyst",
-  sB: "In a long-running group, I naturally keep helping people understand one another, communicate needs, and work together effectively.",
+  sB: "In a long-running group, I naturally keep helping clarify people's perspectives, needs, and relationships with one another.",
   rB: "Advocate"
 },
 
 // Catalyst vs Executor
 {
-  sA: "Over time, I naturally help a project keep moving by reconnecting people to priorities, coordinating effort, and maintaining momentum.",
+  sA: "Over time, I naturally help a project keep moving by coordinating people around priorities, decisions, and next moves.",
   rA: "Catalyst",
-  sB: "Over time, I naturally help a project keep moving by taking ownership of concrete tasks and steadily producing completed work.",
+  sB: "Over time, I naturally help a project keep moving by taking ownership of concrete responsibilities and steadily completing work.",
   rB: "Executor"
 },
 
 // Catalyst vs Alchemist
 {
-  sA: "I can sustainably contribute by keeping people engaged with a direction and helping the group maintain momentum around it.",
+  sA: "I can keep contributing by helping people stay connected to a direction and maintaining movement around it.",
   rA: "Catalyst",
-  sB: "I can sustainably contribute by keeping the work from becoming predictable and introducing experiments that change its direction.",
+  sB: "I can keep contributing by challenging patterns that become limiting and introducing experiments that could change the direction.",
   rB: "Alchemist"
 },
 
@@ -457,15 +458,15 @@ const questions = [
 {
   sA: "As a project grows, I naturally keep thinking about how to communicate it, involve people, and build participation around it.",
   rA: "Catalyst",
-  sB: "As a project grows, I naturally keep thinking about how to protect its quality, identity, and consistency as more gets added.",
+  sB: "As a project grows, I naturally keep thinking about how to preserve its strongest qualities, identity, and coherence as more gets added.",
   rB: "Curator"
 },
 
 // Catalyst vs Advocate
 {
-  sA: "In an ongoing group, I naturally keep strengthening participation by encouraging involvement and reconnecting people to what we are trying to accomplish.",
+  sA: "In an ongoing group, I naturally keep strengthening participation by connecting people to the goal, opportunities, and next moves.",
   rA: "Catalyst",
-  sB: "In an ongoing group, I naturally keep strengthening participation by noticing people's capacity, concerns, and ability to contribute well.",
+  sB: "In an ongoing group, I naturally keep strengthening participation by improving communication, trust, workload, and the conditions people need to contribute.",
   rB: "Advocate"
 },
 
@@ -473,47 +474,47 @@ const questions = [
 {
   sA: "I can keep contributing to a project by steadily turning decisions into finished, usable work.",
   rA: "Executor",
-  sB: "I can keep contributing to a project by regularly testing variations, recombining ideas, and finding new ways to approach the work.",
+  sB: "I can keep contributing to a project by regularly testing variations, recombining ideas, and transforming how the work is being approached.",
   rB: "Alchemist"
 },
 
 // Executor vs Curator
 {
-  sA: "As a project continues, I naturally stay focused on making sure important pieces actually get completed.",
+  sA: "As a project continues, I naturally keep paying attention to what still needs to be completed so important pieces reach a usable state.",
   rA: "Executor",
-  sB: "As a project continues, I naturally stay focused on making sure the growing body of work remains coherent and meets the intended standard.",
+  sB: "As a project continues, I naturally keep paying attention to what should be selected, removed, or refined so the work remains coherent.",
   rB: "Curator"
 },
 
 // Executor vs Advocate
 {
-  sA: "In a long collaboration, I naturally support the group by noticing unfinished work and taking responsibility for getting concrete things done.",
+  sA: "In a long collaboration, I naturally keep noticing concrete responsibilities that need an owner and taking responsibility for getting them done.",
   rA: "Executor",
-  sB: "In a long collaboration, I naturally support the group by noticing when people need clarification, support, adjustment, or better conditions for contributing.",
+  sB: "In a long collaboration, I naturally keep noticing adjustments in communication, workload, or expectations that could help people contribute better.",
   rB: "Advocate"
 },
 
 // Alchemist vs Curator
 {
-  sA: "As a project develops, I naturally keep looking for opportunities to remix, challenge, or transform what we have already created.",
+  sA: "As a project develops, I naturally keep looking for opportunities to recombine, challenge, or transform what we have already created.",
   rA: "Alchemist",
-  sB: "As a project develops, I naturally keep looking for opportunities to strengthen the selection, coherence, and identity of what we have already created.",
+  sB: "As a project develops, I naturally keep looking for opportunities to select, refine, and strengthen what we have already created.",
   rB: "Curator"
 },
 
 // Alchemist vs Advocate
 {
-  sA: "Over time, I naturally help a group by challenging patterns that have become limiting and introducing different ways of working or thinking.",
+  sA: "Over time, I naturally notice patterns in the work or process that have become limiting and look for ways to change them.",
   rA: "Alchemist",
-  sB: "Over time, I naturally help a group by noticing relational patterns that are limiting participation and helping people work through them.",
+  sB: "Over time, I naturally notice patterns between people that have become limiting and look for ways to improve how the group works together.",
   rB: "Advocate"
 },
 
 // Curator vs Advocate
 {
-  sA: "In an ongoing collaboration, I naturally keep paying attention to whether the work itself remains coherent, intentional, and true to what the group is creating.",
+  sA: "In an ongoing collaboration, I naturally keep paying attention to whether the work remains coherent, intentional, and true to what the group is creating.",
   rA: "Curator",
-  sB: "In an ongoing collaboration, I naturally keep paying attention to whether the people involved remain supported, understood, and able to contribute well.",
+  sB: "In an ongoing collaboration, I naturally keep paying attention to whether the people remain supported, understood, and able to contribute effectively.",
   rB: "Advocate"
 }
 
