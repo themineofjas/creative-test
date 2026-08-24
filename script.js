@@ -767,7 +767,19 @@ const roleSummaries = {
 // APPLICATION STATE
 // =====================================
 
+const roleNames = [
+  "Ideator",
+  "Analyst",
+  "Catalyst",
+  "Executor",
+  "Alchemist",
+  "Curator",
+  "Advocate"
+];
+
+
 let currentQuestionIndex = 0;
+
 
 let scores = {
   Ideator: 0,
@@ -779,8 +791,36 @@ let scores = {
   Advocate: 0
 };
 
+
+// Stores the complete response pattern
+let responses = [];
+
+
 let timerInterval;
+
 let timeLeft = 45;
+
+let questionStartedAt = null;
+
+let answerLocked = false;
+
+
+// =====================================
+// IDENTIFY QUESTION SECTION
+// =====================================
+
+function getSectionName(questionIndex) {
+
+  if (questionIndex < 21) {
+    return "Foundational";
+  }
+
+  if (questionIndex < 42) {
+    return "Friction";
+  }
+
+  return "Sustainable";
+}
 
 
 // =====================================
@@ -794,10 +834,12 @@ function startTest() {
     .classList
     .add("hide");
 
+
   document
     .getElementById("quiz-screen")
     .classList
     .remove("hide");
+
 
   loadQuestion();
 }
@@ -810,51 +852,67 @@ function startTest() {
 function loadQuestion() {
 
   if (currentQuestionIndex >= questions.length) {
+
     showResults();
+
     return;
   }
 
+
+  answerLocked = false;
+
+
   const percent =
     (currentQuestionIndex / questions.length) * 100;
+
 
   document
     .getElementById("progress")
     .style
     .width = percent + "%";
 
+
   const q = questions[currentQuestionIndex];
+
 
   document
     .getElementById("btn-sideA")
     .textContent = q.sA;
 
+
   document
     .getElementById("btn-sideB")
     .textContent = q.sB;
 
+
   clearInterval(timerInterval);
+
 
   timeLeft = 45;
 
+
+  questionStartedAt = Date.now();
+
+
   updateTimerDisplay();
+
 
   timerInterval = setInterval(() => {
 
-  timeLeft--;
+    timeLeft--;
 
-  updateTimerDisplay();
 
-  if (timeLeft <= 0) {
+    if (timeLeft <= 0) {
 
-    clearInterval(timerInterval);
+      timeLeft = 0;
 
-    timeLeft = 0;
+      clearInterval(timerInterval);
+    }
+
 
     updateTimerDisplay();
-  }
 
-}, 1000);
-  
+  }, 1000);
 }
 
 
@@ -869,6 +927,7 @@ function updateTimerDisplay() {
       ? `0${timeLeft}`
       : timeLeft;
 
+
   document
     .getElementById("timer")
     .textContent = `⏱️ 00:${formattedTime}`;
@@ -881,21 +940,275 @@ function updateTimerDisplay() {
 
 function handleAnswer(choice) {
 
+  if (answerLocked) {
+    return;
+  }
+
+
+  if (choice !== "A" && choice !== "B") {
+    return;
+  }
+
+
+  answerLocked = true;
+
+
   clearInterval(timerInterval);
+
 
   const q = questions[currentQuestionIndex];
 
-  if (choice === "A") {
-    scores[q.rA] += 1;
-  }
 
-  if (choice === "B") {
-    scores[q.rB] += 1;
-  }
+  const chosenRole =
+    choice === "A"
+      ? q.rA
+      : q.rB;
+
+
+  const rejectedRole =
+    choice === "A"
+      ? q.rB
+      : q.rA;
+
+
+  const elapsedSeconds =
+    questionStartedAt
+      ? Math.round(
+          ((Date.now() - questionStartedAt) / 1000) * 10
+        ) / 10
+      : null;
+
+
+  // Add one provisional point
+  scores[chosenRole] += 1;
+
+
+  // Preserve the complete answer
+  responses.push({
+
+    questionNumber:
+      currentQuestionIndex + 1,
+
+    section:
+      getSectionName(currentQuestionIndex),
+
+    choice:
+      choice,
+
+    chosenRole:
+      chosenRole,
+
+    rejectedRole:
+      rejectedRole,
+
+    elapsedSeconds:
+      elapsedSeconds
+
+  });
+
 
   currentQuestionIndex++;
 
+
   loadQuestion();
+}
+
+
+// =====================================
+// SECTION SCORES
+// Used only for tie resolution
+// =====================================
+
+function getSectionScores(role) {
+
+  const sectionScores = {
+    Foundational: 0,
+    Friction: 0,
+    Sustainable: 0
+  };
+
+
+  responses.forEach(response => {
+
+    if (response.chosenRole === role) {
+
+      sectionScores[response.section] += 1;
+    }
+
+  });
+
+
+  return sectionScores;
+}
+
+
+// =====================================
+// CONSISTENCY SCORE
+// How strongly the Role appears across
+// all three contexts
+// =====================================
+
+function getConsistencyScore(role) {
+
+  const sectionScores =
+    getSectionScores(role);
+
+
+  return Math.min(
+    sectionScores.Foundational,
+    sectionScores.Friction,
+    sectionScores.Sustainable
+  );
+}
+
+
+// =====================================
+// HEAD-TO-HEAD TIE SCORE
+// Counts wins against other Roles that
+// have the same overall score
+// =====================================
+
+function getHeadToHeadTieScore(
+  role,
+  tiedRoles
+) {
+
+  let tieScore = 0;
+
+
+  responses.forEach(response => {
+
+    if (
+      response.chosenRole === role &&
+      tiedRoles.includes(response.rejectedRole)
+    ) {
+
+      tieScore++;
+    }
+
+  });
+
+
+  return tieScore;
+}
+
+
+// =====================================
+// RANK ROLES
+// =====================================
+
+function rankRoles() {
+
+  const groupedByScore = {};
+
+
+  roleNames.forEach(role => {
+
+    const score = scores[role];
+
+
+    if (!groupedByScore[score]) {
+      groupedByScore[score] = [];
+    }
+
+
+    groupedByScore[score].push(role);
+
+  });
+
+
+  const scoreLevels =
+    Object.keys(groupedByScore)
+      .map(Number)
+      .sort((a, b) => b - a);
+
+
+  const rankedRoles = [];
+
+
+  scoreLevels.forEach(scoreLevel => {
+
+    const tiedRoles =
+      groupedByScore[scoreLevel];
+
+
+    if (tiedRoles.length === 1) {
+
+      rankedRoles.push(tiedRoles[0]);
+
+      return;
+    }
+
+
+    tiedRoles.sort((roleA, roleB) => {
+
+      // -----------------------------
+      // Tie-breaker 1:
+      // Direct comparisons among
+      // Roles with the same score
+      // -----------------------------
+
+      const headToHeadA =
+        getHeadToHeadTieScore(
+          roleA,
+          tiedRoles
+        );
+
+
+      const headToHeadB =
+        getHeadToHeadTieScore(
+          roleB,
+          tiedRoles
+        );
+
+
+      if (headToHeadB !== headToHeadA) {
+
+        return headToHeadB - headToHeadA;
+      }
+
+
+      // -----------------------------
+      // Tie-breaker 2:
+      // Which Role appeared more
+      // consistently across all
+      // three sections?
+      // -----------------------------
+
+      const consistencyA =
+        getConsistencyScore(roleA);
+
+
+      const consistencyB =
+        getConsistencyScore(roleB);
+
+
+      if (consistencyB !== consistencyA) {
+
+        return consistencyB - consistencyA;
+      }
+
+
+      // -----------------------------
+      // Final deterministic fallback.
+      // This has no psychometric meaning
+      // and should rarely be needed.
+      // -----------------------------
+
+      return (
+        roleNames.indexOf(roleA) -
+        roleNames.indexOf(roleB)
+      );
+
+    });
+
+
+    rankedRoles.push(...tiedRoles);
+
+  });
+
+
+  return rankedRoles;
 }
 
 
@@ -907,23 +1220,76 @@ function showResults() {
 
   clearInterval(timerInterval);
 
+
   document
     .getElementById("quiz-screen")
     .classList
     .add("hide");
+
 
   document
     .getElementById("results-screen")
     .classList
     .remove("hide");
 
-  const sortedRoles =
-    Object.keys(scores)
-      .sort((a, b) => scores[b] - scores[a]);
 
-  const dominantRole = sortedRoles[0];
+  const rankedRoles =
+    rankRoles();
+
+
+  const primaryRole =
+    rankedRoles[0];
+
+
+  const secondaryRole =
+    rankedRoles[1];
+
 
   document
     .getElementById("results-content")
-    .innerHTML = profiles[dominantRole];
+    .innerHTML = `
+
+      <p class="profile-text">
+        Your results describe the kinds of contributions
+        you appear most naturally drawn to make when
+        working with other people. They are not a limit
+        on what you can do.
+      </p>
+
+
+      <h3 class="section-title">
+        Your Primary Role
+      </h3>
+
+
+      ${profiles[primaryRole]}
+
+
+      <h3 class="section-title">
+        Your Secondary Role
+      </h3>
+
+
+      <h2 class="profile-title">
+        The ${secondaryRole}
+      </h2>
+
+
+      <p class="profile-text">
+        ${roleSummaries[secondaryRole]}
+      </p>
+
+
+      <p class="profile-text">
+        <b>Your combination:</b>
+        Your Primary Role describes the contribution you
+        most consistently preferred across the assessment.
+        Your Secondary Role represents another contribution
+        you are strongly drawn to bring into collaborative work.
+        The interaction between these two Roles may be more
+        useful than treating either one as a complete description
+        of you.
+      </p>
+
+    `;
 }
