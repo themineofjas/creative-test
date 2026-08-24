@@ -82,14 +82,20 @@
 
 
     <!-- RESULTS SCREEN -->
- <div id="results-screen" class="hide">
+ <div class="results-buttons" data-html2canvas-ignore="true">
 
-  <h1>Your Creative Role</h1>
-
-  <div id="results-content"></div>
-
-  <button id="retake-button" onclick="location.reload()">
+  <button
+    id="retake-button"
+    onclick="location.reload()"
+  >
     Retake Assessment
+  </button>
+
+  <button
+    id="download-button"
+    onclick="downloadResultsPDF()"
+  >
+    Download PDF
   </button>
 
 </div>
