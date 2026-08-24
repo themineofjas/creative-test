@@ -1164,3 +1164,33 @@ body.quiz-active {
   overscroll-behavior: none;
   height: 100dvh;
 }
+/* =====================================
+   START ASSESSMENT BUTTON
+===================================== */
+
+#start-button {
+  min-height: 48px;
+
+  padding: 0.8rem 1.2rem;
+
+  background: #1BCEEE;
+  color: #000000;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+
+#start-button:hover {
+  background: #1BCEEE;
+  color: #000000;
+
+  opacity: 0.85;
+}
