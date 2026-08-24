@@ -733,6 +733,35 @@ const profiles = {
 
 };
 
+// =====================================
+// SHORT ROLE SUMMARIES
+// Used for Secondary Role results
+// =====================================
+
+const roleSummaries = {
+
+  Ideator:
+    "You expand possibility by generating ideas, making connections, and helping a group see directions it may not have considered.",
+
+  Analyst:
+    "You create clarity by organizing complexity, examining structure, and helping a group understand how the pieces fit together.",
+
+  Catalyst:
+    "You create movement by connecting people to priorities, opportunities, decisions, and next moves.",
+
+  Executor:
+    "You create tangible progress by taking ownership of concrete work and helping shared intentions become completed results.",
+
+  Alchemist:
+    "You create transformation by challenging assumptions, experimenting with existing ideas, and recombining elements in new ways.",
+
+  Curator:
+    "You create coherence by discerning what belongs, what is strongest, and what should be selected, refined, or removed.",
+
+  Advocate:
+    "You strengthen the human conditions of collaboration by noticing communication, trust, capacity, workload, and what people need to contribute well."
+
+};
 
 // =====================================
 // APPLICATION STATE
