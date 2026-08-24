@@ -1351,12 +1351,13 @@ function showResults() {
     .innerHTML = `
 
       <p class="profile-text">
-        Your results describe the kinds of contributions
-        you appear most naturally drawn to make when
-        working with other people. THEY ARE NOT A LIMIT 
-        ON WHAT YOU CAN DO. Screeshot and share results with family
-        or friends to confirm and discuss accuracy if possible.
-      </p>
+  Your results describe the kinds of contributions
+  you appear most naturally drawn to make when
+  working with other people. <b>They are not a limit
+  on what you can do.</b> Screenshot and share your results
+  with family or friends to compare perspectives and discuss
+  how accurately they reflect you.
+</p>
 
 
       <h3 class="section-title">
