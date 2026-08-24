@@ -1,8 +1,10 @@
 /* =====================================
-   GLOBAL RESET
+   BASE
 ===================================== */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -10,14 +12,18 @@
 html {
   margin: 0;
   padding: 0;
+
+  background: #FFFFFF;
 }
 
 
 body {
   margin: 0;
-  padding: 0;
 
-  min-height: 100vh;
+  min-height: 100dvh;
+
+  padding:
+    clamp(1rem, 4vw, 3rem);
 
   background: #FFFFFF;
   color: #000000;
@@ -30,46 +36,29 @@ body {
     sans-serif;
 
   line-height: 1.6;
+
+  overflow-x: hidden;
 }
 
 
-/* =====================================
-   MAIN CONTAINER
-===================================== */
-
-.container,
-.card {
-  width: min(92%, 700px);
+.app-shell {
+  width: min(100%, 900px);
 
   margin: 0 auto;
-  padding: 2rem 1.25rem;
-
-  background: #FFFFFF;
-  color: #000000;
 }
 
 
 /* =====================================
-   SCREENS
+   SCREEN VISIBILITY
 ===================================== */
 
-#welcome-screen,
-#quiz-screen,
-#results-screen {
-  background: #FFFFFF;
-  color: #000000;
-}
-
-
-/* Used by JavaScript to switch screens */
-
 .hide {
-  display: none;
+  display: none !important;
 }
 
 
 /* =====================================
-   MAIN HEADINGS
+   GENERAL TYPOGRAPHY
 ===================================== */
 
 h1,
@@ -80,852 +69,76 @@ p {
 }
 
 
-/* Main page title */
-
 h1 {
   color: #000000;
 
-  font-size: 2rem;
-  line-height: 1.15;
+  font-size:
+    clamp(1.8rem, 4vw, 2.4rem);
 
-  margin-bottom: 1rem;
+  line-height: 1.15;
 }
 
 
 /* =====================================
-   WELCOME SCREEN
+   WELCOME
 ===================================== */
 
 #welcome-screen {
-  text-align: center;
+  width: 100%;
+
+  min-height:
+    calc(100dvh - 6rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
-#welcome-screen p {
-  color: #000000;
+.welcome-content {
+  width: min(100%, 650px);
+
+  text-align: center;
+
+  padding:
+    clamp(1rem, 3vw, 2rem);
+}
+
+
+.welcome-content p {
+  margin-left: auto;
+  margin-right: auto;
 
   max-width: 600px;
 
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
+  color: #000000;
 }
 
 
 /* =====================================
-   BUTTONS
+   ACTION BUTTONS
 ===================================== */
 
 button {
   font: inherit;
 
+  border: none;
+
   cursor: pointer;
 
-  border: none;
-  border-radius: 8px;
+  touch-action: manipulation;
 
-  transition:
-    transform 0.15s ease,
-    background-color 0.15s ease,
-    border-color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
-button:active {
-  transform: scale(0.99);
-}
-
-
-/* Start / retake type buttons */
-
-.main-button,
 #start-button,
-#retake-button {
-  background: #000000;
-  color: #FFFFFF;
-
-  padding: 0.9rem 1.4rem;
-
-  font-weight: 700;
-
-  border-radius: 8px;
-}
-
-
-.main-button:hover,
-#start-button:hover,
-#retake-button:hover {
-  background: #1BCEEE;
-  color: #000000;
-}
-
-
-/* =====================================
-   QUIZ
-===================================== */
-
-#quiz-screen {
-  width: 100%;
-}
-
-
-/* Quiz question heading */
-
-#quiz-screen h2,
-#quiz-screen h3 {
-  color: #000000;
-}
-
-
-/* =====================================
-   PROGRESS BAR
-===================================== */
-
-.progress-container {
-  width: 100%;
-  height: 8px;
-
-  margin-bottom: 1.5rem;
-
-  overflow: hidden;
-
-  background: #E5E5E5;
-
-  border-radius: 999px;
-}
-
-
-#progress {
-  width: 0%;
-  height: 100%;
-
-  background: #1BCEEE;
-
-  border-radius: 999px;
-
-  transition: width 0.25s ease;
-}
-
-
-/* =====================================
-   TIMER
-===================================== */
-
-#timer {
-  display: block;
-
-  margin-bottom: 1.5rem;
-
-  color: #9B9B9B;
-
-  font-size: 0.95rem;
-  font-weight: 700;
-
-  text-align: center;
-}
-
-
-/* =====================================
-   ANSWER CHOICES
-===================================== */
-
-.choices,
-.choice-container {
-  display: flex;
-  flex-direction: column;
-
-  gap: 1rem;
-
-  width: 100%;
-
-  margin-top: 1.5rem;
-}
-
-
-.choice-button,
-#btn-sideA,
-#btn-sideB {
-  width: 100%;
-
-  padding: 1.25rem;
-
-  background: #FFFFFF;
-  color: #000000;
-
-  border: 1px solid #9B9B9B;
-  border-radius: 10px;
-
-  text-align: left;
-
-  font-size: 1rem;
-  line-height: 1.45;
-}
-
-
-.choice-button:hover,
-#btn-sideA:hover,
-#btn-sideB:hover {
-  border-color: #1BCEEE;
-  background: #F8FCFD;
-}
-
-
-/* =====================================
-   RESULTS SCREEN
-===================================== */
-
-#results-screen {
-  background: #FFFFFF;
-  color: #000000;
-}
-
-
-/* Main results page title:
-   "Your Creative Role"
-*/
-
-#results-screen > h1,
-#results-screen > h2 {
-  color: #000000;
-}
-
-
-/* =====================================
-   PRIMARY / SECONDARY LABELS
-
-   Example:
-   YOUR PRIMARY ROLE
-   YOUR SECONDARY ROLE
-===================================== */
-
-.section-title {
-  color: #9B9B9B;
-
-  font-size: 0.95rem;
-  line-height: 1.25;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.06em;
-
-  margin-top: 2.5rem;
-  margin-bottom: 0.45rem;
-}
-
-
-/* =====================================
-   ROLE NAME
-
-   Example:
-   The Ideator
-   The Analyst
-===================================== */
-
-.profile-title {
-  color: #1BCEEE;
-
-  font-size: 2rem;
-  line-height: 1.1;
-
-  font-weight: 750;
-
-  margin-top: 0;
-  margin-bottom: 0.15rem;
-}
-
-
-/* =====================================
-   ROLE DESCRIPTION / SUBTITLE
-
-   Example:
-   The Possibility Generator
-===================================== */
-
-.profile-sub {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-
-  color: #9B9B9B;
-
-  font-size: 1rem;
-  line-height: 1.3;
-
-  font-weight: 600;
-}
-
-
-/* =====================================
-   RESULT BODY TEXT
-===================================== */
-
-.profile-text {
-  color: #000000;
-
-  font-size: 1rem;
-  line-height: 1.7;
-
-  margin-bottom: 1.5rem;
-}
-
-
-.profile-text b {
-  font-weight: 700;
-}
-
-
-/* =====================================
-   PRIMARY + SECONDARY ROLE SEPARATION
-===================================== */
-
-#results-content > .section-title {
-  margin-top: 3rem;
-}
-
-
-/* =====================================
-   COMPLEMENTARY ROLE SECTION
-===================================== */
-
-.results-section-heading {
-  color: #000000;
-
-  font-size: 1.25rem;
-  line-height: 1.25;
-
-  font-weight: 700;
-
-  margin-top: 3.5rem;
-  margin-bottom: 0.75rem;
-}
-
-
-/* Individual complementary role */
-
-.recommended-role {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-
-/* Complementary role names */
-
-.recommended-role .section-title {
-  color: #1BCEEE;
-
-  font-size: 1.05rem;
-  line-height: 1.25;
-
-  font-weight: 700;
-
-  text-transform: none;
-
-  letter-spacing: normal;
-
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-}
-
-
-/* Complementary role description */
-
-.recommended-role .profile-text {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-
-/* =====================================
-   THE SEVEN CREATIVE ROLES
-===================================== */
-
-.role-directory {
-  margin-top: 1rem;
-
-  padding-left: 1.25rem;
-
-  color: #000000;
-}
-
-
-.role-directory li {
-  margin-bottom: 0.7rem;
-
-  color: #000000;
-}
-
-
-.role-directory li b {
-  font-weight: 700;
-}
-
-
-/* =====================================
-   LINKS
-===================================== */
-
-a {
-  color: #1BCEEE;
-
-  text-decoration: none;
-}
-
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-/* =====================================
-   ACCESSIBILITY / FOCUS
-===================================== */
-
-button:focus-visible,
-a:focus-visible {
-  outline: 3px solid #1BCEEE;
-  outline-offset: 3px;
-}
-
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 599px) {
-
-  .container,
-  .card {
-    width: 94%;
-
-    padding: 1.5rem 0.75rem;
-  }
-
-
-  h1 {
-    font-size: 1.75rem;
-  }
-
-
-  .profile-title {
-    font-size: 1.75rem;
-  }
-
-
-  .results-section-heading {
-    font-size: 1.15rem;
-  }
-
-
-  .choice-button,
-  #btn-sideA,
-  #btn-sideB {
-    padding: 1rem;
-  }
-
-}
-
-
-/* =====================================
-   TABLET / DESKTOP
-===================================== */
-
-@media (min-width: 600px) {
-
-  .container,
-  .card {
-    padding: 3rem 2rem;
-  }
-
-
-  .choices,
-  .choice-container {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-
-  .choice-button,
-  #btn-sideA,
-  #btn-sideB {
-    flex: 1;
-  }
-
-}
-
-/* =====================================
-   RESULTS ACTIONS
-===================================== */
-
-.results-actions {
-  display: flex;
-  justify-content: flex-end;
-
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-}
-
-
-/* Download PDF button */
-
-.pdf-button {
-  background: #000000;
-  color: #FFFFFF;
-
-  border: none;
-  border-radius: 8px;
-
-  padding: 0.8rem 1.2rem;
-
-  font-size: 0.95rem;
-  font-weight: 700;
-
-  cursor: pointer;
-}
-
-.pdf-button:hover {
-  background: #1BCEEE;
-  color: #000000;
-}
-/* =====================================
-   QUIZ POSITION + RESPONSIVE CHOICES
-===================================== */
-
-/* Keep the assessment slightly above
-   the vertical center of the screen */
-
-#quiz-screen:not(.hide) {
-  min-height: calc(100dvh - 4rem);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  transform: translateY(-5vh);
-}
-
-
-/* Make sure hidden screens stay hidden */
-
-.hide {
-  display: none !important;
-}
-
-
-/* Find the container holding the two
-   answer buttons, regardless of its class */
-
-#quiz-screen *:has(> #btn-sideA):has(> #btn-sideB) {
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  gap: 1rem;
-}
-
-
-/* Answer buttons */
-
-#btn-sideA,
-#btn-sideB {
-  width: 100%;
-
-  padding: 1.25rem;
-
-  background: #FFFFFF;
-  color: #000000;
-
-  border: 1px solid #9B9B9B;
-  border-radius: 10px;
-
-  text-align: left;
-
-  font-size: 1rem;
-  line-height: 1.45;
-}
-
-
-/* Larger screens:
-   choices sit SIDE BY SIDE */
-
-@media (min-width: 700px) {
-
-  #quiz-screen *:has(> #btn-sideA):has(> #btn-sideB) {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-
-  #btn-sideA,
-  #btn-sideB {
-    flex: 1;
-    width: 50%;
-  }
-
-}
-
-
-/* Mobile:
-   choices remain TOP / BOTTOM */
-
-@media (max-width: 699px) {
-
-  #quiz-screen:not(.hide) {
-    min-height: calc(100dvh - 2rem);
-
-    transform: translateY(-3vh);
-  }
-
-
-  #quiz-screen *:has(> #btn-sideA):has(> #btn-sideB) {
-    flex-direction: column;
-  }
-
-
-  #btn-sideA,
-  #btn-sideB {
-    width: 100%;
-  }
-
-}
-
-/* =====================================
-   RESULT BUTTONS
-===================================== */
-
-/* Retake + Download PDF */
-
-#results-screen button,
-.pdf-button,
-#retake-button {
-  background: #1BCEEE;
-  color: #000000;
-
-  border: none;
-  border-radius: 8px;
-
-  padding: 0.8rem 1.2rem;
-
-  font-size: 0.95rem;
-  font-weight: 700;
-
-  cursor: pointer;
-}
-
-
-/* Same interaction for both buttons */
-
-#results-screen button:hover,
-.pdf-button:hover,
-#retake-button:hover {
-  background: #1BCEEE;
-  color: #000000;
-
-  opacity: 0.85;
-}
-
-
-/* PDF remains bottom-right */
-
-.results-actions {
-  display: flex;
-  justify-content: flex-end;
-
-  width: 100%;
-
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-}
-
-/* =====================================
-   FINAL PAGE SPACING
-===================================== */
-
-body {
-  margin: 0;
-
-  padding:
-    clamp(1rem, 4vw, 3rem);
-
-  background: #FFFFFF;
-  color: #000000;
-}
-
-
-/* Give every screen breathing room */
-
-#welcome-screen,
-#quiz-screen,
-#results-screen {
-  width: min(100%, 760px);
-
-  margin-left: auto;
-  margin-right: auto;
-
-  padding:
-    clamp(1.25rem, 3vw, 2.5rem);
-
-  background: #FFFFFF;
-}
-
-
-/* Results need normal document flow */
-
-#results-screen:not(.hide) {
-  display: block;
-}
-
-
-/* =====================================
-   QUIZ POSITION
-===================================== */
-
-#quiz-screen:not(.hide) {
-  min-height:
-    calc(100dvh - 6rem);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  transform: translateY(-3vh);
-}
-
-
-/* =====================================
-   PROGRESS BAR
-===================================== */
-
-/* Outer progress track */
-
-.progress-container,
-#progress-container {
-  display: block;
-
-  width: 100%;
-  height: 10px;
-
-  margin-top: 0.5rem;
-  margin-bottom: 1.75rem;
-
-  background: #E5E5E5;
-
-  border-radius: 999px;
-
-  overflow: hidden;
-}
-
-
-/* Actual moving progress indicator */
-
-#progress {
-  display: block;
-
-  width: 0%;
-  height: 10px;
-  min-height: 10px;
-
-  background: #1BCEEE;
-
-  border-radius: 999px;
-
-  transition: width 0.25s ease;
-}
-
-
-/* =====================================
-   QUESTION CHOICES
-===================================== */
-
-#quiz-screen *:has(> #btn-sideA):has(> #btn-sideB) {
-  display: flex;
-
-  width: 100%;
-
-  gap: 1rem;
-
-  margin-top: 1.5rem;
-}
-
-
-/* Large screens = side by side */
-
-@media (min-width: 700px) {
-
-  #quiz-screen *:has(> #btn-sideA):has(> #btn-sideB) {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-
-  #btn-sideA,
-  #btn-sideB {
-    flex: 1 1 0;
-    width: 50%;
-  }
-
-}
-
-
-/* Small screens = top and bottom */
-
-@media (max-width: 699px) {
-
-  #quiz-screen:not(.hide) {
-    min-height:
-      calc(100dvh - 3rem);
-
-    transform: translateY(-2vh);
-  }
-
-
-  #quiz-screen *:has(> #btn-sideA):has(> #btn-sideB) {
-    flex-direction: column;
-  }
-
-
-  #btn-sideA,
-  #btn-sideB {
-    width: 100%;
-  }
-
-}
-
-
-/* =====================================
-   RESULTS BUTTON ROW
-===================================== */
-
-.results-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 1rem;
-
-  width: 100%;
-
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-}
-
-
-/* Retake + Download match exactly */
-
 #retake-button,
 #download-button {
-  flex: 1 1 0;
-
-  max-width: 200px;
   min-height: 48px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 0;
-
-  padding: 0.8rem 1.2rem;
+  padding:
+    0.8rem 1.2rem;
 
   background: #1BCEEE;
   color: #000000;
@@ -939,69 +152,499 @@ body {
 
   text-align: center;
 
-  cursor: pointer;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
 }
 
 
+#start-button:hover,
 #retake-button:hover,
 #download-button:hover {
-  background: #1BCEEE;
-  color: #000000;
-
   opacity: 0.85;
 }
 
-/* =====================================
-   SMALL-SCREEN PAGE GUTTERS
-===================================== */
 
-@media (max-width: 599px) {
-
-  body {
-    padding: 0.75rem;
-  }
-
-
-  #welcome-screen,
-  #quiz-screen,
-  #results-screen {
-    padding: 1rem;
-  }
-
-
-  .results-buttons {
-    gap: 0.75rem;
-  }
-
-
-  #retake-button,
-  #download-button {
-    padding:
-      0.75rem 0.6rem;
-
-    font-size: 0.88rem;
-  }
-
+#start-button:active,
+#retake-button:active,
+#download-button:active {
+  transform: scale(0.98);
 }
+
 
 /* =====================================
-   SCREEN VISIBILITY FIX
+   ASSESSMENT-ONLY SCROLL LOCK
 ===================================== */
 
-.hide {
-  display: none !important;
+/*
+   JavaScript adds quiz-active to BOTH
+   <html> and <body> while the assessment
+   is running.
+
+   Welcome and results remain normally
+   scrollable.
+*/
+
+html.quiz-active,
+html.quiz-active body {
+  width: 100%;
+
+  height: 100%;
+  max-height: 100%;
+
+  margin: 0;
+
+  overflow: hidden !important;
+
+  overscroll-behavior: none;
 }
 
-#welcome-screen:not(.hide),
-#quiz-screen:not(.hide),
-#results-screen:not(.hide) {
-  visibility: visible;
-  opacity: 1;
+
+html.quiz-active body {
+  position: fixed;
+
+  inset: 0;
+
+  padding: 0;
+
+  width: 100vw;
+  height: 100dvh;
 }
 
-#results-screen:not(.hide) {
-  display: block !important;
+
+/* =====================================
+   QUIZ SCREEN
+===================================== */
+
+#quiz-screen:not(.hide) {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100vw;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  background: #FFFFFF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*
+     More bottom padding than top padding
+     places the test slightly above center
+     without using transforms that create
+     browser overflow.
+  */
+
+  padding:
+    3vh
+    clamp(1rem, 4vw, 3rem)
+    9vh;
 }
+
+
+.quiz-content {
+  width: min(100%, 920px);
+
+  margin: 0 auto;
+
+  padding:
+    clamp(1rem, 3vw, 2rem);
+
+  background: #FFFFFF;
+  color: #000000;
+}
+
+
+/* =====================================
+   PREVENT ACCIDENTAL QUIZ SELECTION
+===================================== */
+
+#quiz-screen,
+#quiz-screen *,
+#btn-sideA,
+#btn-sideB {
+  -webkit-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+
+  touch-action: manipulation;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =====================================
+   PROGRESS BAR
+===================================== */
+
+.progress-container {
+  display: block;
+
+  width: 100%;
+  height: 10px;
+
+  margin:
+    0
+    0
+    1.5rem;
+
+  background: #E5E5E5;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+
+#progress {
+  display: block;
+
+  width: 0%;
+  height: 100%;
+
+  background: #1BCEEE;
+
+  border-radius: 999px;
+
+  transition:
+    width 0.2s ease;
+}
+
+
+/* =====================================
+   TIMER
+===================================== */
+
+#timer {
+  margin-bottom: 1rem;
+
+  color: #9B9B9B;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+/* =====================================
+   QUIZ HEADING
+===================================== */
+
+.quiz-heading {
+  margin-bottom: 0.4rem;
+
+  text-align: center;
+
+  font-size:
+    clamp(1.35rem, 3vw, 1.8rem);
+}
+
+
+.quiz-instruction {
+  margin:
+    0
+    auto
+    1.5rem;
+
+  max-width: 620px;
+
+  color: #9B9B9B;
+
+  text-align: center;
+
+  font-size: 0.95rem;
+}
+
+
+/* =====================================
+   ANSWER AREA
+===================================== */
+
+.answer-row {
+  display: flex;
+
+  width: 100%;
+
+  gap: 1rem;
+
+  align-items: stretch;
+}
+
+
+.choice-button {
+  flex: 1 1 0;
+
+  min-width: 0;
+
+  width: 100%;
+
+  min-height: 150px;
+
+  padding:
+    1.25rem;
+
+  background: #FFFFFF;
+  color: #000000;
+
+  border:
+    1px solid #9B9B9B;
+
+  border-radius: 10px;
+
+  font-size: 1rem;
+  line-height: 1.45;
+
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+
+.choice-button:hover {
+  border-color: #1BCEEE;
+
+  background: #F8FCFD;
+}
+
+
+.choice-button:active {
+  transform: scale(0.99);
+}
+
+
+/* =====================================
+   OR DIVIDER
+===================================== */
+
+.or-divider {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-self: center;
+
+  padding:
+    0 0.25rem;
+
+  margin: 0;
+
+  color: #9B9B9B;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+/* =====================================
+   RESULTS SCREEN
+===================================== */
+
+#results-screen:not(.hide) {
+  display: block;
+
+  width: min(100%, 760px);
+
+  margin: 0 auto;
+
+  padding:
+    clamp(1.25rem, 4vw, 3rem);
+
+  background: #FFFFFF;
+  color: #000000;
+}
+
+
+.results-page-title {
+  margin-bottom: 1.5rem;
+
+  color: #000000;
+}
+
+
+/* =====================================
+   RESULT LABELS
+
+   Examples:
+   YOUR PRIMARY ROLE
+   YOUR SECONDARY ROLE
+===================================== */
+
+.section-title {
+  margin-top: 2.5rem;
+  margin-bottom: 0.45rem;
+
+  color: #9B9B9B;
+
+  font-size: 0.95rem;
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.06em;
+}
+
+
+/* =====================================
+   ACTUAL ROLE NAMES
+===================================== */
+
+.profile-title {
+  margin-top: 0;
+  margin-bottom: 0.12rem;
+
+  color: #1BCEEE;
+
+  font-size:
+    clamp(1.75rem, 4vw, 2.15rem);
+
+  line-height: 1.1;
+
+  font-weight: 750;
+}
+
+
+/* Role descriptor directly underneath */
+
+.profile-sub {
+  margin-top: 0;
+  margin-bottom: 1.35rem;
+
+  color: #9B9B9B;
+
+  font-size: 1rem;
+  line-height: 1.3;
+
+  font-weight: 600;
+}
+
+
+/* =====================================
+   RESULT TEXT
+===================================== */
+
+.profile-text {
+  margin-bottom: 1.5rem;
+
+  color: #000000;
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+.profile-text b {
+  font-weight: 700;
+}
+
+
+/* Keep each full role profile together
+   where possible in PDF output */
+
+.role-profile {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+
+/* =====================================
+   SMALLER RESULTS SECTIONS
+
+   Three Complementary Roles
+   The Seven Creative Roles
+===================================== */
+
+.results-section-heading {
+  margin-top: 3.5rem;
+  margin-bottom: 0.75rem;
+
+  color: #000000;
+
+  font-size: 1.25rem;
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+
+/* =====================================
+   COMPLEMENTARY ROLES
+===================================== */
+
+.recommended-role {
+  margin:
+    1.5rem
+    0;
+
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+
+.recommended-role .section-title {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+
+  color: #1BCEEE;
+
+  font-size: 1.05rem;
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  text-transform: none;
+
+  letter-spacing: normal;
+}
+
+
+.recommended-role .profile-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+/* =====================================
+   SEVEN ROLE DIRECTORY
+===================================== */
+
+.role-directory {
+  margin-top: 1rem;
+
+  padding-left: 1.25rem;
+}
+
+
+.role-directory li {
+  margin-bottom: 0.7rem;
+
+  color: #000000;
+}
+
+
+.role-directory li b {
+  color: #1BCEEE;
+
+  font-weight: 700;
+}
+
 
 /* =====================================
    RESULTS BUTTONS
@@ -1009,9 +652,9 @@ body {
 
 .results-buttons {
   display: flex;
-  flex-direction: row;
+
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   gap: 1rem;
 
@@ -1024,258 +667,191 @@ body {
 
 #retake-button,
 #download-button {
-  flex: 1;
+  flex:
+    0 1 190px;
 
-  min-height: 48px;
+  width: 190px;
 
   margin: 0;
-
-  padding: 0.8rem 1rem;
-
-  background: #1BCEEE;
-  color: #000000;
-
-  border: none;
-  border-radius: 8px;
-
-  font-size: 0.95rem;
-  font-weight: 700;
-
-  text-align: center;
-
-  cursor: pointer;
 }
 
 
-@media (min-width: 600px) {
-
-  .results-buttons {
-    justify-content: flex-end;
-  }
-
-  #retake-button,
-  #download-button {
-    flex: 0 1 190px;
-  }
-
-   
 /* =====================================
-   CENTER "OR" BETWEEN ANSWERS
+   FOCUS ACCESSIBILITY
 ===================================== */
 
-.or,
-.or-divider,
-#or {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+button:focus-visible,
+a:focus-visible {
+  outline:
+    3px solid #1BCEEE;
 
-  margin: 0;
-
-  color: #9B9B9B;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-
-  text-align: center;
-
-  flex: 0 0 auto;
+  outline-offset: 3px;
 }
 
 
-/* PHONE / NARROW SCREEN
-   A
-   OR
-   B
-*/
+/* =====================================
+   MOBILE / NARROW BROWSER
+===================================== */
 
 @media (max-width: 699px) {
 
-  .or,
-  .or-divider,
-  #or {
+  body {
+    padding: 0.75rem;
+  }
+
+
+  #quiz-screen:not(.hide) {
+    padding:
+      2vh
+      0.9rem
+      5vh;
+  }
+
+
+  .quiz-content {
+    padding:
+      0.75rem;
+  }
+
+
+  /*
+     Phone:
+     Choice A
+     OR
+     Choice B
+  */
+
+  .answer-row {
+    flex-direction: column;
+
+    gap: 0.65rem;
+  }
+
+
+  .choice-button {
     width: 100%;
 
-    padding: 0.15rem 0;
-
-    align-self: center;
-  }
-
-}
-
-
-/* LARGER SCREEN
-   A   OR   B
-*/
-
-@media (min-width: 700px) {
-
-  .or,
-  .or-divider,
-  #or {
-    width: auto;
-
-    padding: 0 0.6rem;
-
-    align-self: center;
-  }
-
-}
-
-}
-/* =====================================
-   PREVENT ACCIDENTAL DOUBLE-TAP ZOOM
-   Keeps normal scrolling + pinch zoom
-===================================== */
-
-html,
-body,
-#welcome-screen,
-#quiz-screen,
-#results-screen,
-#btn-sideA,
-#btn-sideB,
-button {
-  touch-action: manipulation;
-}
-/* =====================================
-   PREVENT TEXT SELECTION ON QUIZ TAPS
-===================================== */
-
-#quiz-screen,
-#btn-sideA,
-#btn-sideB,
-#quiz-screen button,
-.or,
-.or-divider,
-#or {
-  -webkit-user-select: none;
-  user-select: none;
-
-  -webkit-touch-callout: none;
-
-  -webkit-tap-highlight-color: transparent;
-}/* =====================================
-   ASSESSMENT-ONLY SCROLL LOCK
-===================================== */
-
-body.quiz-active {
-  overflow: hidden;
-  overscroll-behavior: none;
-  height: 100dvh;
-}
-/* =====================================
-   START ASSESSMENT BUTTON
-===================================== */
-
-#start-button {
-  min-height: 48px;
-
-  padding: 0.8rem 1.2rem;
-
-  background: #1BCEEE;
-  color: #000000;
-
-  border: none;
-  border-radius: 8px;
-
-  font-size: 0.95rem;
-  font-weight: 700;
-
-  text-align: center;
-
-  cursor: pointer;
-}
-
-
-#start-button:hover {
-  background: #1BCEEE;
-  color: #000000;
-
-  opacity: 0.85;
-}
-/* =====================================
-   LARGE-SCREEN QUIZ OVERFLOW FIX
-   Leaves phone layout unchanged
-===================================== */
-
-@media (min-width: 700px) {
-
-  /* Lock the browser viewport only while
-     the assessment is active */
-
-  body.quiz-active {
-    width: 100%;
-    height: 100dvh;
-
-    margin: 0;
-    padding: 0;
-
-    overflow: hidden;
-  }
-
-
-  /* Keep quiz fully inside viewport */
-
-  body.quiz-active #quiz-screen:not(.hide) {
-    width: min(90%, 900px);
-    max-width: 900px;
-
-    height: 100dvh;
     min-height: 0;
 
-    margin: 0 auto;
+    padding:
+      1rem;
 
-    padding: 2rem;
-
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    /* Slightly above true center */
-    transform: translateY(-3vh);
+    flex: none;
   }
 
 
-  /* Prevent any quiz child from
-     accidentally creating horizontal overflow */
-
-  body.quiz-active #quiz-screen * {
-    max-width: 100%;
-  }
-
-
-  /* Answer row */
-
-  body.quiz-active
-  #quiz-screen
-  *:has(> #btn-sideA):has(> #btn-sideB) {
-
+  .or-divider {
     width: 100%;
 
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
+    padding:
+      0.1rem 0;
 
-    gap: 1rem;
-
-    margin-left: 0;
-    margin-right: 0;
+    text-align: center;
   }
 
 
-  /* Both answers share available width */
+  #results-screen:not(.hide) {
+    padding:
+      1rem;
+  }
 
-  body.quiz-active #btn-sideA,
-  body.quiz-active #btn-sideB {
+
+  .results-buttons {
+    gap: 0.75rem;
+  }
+
+
+  #retake-button,
+  #download-button {
     flex: 1 1 0;
 
     width: auto;
     min-width: 0;
 
-    margin: 0;
+    padding:
+      0.75rem 0.55rem;
+
+    font-size: 0.88rem;
+  }
+
+}
+
+
+/* =====================================
+   LARGER SCREEN
+===================================== */
+
+@media (min-width: 700px) {
+
+  /*
+     Desktop / iPad:
+     Choice A   OR   Choice B
+  */
+
+  .answer-row {
+    flex-direction: row;
+  }
+
+
+  .choice-button {
+    flex: 1 1 0;
+
+    width: 0;
+  }
+
+
+  .or-divider {
+    width: auto;
+
+    padding:
+      0 0.4rem;
+  }
+
+}
+
+
+/* =====================================
+   VERY SHORT VIEWPORTS
+===================================== */
+
+@media (max-height: 650px) {
+
+  #quiz-screen:not(.hide) {
+    padding:
+      1vh
+      1rem
+      3vh;
+  }
+
+
+  .quiz-content {
+    padding:
+      0.5rem 1rem;
+  }
+
+
+  .progress-container {
+    margin-bottom: 0.8rem;
+  }
+
+
+  #timer {
+    margin-bottom: 0.5rem;
+  }
+
+
+  .quiz-instruction {
+    margin-bottom: 0.8rem;
+  }
+
+
+  .choice-button {
+    min-height: 0;
+
+    padding:
+      0.85rem 1rem;
+
+    font-size: 0.95rem;
   }
 
 }
