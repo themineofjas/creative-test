@@ -1569,3 +1569,64 @@ function showResults() {
 
     `;
 }
+
+// =====================================
+// DOWNLOAD RESULTS AS PDF
+// =====================================
+
+function downloadResultsPDF() {
+
+  const results =
+    document.getElementById("results-content");
+
+
+  const rankedRoles =
+    rankRoles();
+
+
+  const primaryRole =
+    rankedRoles[0];
+
+
+  const secondaryRole =
+    rankedRoles[1];
+
+
+  const filename =
+    `creative-role-${primaryRole.toLowerCase()}-${secondaryRole.toLowerCase()}.pdf`;
+
+
+  const options = {
+
+    margin: 0.5,
+
+    filename: filename,
+
+    image: {
+      type: "jpeg",
+      quality: 0.98
+    },
+
+    html2canvas: {
+      scale: 2,
+      backgroundColor: "#FFFFFF"
+    },
+
+    jsPDF: {
+      unit: "in",
+      format: "letter",
+      orientation: "portrait"
+    },
+
+    pagebreak: {
+      mode: ["avoid-all", "css", "legacy"]
+    }
+
+  };
+
+
+  html2pdf()
+    .set(options)
+    .from(results)
+    .save();
+}
