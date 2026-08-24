@@ -176,7 +176,6 @@ const questions = [
 
   // =====================================
   // SECTION 2: GROUP CONTRIBUTION UNDER FRICTION
-  // What I naturally bring when collaboration gets difficult
   // =====================================
 
   // Ideator vs Analyst
@@ -350,7 +349,6 @@ const questions = [
 
   // =====================================
   // SECTION 3: SUSTAINABLE GROUP CONTRIBUTION
-  // What I can naturally keep contributing over time
   // =====================================
 
   // Ideator vs Analyst
@@ -558,7 +556,6 @@ const profiles = {
     </p>
   `,
 
-
   Ideator: `
     <h2 class="profile-title">The Ideator</h2>
     <div class="profile-sub">The Possibility Generator</div>
@@ -586,7 +583,6 @@ const profiles = {
       been fully developed.
     </p>
   `,
-
 
   Analyst: `
     <h2 class="profile-title">The Analyst</h2>
@@ -616,7 +612,6 @@ const profiles = {
     </p>
   `,
 
-
   Catalyst: `
     <h2 class="profile-title">The Catalyst</h2>
     <div class="profile-sub">The Movement & Mobilization Engine</div>
@@ -643,7 +638,6 @@ const profiles = {
       participate in what comes next.
     </p>
   `,
-
 
   Executor: `
     <h2 class="profile-title">The Executor</h2>
@@ -673,7 +667,6 @@ const profiles = {
     </p>
   `,
 
-
   Alchemist: `
     <h2 class="profile-title">The Alchemist</h2>
     <div class="profile-sub">The Transformation & Experimentation Engine</div>
@@ -701,7 +694,6 @@ const profiles = {
       something genuinely different.
     </p>
   `,
-
 
   Curator: `
     <h2 class="profile-title">The Curator</h2>
@@ -787,7 +779,6 @@ const roleDetails = {
 
 // =====================================
 // COMPLEMENTARY ROLE RECOMMENDATIONS
-// Provisional group-building recommendations
 // =====================================
 
 const complementaryPairings = {
@@ -810,7 +801,6 @@ const complementaryPairings = {
   "Ideator|Advocate":
     ["Analyst", "Catalyst", "Executor"],
 
-
   "Analyst|Catalyst":
     ["Ideator", "Executor", "Advocate"],
 
@@ -826,7 +816,6 @@ const complementaryPairings = {
   "Analyst|Advocate":
     ["Ideator", "Catalyst", "Executor"],
 
-
   "Catalyst|Executor":
     ["Ideator", "Analyst", "Advocate"],
 
@@ -839,7 +828,6 @@ const complementaryPairings = {
   "Catalyst|Advocate":
     ["Ideator", "Analyst", "Executor"],
 
-
   "Executor|Alchemist":
     ["Analyst", "Curator", "Advocate"],
 
@@ -849,13 +837,11 @@ const complementaryPairings = {
   "Executor|Advocate":
     ["Ideator", "Analyst", "Catalyst"],
 
-
   "Alchemist|Curator":
     ["Analyst", "Executor", "Advocate"],
 
   "Alchemist|Advocate":
     ["Analyst", "Catalyst", "Executor"],
-
 
   "Curator|Advocate":
     ["Ideator", "Catalyst", "Executor"]
@@ -895,7 +881,6 @@ function getPairKey(roleA, roleB) {
     return `${roleA}|${roleB}`;
   }
 
-
   return `${roleB}|${roleA}`;
 }
 
@@ -914,9 +899,7 @@ let scores = {
 };
 
 
-// Stores the complete response pattern
 let responses = [];
-
 
 let timerInterval;
 
@@ -950,6 +933,10 @@ function getSectionName(questionIndex) {
 // =====================================
 
 function startTest() {
+
+  // Only the assessment screen is scroll-locked.
+  document.body.classList.add("quiz-active");
+
 
   document
     .getElementById("welcome-screen")
@@ -1012,7 +999,6 @@ function loadQuestion() {
 
 
   timeLeft = 45;
-
 
   questionStartedAt =
     Date.now();
@@ -1109,11 +1095,9 @@ function handleAnswer(choice) {
       : null;
 
 
-  // Provisional scoring
   scores[chosenRole] += 1;
 
 
-  // Preserve complete response pattern
   responses.push({
 
     questionNumber:
@@ -1146,7 +1130,6 @@ function handleAnswer(choice) {
 
 // =====================================
 // SECTION SCORES
-// Used for tie resolution
 // =====================================
 
 function getSectionScores(role) {
@@ -1284,11 +1267,6 @@ function rankRoles() {
       tiedRoles.sort(
         (roleA, roleB) => {
 
-          // -----------------------------
-          // Tie-breaker 1:
-          // Direct head-to-head choices
-          // -----------------------------
-
           const headToHeadA =
             getHeadToHeadTieScore(
               roleA,
@@ -1315,11 +1293,6 @@ function rankRoles() {
           }
 
 
-          // -----------------------------
-          // Tie-breaker 2:
-          // Cross-section consistency
-          // -----------------------------
-
           const consistencyA =
             getConsistencyScore(
               roleA
@@ -1343,11 +1316,6 @@ function rankRoles() {
             );
           }
 
-
-          // -----------------------------
-          // Final deterministic fallback
-          // No psychometric meaning
-          // -----------------------------
 
           return (
             roleNames.indexOf(roleA) -
@@ -1377,6 +1345,11 @@ function rankRoles() {
 function showResults() {
 
   clearInterval(timerInterval);
+
+
+  // Re-enable normal page scrolling
+  // once the assessment is finished.
+  document.body.classList.remove("quiz-active");
 
 
   document
@@ -1550,12 +1523,14 @@ function showResults() {
         the patterns that emerged most strongly for you.
       </p>
 
-            <ul class="profile-text role-directory">
+
+      <ul class="profile-text role-directory">
         ${allRolesHTML}
       </ul>
 
     `;
 }
+
 
 // =====================================
 // DOWNLOAD RESULTS AS PDF
@@ -1564,7 +1539,7 @@ function showResults() {
 function downloadResultsPDF() {
 
   const results =
-    document.getElementById("results-content");
+    document.getElementById("results-screen");
 
 
   const rankedRoles =
@@ -1595,8 +1570,20 @@ function downloadResultsPDF() {
     },
 
     html2canvas: {
+
       scale: 2,
-      backgroundColor: "#FFFFFF"
+
+      backgroundColor: "#FFFFFF",
+
+      ignoreElements: element => {
+
+        return (
+          element.tagName === "BUTTON" ||
+          element.classList.contains("results-buttons")
+        );
+
+      }
+
     },
 
     jsPDF: {
@@ -1606,7 +1593,7 @@ function downloadResultsPDF() {
     },
 
     pagebreak: {
-      mode: ["avoid-all", "css", "legacy"]
+      mode: ["css", "legacy"]
     }
 
   };
