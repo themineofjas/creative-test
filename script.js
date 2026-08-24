@@ -733,6 +733,7 @@ const profiles = {
 
 };
 
+
 // =====================================
 // ROLE DIRECTORY
 // =====================================
@@ -786,10 +787,7 @@ const roleDetails = {
 
 // =====================================
 // COMPLEMENTARY ROLE RECOMMENDATIONS
-//
-// These are provisional design recommendations.
-// They are intended to broaden the contribution
-// mix around a person's Primary + Secondary Roles.
+// Provisional group-building recommendations
 // =====================================
 
 const complementaryPairings = {
@@ -864,6 +862,7 @@ const complementaryPairings = {
 
 };
 
+
 // =====================================
 // APPLICATION STATE
 // =====================================
@@ -877,6 +876,7 @@ const roleNames = [
   "Curator",
   "Advocate"
 ];
+
 
 // =====================================
 // CREATE PRIMARY + SECONDARY PAIR KEY
@@ -892,7 +892,6 @@ function getPairKey(roleA, roleB) {
 
 
   if (indexA < indexB) {
-
     return `${roleA}|${roleB}`;
   }
 
@@ -995,7 +994,8 @@ function loadQuestion() {
     .width = percent + "%";
 
 
-  const q = questions[currentQuestionIndex];
+  const q =
+    questions[currentQuestionIndex];
 
 
   document
@@ -1014,28 +1014,30 @@ function loadQuestion() {
   timeLeft = 45;
 
 
-  questionStartedAt = Date.now();
+  questionStartedAt =
+    Date.now();
 
 
   updateTimerDisplay();
 
 
-  timerInterval = setInterval(() => {
+  timerInterval =
+    setInterval(() => {
 
-    timeLeft--;
-
-
-    if (timeLeft <= 0) {
-
-      timeLeft = 0;
-
-      clearInterval(timerInterval);
-    }
+      timeLeft--;
 
 
-    updateTimerDisplay();
+      if (timeLeft <= 0) {
 
-  }, 1000);
+        timeLeft = 0;
+
+        clearInterval(timerInterval);
+      }
+
+
+      updateTimerDisplay();
+
+    }, 1000);
 }
 
 
@@ -1053,7 +1055,8 @@ function updateTimerDisplay() {
 
   document
     .getElementById("timer")
-    .textContent = `⏱️ 00:${formattedTime}`;
+    .textContent =
+    `⏱️ 00:${formattedTime}`;
 }
 
 
@@ -1068,7 +1071,10 @@ function handleAnswer(choice) {
   }
 
 
-  if (choice !== "A" && choice !== "B") {
+  if (
+    choice !== "A" &&
+    choice !== "B"
+  ) {
     return;
   }
 
@@ -1079,7 +1085,8 @@ function handleAnswer(choice) {
   clearInterval(timerInterval);
 
 
-  const q = questions[currentQuestionIndex];
+  const q =
+    questions[currentQuestionIndex];
 
 
   const chosenRole =
@@ -1102,11 +1109,11 @@ function handleAnswer(choice) {
       : null;
 
 
-  // Add one provisional point
+  // Provisional scoring
   scores[chosenRole] += 1;
 
 
-  // Preserve the complete answer
+  // Preserve complete response pattern
   responses.push({
 
     questionNumber:
@@ -1139,7 +1146,7 @@ function handleAnswer(choice) {
 
 // =====================================
 // SECTION SCORES
-// Used only for tie resolution
+// Used for tie resolution
 // =====================================
 
 function getSectionScores(role) {
@@ -1153,9 +1160,13 @@ function getSectionScores(role) {
 
   responses.forEach(response => {
 
-    if (response.chosenRole === role) {
+    if (
+      response.chosenRole === role
+    ) {
 
-      sectionScores[response.section] += 1;
+      sectionScores[
+        response.section
+      ] += 1;
     }
 
   });
@@ -1167,8 +1178,6 @@ function getSectionScores(role) {
 
 // =====================================
 // CONSISTENCY SCORE
-// How strongly the Role appears across
-// all three contexts
 // =====================================
 
 function getConsistencyScore(role) {
@@ -1187,8 +1196,6 @@ function getConsistencyScore(role) {
 
 // =====================================
 // HEAD-TO-HEAD TIE SCORE
-// Counts wins against other Roles that
-// have the same overall score
 // =====================================
 
 function getHeadToHeadTieScore(
@@ -1203,7 +1210,9 @@ function getHeadToHeadTieScore(
 
     if (
       response.chosenRole === role &&
-      tiedRoles.includes(response.rejectedRole)
+      tiedRoles.includes(
+        response.rejectedRole
+      )
     ) {
 
       tieScore++;
@@ -1227,21 +1236,25 @@ function rankRoles() {
 
   roleNames.forEach(role => {
 
-    const score = scores[role];
+    const score =
+      scores[role];
 
 
     if (!groupedByScore[score]) {
+
       groupedByScore[score] = [];
     }
 
 
-    groupedByScore[score].push(role);
+    groupedByScore[score]
+      .push(role);
 
   });
 
 
   const scoreLevels =
-    Object.keys(groupedByScore)
+    Object
+      .keys(groupedByScore)
       .map(Number)
       .sort((a, b) => b - a);
 
@@ -1249,86 +1262,108 @@ function rankRoles() {
   const rankedRoles = [];
 
 
-  scoreLevels.forEach(scoreLevel => {
+  scoreLevels.forEach(
+    scoreLevel => {
 
-    const tiedRoles =
-      groupedByScore[scoreLevel];
-
-
-    if (tiedRoles.length === 1) {
-
-      rankedRoles.push(tiedRoles[0]);
-
-      return;
-    }
+      const tiedRoles =
+        groupedByScore[
+          scoreLevel
+        ];
 
 
-    tiedRoles.sort((roleA, roleB) => {
+      if (tiedRoles.length === 1) {
 
-      // -----------------------------
-      // Tie-breaker 1:
-      // Direct comparisons among
-      // Roles with the same score
-      // -----------------------------
-
-      const headToHeadA =
-        getHeadToHeadTieScore(
-          roleA,
-          tiedRoles
+        rankedRoles.push(
+          tiedRoles[0]
         );
 
-
-      const headToHeadB =
-        getHeadToHeadTieScore(
-          roleB,
-          tiedRoles
-        );
-
-
-      if (headToHeadB !== headToHeadA) {
-
-        return headToHeadB - headToHeadA;
+        return;
       }
 
 
-      // -----------------------------
-      // Tie-breaker 2:
-      // Which Role appeared more
-      // consistently across all
-      // three sections?
-      // -----------------------------
+      tiedRoles.sort(
+        (roleA, roleB) => {
 
-      const consistencyA =
-        getConsistencyScore(roleA);
+          // -----------------------------
+          // Tie-breaker 1:
+          // Direct head-to-head choices
+          // -----------------------------
 
-
-      const consistencyB =
-        getConsistencyScore(roleB);
-
-
-      if (consistencyB !== consistencyA) {
-
-        return consistencyB - consistencyA;
-      }
+          const headToHeadA =
+            getHeadToHeadTieScore(
+              roleA,
+              tiedRoles
+            );
 
 
-      // -----------------------------
-      // Final deterministic fallback.
-      // This has no psychometric meaning
-      // and should rarely be needed.
-      // -----------------------------
+          const headToHeadB =
+            getHeadToHeadTieScore(
+              roleB,
+              tiedRoles
+            );
 
-      return (
-        roleNames.indexOf(roleA) -
-        roleNames.indexOf(roleB)
+
+          if (
+            headToHeadB !==
+            headToHeadA
+          ) {
+
+            return (
+              headToHeadB -
+              headToHeadA
+            );
+          }
+
+
+          // -----------------------------
+          // Tie-breaker 2:
+          // Cross-section consistency
+          // -----------------------------
+
+          const consistencyA =
+            getConsistencyScore(
+              roleA
+            );
+
+
+          const consistencyB =
+            getConsistencyScore(
+              roleB
+            );
+
+
+          if (
+            consistencyB !==
+            consistencyA
+          ) {
+
+            return (
+              consistencyB -
+              consistencyA
+            );
+          }
+
+
+          // -----------------------------
+          // Final deterministic fallback
+          // No psychometric meaning
+          // -----------------------------
+
+          return (
+            roleNames.indexOf(roleA) -
+            roleNames.indexOf(roleB)
+          );
+
+        }
       );
 
-    });
 
+      rankedRoles.push(
+        ...tiedRoles
+      );
 
-    rankedRoles.push(...tiedRoles);
-
-  });
+    }
+  );
 
 
   return rankedRoles;
@@ -1380,7 +1415,9 @@ function showResults() {
 
 
   const recommendedRoles =
-    complementaryPairings[pairKey] || [];
+    complementaryPairings[
+      pairKey
+    ] || [];
 
 
   const recommendationsHTML =
@@ -1412,7 +1449,9 @@ function showResults() {
       .map(role => `
 
         <li>
-          <b>${roleDetails[role].fullName}</b>
+          <b>
+            ${roleDetails[role].fullName}
+          </b>
         </li>
 
       `)
@@ -1428,15 +1467,17 @@ function showResults() {
     .innerHTML = `
 
       <p class="profile-text">
-        Your results describe the kinds of contributions
-        you appear most naturally drawn to make when
-        working with other people.
+        Your results describe the kinds of
+        contributions you appear most naturally
+        drawn to make when working with other people.
 
-        <b>They are not a limit on what you can do.</b>
+        <b>
+          They are not a limit on what you can do.
+        </b>
 
-        Screenshot and share your results with family
-        or friends to compare perspectives and discuss
-        how accurately they reflect you.
+        Screenshot and share your results with
+        family or friends to compare perspectives
+        and discuss how accurately they reflect you.
       </p>
 
 
@@ -1461,8 +1502,8 @@ function showResults() {
       <p class="profile-text">
         Your Primary Role represents the contribution
         pattern that emerged most strongly across your
-        responses. Your Secondary Role represents another
-        prominent contribution pattern.
+        responses. Your Secondary Role represents
+        another prominent contribution pattern.
 
         <br><br>
 
@@ -1473,7 +1514,7 @@ function showResults() {
       </p>
 
 
-      <h2 class="profile-title">
+      <h2 class="results-section-heading">
         Three Complementary Roles to Look For
       </h2>
 
@@ -1490,14 +1531,15 @@ function showResults() {
 
 
       <p class="profile-text">
-        These are not rules about who you should work with.
-        Think of them as useful Roles to look for when
-        building a group with a broader mix of strengths,
-        perspectives, and ways of contributing.
+        These are not rules about who you should
+        work with. Think of them as useful Roles to
+        look for when building a group with a broader
+        mix of strengths, perspectives, and ways of
+        contributing.
       </p>
 
 
-      <h2 class="profile-title">
+      <h2 class="results-section-heading">
         The Seven Creative Roles
       </h2>
 
