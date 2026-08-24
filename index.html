@@ -6,115 +6,197 @@
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0"
+    content="width=device-width, initial-scale=1"
   >
 
-  <title>Creative Role Assessment</title>
+  <title>Creative Framework Diagnostic</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 </head>
+
 
 <body>
 
-  <div class="test-container">
-
-    <!-- WELCOME SCREEN -->
-    <div id="welcome-screen" class="card active">
-
-      <h1>Creative Role Assessment</h1>
-
-      <p>
-        Discover your natural role within a creative ecosystem.
-        This quick 10-minute assessment intends to give you
-       self-awareness about what you primarily bring to a creative group and a quick way to explain it to others.
-      </p>
-
-      <button
-        onclick="startTest()"
-        class="btn-main"
-      >
-        Start Assessment
-      </button>
-
-    </div>
+  <main class="app-shell">
 
 
-    <!-- QUIZ INTERFACE -->
-    <div id="quiz-screen" class="card hide">
+    <!-- =====================================
+         WELCOME SCREEN
+    ====================================== -->
 
-      <div class="progress-bar-container">
-        <div id="progress" class="progress-bar"></div>
-      </div>
+    <section id="welcome-screen">
 
-      <div id="timer" class="timer-display">
-        ⏱️ 00:45
-      </div>
+      <div class="welcome-content">
 
-      <h2>
-        Which statement describes you more naturally?
-      </h2>
+        <h1>
+          Creative Framework Diagnostic
+        </h1>
 
-      <div class="pairing-container">
+        <p>
+          Explore the kinds of contributions you are
+          naturally drawn to make when working with
+          other people.
+        </p>
+
+        <p>
+          You will be shown two possible contributions
+          at a time. Choose the one that feels more
+          naturally like what you would bring to a
+          competent collaborative group.
+        </p>
 
         <button
-          onclick="handleAnswer('A')"
-          id="btn-sideA"
-          class="choice-box"
+          id="start-button"
+          type="button"
+          onclick="startTest()"
         >
-          Statement A Loading...
+          Start Assessment
         </button>
 
-        <div class="vs-divider">
-          OR
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ASSESSMENT SCREEN
+    ====================================== -->
+
+    <section
+      id="quiz-screen"
+      class="hide"
+    >
+
+      <div class="quiz-content">
+
+
+        <!-- Progress -->
+
+        <div
+          class="progress-container"
+          aria-hidden="true"
+        >
+
+          <div id="progress"></div>
+
         </div>
 
+
+        <!-- Timer -->
+
+        <div id="timer">
+          00:45
+        </div>
+
+
+        <!-- Prompt -->
+
+        <h1 class="quiz-heading">
+          Which feels more like you?
+        </h1>
+
+        <p class="quiz-instruction">
+          Choose the contribution you would be more
+          naturally drawn to make.
+        </p>
+
+
+        <!-- Choices -->
+
+        <div class="answer-row">
+
+          <button
+            id="btn-sideA"
+            class="choice-button"
+            type="button"
+            onclick="handleAnswer('A')"
+          ></button>
+
+
+          <div
+            class="or-divider"
+            aria-hidden="true"
+          >
+            OR
+          </div>
+
+
+          <button
+            id="btn-sideB"
+            class="choice-button"
+            type="button"
+            onclick="handleAnswer('B')"
+          ></button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         RESULTS SCREEN
+    ====================================== -->
+
+    <section
+      id="results-screen"
+      class="hide"
+    >
+
+      <h1 class="results-page-title">
+        Your Creative Role
+      </h1>
+
+
+      <div id="results-content"></div>
+
+
+      <div
+        class="results-buttons"
+        data-html2canvas-ignore="true"
+      >
+
         <button
-          onclick="handleAnswer('B')"
-          id="btn-sideB"
-          class="choice-box"
+          id="retake-button"
+          type="button"
+          onclick="location.reload()"
         >
-          Statement B Loading...
+          Retake Assessment
+        </button>
+
+
+        <button
+          id="download-button"
+          type="button"
+          onclick="downloadResultsPDF()"
+        >
+          Download PDF
         </button>
 
       </div>
 
-    </div>
-
-<!-- =====================================
-     RESULTS SCREEN
-===================================== -->
-
-<div id="results-screen" class="hide">
-
-  <h1>Your Creative Role</h1>
-
-  <div id="results-content"></div>
-
-  <div class="results-buttons" data-html2canvas-ignore="true">
-
-    <button
-      id="retake-button"
-      onclick="location.reload()"
-    >
-      Retake Assessment
-    </button>
-
-    <button
-      id="download-button"
-      onclick="downloadResultsPDF()"
-    >
-      Download PDF
-    </button>
-
-  </div>
-
-</div>
-
-  </div>
+    </section>
 
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js"></script>
-<script src="script.js"></script>
+  </main>
+
+
+  <!-- PDF export library -->
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js"
+  ></script>
+
+
+  <!-- Assessment -->
+
+  <script src="script.js"></script>
 
 </body>
 
