@@ -1252,8 +1252,9 @@ function showResults() {
       <p class="profile-text">
         Your results describe the kinds of contributions
         you appear most naturally drawn to make when
-        working with other people. They are not a limit
-        on what you can do.
+        working with other people. THEY ARE NOT A LIMIT 
+        ON WHAT YOU CAN DO. Screeshot and share results with family
+        or friends to confirm and discuss accuracy if possible.
       </p>
 
 
@@ -1281,15 +1282,14 @@ function showResults() {
 
 
       <p class="profile-text">
-        <b>Your combination:</b>
-        Your Primary Role describes the contribution you
-        most consistently preferred across the assessment.
-        Your Secondary Role represents another contribution
-        you are strongly drawn to bring into collaborative work.
-        The interaction between these two Roles may be more
-        useful than treating either one as a complete description
-        of you.
-      </p>
+  <b>Your combination:</b>
+  Your Primary Role represents the contribution pattern
+  that emerged most strongly across your responses.
+  Your Secondary Role represents another prominent
+  contribution pattern. Together, these two Roles offer
+  a more useful picture of how you are naturally inclined
+  to contribute in collaborative work than either Role alone.
+</p>
 
     `;
 }
